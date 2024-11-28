@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "f": {
+      "item": "fishe:iron_fishe"
+    },
+    "s": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "  f",
+    " fs",
+    "f s"
+  ],
+  "result": {
+    "item": "fishe:iron_rod"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "fishe:stone_fishe"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cobblestone"
+  }
+}

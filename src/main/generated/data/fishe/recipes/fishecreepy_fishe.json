@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishe:creepy_fishe"
+    },
+    {
+      "item": "fishe:creepy_fishe"
+    },
+    {
+      "item": "fishe:creepy_fishe"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gunpowder"
+  }
+}

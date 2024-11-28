@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "f": {
+      "item": "fishe:copper_fishe"
+    },
+    "s": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "  f",
+    " fs",
+    "f s"
+  ],
+  "result": {
+    "item": "fishe:copper_rod"
+  },
+  "show_notification": true
+}

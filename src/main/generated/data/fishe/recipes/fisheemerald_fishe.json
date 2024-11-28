@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishe:emerald_fishe"
+    },
+    {
+      "item": "fishe:emerald_fishe"
+    },
+    {
+      "item": "fishe:emerald_fishe"
+    },
+    {
+      "item": "fishe:emerald_fishe"
+    }
+  ],
+  "result": {
+    "item": "minecraft:emerald"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "fishe:red_fishe"
+    }
+  ],
+  "result": {
+    "item": "minecraft:redstone"
+  }
+}

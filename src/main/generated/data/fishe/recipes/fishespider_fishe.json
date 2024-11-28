@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishe:spider_fishe"
+    }
+  ],
+  "result": {
+    "item": "minecraft:string"
+  }
+}

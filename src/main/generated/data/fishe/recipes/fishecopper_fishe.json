@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishe:copper_fishe"
+    },
+    {
+      "item": "fishe:copper_fishe"
+    },
+    {
+      "item": "fishe:copper_fishe"
+    },
+    {
+      "item": "fishe:copper_fishe"
+    }
+  ],
+  "result": {
+    "item": "minecraft:raw_copper"
+  }
+}

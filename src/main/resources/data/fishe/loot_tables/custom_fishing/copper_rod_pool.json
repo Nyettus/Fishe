@@ -1,0 +1,42 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishe:stone_fishe",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishe:coal_fishe",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishe:copper_fishe",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishe:iron_fishe",
+          "weight": 15
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+

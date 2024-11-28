@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "fishe:copper_rod",
+    "fishe:iron_rod",
+    "fishe:gold_rod",
+    "fishe:diamond_rod"
+  ]
+}

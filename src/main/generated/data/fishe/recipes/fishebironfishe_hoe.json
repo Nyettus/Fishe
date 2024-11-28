@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "f": {
+      "item": "fishe:iron_fishe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " ff",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "item": "fishe:ironfishe_hoe"
+  },
+  "show_notification": true
+}

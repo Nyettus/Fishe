@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    }
+  ],
+  "result": {
+    "item": "minecraft:diamond"
+  }
+}

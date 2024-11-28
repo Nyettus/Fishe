@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.fishe.mixin.client",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "ExampleClientMixin",
+    "FishingBobberEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": []
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishe:coal_fishe"
+    },
+    {
+      "item": "fishe:coal_fishe"
+    },
+    {
+      "item": "fishe:coal_fishe"
+    },
+    {
+      "item": "fishe:coal_fishe"
+    }
+  ],
+  "result": {
+    "item": "minecraft:coal"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "f": {
+      "item": "fishe:diamond_fishe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " f ",
+    " f ",
+    " s "
+  ],
+  "result": {
+    "item": "fishe:diamondfishe_sword"
+  },
+  "show_notification": true
+}

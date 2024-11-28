@@ -1,0 +1,34 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fishe:rot_fishe",
+          "weight": 50
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishe:bone_fishe",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishe:spider_fishe",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishe:creepy_fishe",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "fishe:ender_fishe",
+          "weight": 10
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishe:gold_fishe"
+    },
+    {
+      "item": "fishe:gold_fishe"
+    },
+    {
+      "item": "fishe:gold_fishe"
+    },
+    {
+      "item": "fishe:gold_fishe"
+    }
+  ],
+  "result": {
+    "item": "minecraft:raw_gold"
+  }
+}

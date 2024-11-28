@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    }
+  ],
+  "result": {
+    "item": "minecraft:ender_pearl"
+  }
+}

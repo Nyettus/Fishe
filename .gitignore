@@ -1,21 +1,45 @@
+# Gradle
 .gradle
-**/build/
-!src/**/build/
 
-# Ignore Gradle GUI config
-gradle-app.setting
+# VSCode
+.settings/
+.vscode/
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
-
-# Cache of project
-.gradletasknamecache
-
-# Eclipse Gradle plugin generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
+# Eclipse
+.checkstyle
 .classpath
+.metadata
+.settings
+.project
+*.launch
+
+# Intellij/Idea
+.factorypath
+.idea
+*.iml
+*.ipr
+*.iws
+
+# Build artifacts
+bin/
+build/
+jars/
+out/
+classes/
+
+# Generated sources
+# The trailing * is important, otherwise Git wouldn't evaluate the directories at all and we wouldn't be able to un-ignore some of them.
+**/src/generated/*
+
+# Debug artifacts
+run
+*.log
+*.log.gz
+focus.txt
+
+# Windows
+*.db
+$RECYCLE.BIN/
+
+# Mac
+.DS_Store

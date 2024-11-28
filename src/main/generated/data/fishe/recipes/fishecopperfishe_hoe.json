@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "f": {
+      "item": "fishe:copper_fishe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ff ",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "item": "fishe:copperfishe_hoe"
+  },
+  "show_notification": true
+}

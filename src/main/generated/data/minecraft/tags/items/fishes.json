@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "fishe:stone_fishe",
+    "fishe:coal_fishe",
+    "fishe:copper_fishe",
+    "fishe:iron_fishe",
+    "fishe:gold_fishe",
+    "fishe:lapis_fishe",
+    "fishe:emerald_fishe",
+    "fishe:diamond_fishe",
+    "fishe:red_fishe"
+  ]
+}
