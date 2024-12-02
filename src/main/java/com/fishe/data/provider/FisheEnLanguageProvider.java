@@ -30,6 +30,8 @@ public class FisheEnLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ItemsFishe.CREEPY_FISHE,"Creepy Fishe");
         translationBuilder.add(ItemsFishe.ENDER_FISHE,"Ender Fishe");
 
+        translationBuilder.add(ItemsFishe.FISHE_PASTE,"Fishe Paste");
+
         translationBuilder.add(ItemsTools.COPPER_ROD,"Copper Fishing Rod");
         translationBuilder.add(ItemsTools.IRON_ROD,"Iron Fishing Rod");
         translationBuilder.add(ItemsTools.GOLD_ROD,"Gold Fishing Rod");

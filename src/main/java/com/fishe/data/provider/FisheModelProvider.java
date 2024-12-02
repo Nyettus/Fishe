@@ -25,7 +25,7 @@ public class FisheModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         genFishModels(itemModelGenerator);
-
+        itemModelGenerator.register(ItemsFishe.FISHE_PASTE,Models.GENERATED);
 
         itemModelGenerator.register(ItemsTools.COPPER_ROD,Models.HANDHELD_ROD);
         itemModelGenerator.register(ItemsTools.COPPER_ROD,"_cast",Models.HANDHELD_ROD);
