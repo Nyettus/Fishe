@@ -1,5 +1,6 @@
 package com.fishe.Blocks.Entity;
 
+import com.fishe.Fishe;
 import com.fishe.Items.ItemsFishe;
 import com.fishe.Items.ItemsTools;
 import com.fishe.Screen.FishePasterScreenHandler;
@@ -136,6 +137,10 @@ public class FishePasterBlockEntity extends BlockEntity implements ExtendedScree
     private void craftItem() {
         this.removeStack(INPUT_SLOT,1);
         var recipe = getCurrentRecipe();
+        if(!recipe.isPresent()){
+            Fishe.LOGGER.info("There is no recipe present");
+            return;
+        }
         ItemStack result = new ItemStack(recipe.get().getOutput(null).getItem());
 
         this.setStack(OUTPUT_SLOT,new ItemStack(result.getItem(),getStack(OUTPUT_SLOT).getCount()+result.getCount()));

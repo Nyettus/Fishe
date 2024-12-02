@@ -6,7 +6,8 @@
     }
   ],
   "output": {
-    "item": "minecraft:gravel"
+    "item": "fishe:fishe_paste",
+    "count" : 10
   }
 
 }
