@@ -61,6 +61,8 @@ public class ItemsFishe extends ItemMaster {
 
 
 
+    public static final Item FISHE_PASTE = registerGroup(new Item(new Item.Settings()),"fishe_paste");
+
 
 
 
