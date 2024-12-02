@@ -1,5 +1,6 @@
 package com.fishe.data.provider;
 
+import com.fishe.Blocks.BlockMaster;
 import com.fishe.Items.ItemMaster;
 import com.fishe.Items.ItemsFishe;
 import com.fishe.Items.ItemsTools;
@@ -18,7 +19,7 @@ public class FisheModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-
+        genBlockModels(blockStateModelGenerator);
     }
 
     @Override
@@ -55,5 +56,9 @@ public class FisheModelProvider extends FabricModelProvider {
         for(Item value : ItemMaster.ToolMap.values()){
             generator.register(value,Models.HANDHELD);
         }
+    }
+
+    private void genBlockModels(BlockStateModelGenerator generator){
+        generator.registerSimpleCubeAll(BlockMaster.FISHE_PASTER);
     }
 }

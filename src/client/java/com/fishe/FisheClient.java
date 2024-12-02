@@ -1,7 +1,10 @@
 package com.fishe;
 
 import com.fishe.Items.ItemsTools;
+import com.fishe.Screen.ModScreenHandler;
+import com.fishe.ScreenClient.FishePasterScreen;
 import net.fabricmc.api.ClientModInitializer;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FishingRodItem;
@@ -12,6 +15,7 @@ public class FisheClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		InitRod();
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
+		HandledScreens.register(ModScreenHandler.FISHE_PASTER_SCREEN_HANDLER_SCREEN_HANDLER, FishePasterScreen::new);
 	}
 
 	private static void InitRod() {

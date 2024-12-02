@@ -1,8 +1,10 @@
 package com.fishe;
 
+import com.fishe.Blocks.BlockMaster;
 import com.fishe.Items.ItemMaster;
 import com.fishe.Utils.ModLootTableModifier;
 import com.fishe.enchantments.EnchantmentMaster;
+import com.fishe.recipe.ModRecipes;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -25,6 +27,10 @@ public class Fishe implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		ItemMaster.Initialize();
+		BlockMaster.Initialize();
+
+		ModRecipes.Initialize();
+
 		EnchantmentMaster.Initialize();
 		ModLootTableModifier.ModifyFishTable();
 	}

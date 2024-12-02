@@ -1,9 +1,6 @@
 package com.fishe;
 
-import com.fishe.data.provider.FisheEnLanguageProvider;
-import com.fishe.data.provider.FisheModTagProvider;
-import com.fishe.data.provider.FisheModelProvider;
-import com.fishe.data.provider.FisheRecipeProvider;
+import com.fishe.data.provider.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -14,7 +11,7 @@ public class FisheDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(FisheModelProvider::new);
 		pack.addProvider(FisheEnLanguageProvider::new);
 		pack.addProvider(FisheRecipeProvider::new);
-		//loot table go here
+		pack.addProvider(FisheModBlockLootTableProvider::new);
 		pack.addProvider(FisheModTagProvider::new);
 
 	}

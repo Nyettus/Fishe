@@ -1,0 +1,12 @@
+{
+  "type": "fishe:fishe_paster",
+  "ingredients": [
+    {
+      "item": "fishe:stone_fishe"
+    }
+  ],
+  "output": {
+    "item": "minecraft:gravel"
+  }
+
+}
