@@ -20,6 +20,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
+import net.minecraft.recipe.Recipe;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -135,14 +136,10 @@ public class FishePasterBlockEntity extends BlockEntity implements ExtendedScree
     }
 
     private void craftItem() {
-        this.removeStack(INPUT_SLOT,1);
         var recipe = getCurrentRecipe();
-        if(!recipe.isPresent()){
-            Fishe.LOGGER.info("There is no recipe present");
-            return;
-        }
-        ItemStack result = new ItemStack(recipe.get().getOutput(null).getItem());
+        this.removeStack(INPUT_SLOT,1);
 
+        ItemStack result = recipe.get().getOutput(null);
         this.setStack(OUTPUT_SLOT,new ItemStack(result.getItem(),getStack(OUTPUT_SLOT).getCount()+result.getCount()));
     }
 
