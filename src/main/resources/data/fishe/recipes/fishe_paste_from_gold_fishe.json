@@ -2,12 +2,12 @@
   "type": "fishe:fishe_paster",
   "ingredients": [
     {
-      "item": "fishe:stone_fishe"
+      "item": "fishe:gold_fishe"
     }
   ],
   "output": {
     "item": "fishe:fishe_paste",
-    "count": 4
+    "count": 10
   }
 
 }

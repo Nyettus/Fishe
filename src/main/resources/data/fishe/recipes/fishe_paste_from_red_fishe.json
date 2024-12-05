@@ -2,12 +2,12 @@
   "type": "fishe:fishe_paster",
   "ingredients": [
     {
-      "item": "fishe:stone_fishe"
+      "item": "fishe:red_fishe"
     }
   ],
   "output": {
     "item": "fishe:fishe_paste",
-    "count": 4
+    "count": 1
   }
 
 }
