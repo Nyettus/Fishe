@@ -43,3 +43,6 @@ $RECYCLE.BIN/
 
 # Mac
 .DS_Store
+
+
+**/.cache/
