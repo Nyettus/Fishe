@@ -1,6 +1,7 @@
 package com.fishe.Screen;
 
 import com.fishe.Blocks.Entity.FishePasterBlockEntity;
+import com.fishe.Blocks.Entity.FishePasterOutputSlot;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -34,7 +35,7 @@ public class FishePasterScreenHandler extends ScreenHandler {
         this.blockEntity = (FishePasterBlockEntity) blockEntity;
 
         this.addSlot(new Slot(inventory,0,80,11));
-        this.addSlot(new Slot(inventory,1,80,59));
+        this.addSlot(new FishePasterOutputSlot(inventory,1,80,59));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

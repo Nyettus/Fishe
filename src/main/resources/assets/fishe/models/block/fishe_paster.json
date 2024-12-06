@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "fishe:block/fishe_paster_top",
+    "side": "fishe:block/fishe_paster_side"
+  }
+}
