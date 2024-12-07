@@ -9,9 +9,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlockEntities {
-    public static final BlockEntityType<FishePasterBlockEntity> FISHE_PASTER_BLOCK_ENTITY_BLOCK_ENTITY =
+    public static final BlockEntityType<FisheFermenterBlockEntity> FISHE_PASTER_BLOCK_ENTITY_BLOCK_ENTITY =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Fishe.MOD_ID,"fishe_paster_be"),
-                    FabricBlockEntityTypeBuilder.create(FishePasterBlockEntity::new, BlockMaster.FISHE_PASTER).build());
+                    FabricBlockEntityTypeBuilder.create(FisheFermenterBlockEntity::new, BlockMaster.FISHE_FERMENTER).build());
 
 
 

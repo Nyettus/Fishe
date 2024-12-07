@@ -1,16 +1,11 @@
 package com.fishe.Blocks.Entity;
 
-import com.fishe.Fishe;
-import com.fishe.Items.ItemsFishe;
-import com.fishe.Items.ItemsTools;
-import com.fishe.Screen.FishePasterScreenHandler;
+import com.fishe.Screen.FisheFermenterScreenHandler;
 import com.fishe.Utils.ImplementedInventory;
 import com.fishe.recipe.FishePasterRecipe;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -18,10 +13,8 @@ import net.minecraft.inventory.SidedInventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
-import net.minecraft.recipe.Recipe;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -33,9 +26,8 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
-import java.util.stream.IntStream;
 
-public class FishePasterBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory, SidedInventory {
+public class FisheFermenterBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory, SidedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
 
     private static final int INPUT_SLOT = 0;
@@ -45,14 +37,14 @@ public class FishePasterBlockEntity extends BlockEntity implements ExtendedScree
     private int progress = 0;
     private int maxProgress = 72;
 
-    public FishePasterBlockEntity(BlockPos pos, BlockState state) {
+    public FisheFermenterBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.FISHE_PASTER_BLOCK_ENTITY_BLOCK_ENTITY, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> FishePasterBlockEntity.this.progress;
-                    case 1 -> FishePasterBlockEntity.this.maxProgress;
+                    case 0 -> FisheFermenterBlockEntity.this.progress;
+                    case 1 -> FisheFermenterBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -60,8 +52,8 @@ public class FishePasterBlockEntity extends BlockEntity implements ExtendedScree
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0 -> FishePasterBlockEntity.this.progress = value;
-                    case 1 -> FishePasterBlockEntity.this.progress = value;
+                    case 0 -> FisheFermenterBlockEntity.this.progress = value;
+                    case 1 -> FisheFermenterBlockEntity.this.progress = value;
                 }
             }
 
@@ -84,7 +76,7 @@ public class FishePasterBlockEntity extends BlockEntity implements ExtendedScree
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Fishe Paster");
+        return Text.literal("Fishe Fermenter");
     }
 
 
@@ -105,7 +97,7 @@ public class FishePasterBlockEntity extends BlockEntity implements ExtendedScree
 
     @Override
     public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new FishePasterScreenHandler(syncId,playerInventory,this,this.propertyDelegate);
+        return new FisheFermenterScreenHandler(syncId,playerInventory,this,this.propertyDelegate);
     }
 
     public void tick(World world, BlockPos pos, BlockState state) {

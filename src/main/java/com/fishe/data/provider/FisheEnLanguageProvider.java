@@ -1,5 +1,6 @@
 package com.fishe.data.provider;
 
+import com.fishe.Blocks.BlockMaster;
 import com.fishe.Items.ItemsFishe;
 import com.fishe.Items.ItemsTools;
 import com.fishe.enchantments.EnchantmentMaster;
@@ -37,6 +38,8 @@ public class FisheEnLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ItemsTools.GOLD_ROD,"Gold Fishing Rod");
         translationBuilder.add(ItemsTools.DIAMOND_ROD,"Diamond Fishing Rod");
 
+        GenerateBlockNames(translationBuilder);
+
         translationBuilder.add(EnchantmentMaster.CALL_OF_THE_NIGHT,"Call of the Night");
 
         GenerateToolNames(translationBuilder,"Copperfishe",
@@ -67,6 +70,8 @@ public class FisheEnLanguageProvider extends FabricLanguageProvider {
                 ItemsTools.DIAMONDFISHE_HOE,
                 ItemsTools.DIAMONDFISHE_SWORD);
 
+
+
     }
 
 
@@ -83,5 +88,9 @@ public class FisheEnLanguageProvider extends FabricLanguageProvider {
         builder.add(hoe,prefix+" Hoe");
         builder.add(sword,prefix+" Sword");
 
+    }
+
+    private void GenerateBlockNames(TranslationBuilder builder){
+        builder.add(BlockMaster.FISHE_FERMENTER,"Fishe Fermenter");
     }
 }

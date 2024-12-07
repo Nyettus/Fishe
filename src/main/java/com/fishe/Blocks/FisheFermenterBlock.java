@@ -1,13 +1,12 @@
 package com.fishe.Blocks;
 
-import com.fishe.Blocks.Entity.FishePasterBlockEntity;
+import com.fishe.Blocks.Entity.FisheFermenterBlockEntity;
 import com.fishe.Blocks.Entity.ModBlockEntities;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -17,10 +16,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class FishePasterBlock extends BlockWithEntity implements BlockEntityProvider {
+public class FisheFermenterBlock extends BlockWithEntity implements BlockEntityProvider {
 
 
-    protected FishePasterBlock(Settings settings) {
+    protected FisheFermenterBlock(Settings settings) {
         super(settings);
     }
 
@@ -31,7 +30,7 @@ public class FishePasterBlock extends BlockWithEntity implements BlockEntityProv
 
     @Override
     public @Nullable BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new FishePasterBlockEntity(pos,state);
+        return new FisheFermenterBlockEntity(pos,state);
     }
 
 
@@ -39,8 +38,8 @@ public class FishePasterBlock extends BlockWithEntity implements BlockEntityProv
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if(state.getBlock() != newState.getBlock()){
             BlockEntity entity = world.getBlockEntity(pos);
-            if(entity instanceof FishePasterBlockEntity){
-                ItemScatterer.spawn(world,pos,(FishePasterBlockEntity)entity);
+            if(entity instanceof FisheFermenterBlockEntity){
+                ItemScatterer.spawn(world,pos,(FisheFermenterBlockEntity)entity);
                 world.updateComparators(pos,this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
@@ -53,7 +52,7 @@ public class FishePasterBlock extends BlockWithEntity implements BlockEntityProv
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if(!world.isClient){
-            NamedScreenHandlerFactory screenHandlerFactory = ((FishePasterBlockEntity) world.getBlockEntity(pos));
+            NamedScreenHandlerFactory screenHandlerFactory = ((FisheFermenterBlockEntity) world.getBlockEntity(pos));
             if(screenHandlerFactory != null){
                 player.openHandledScreen(screenHandlerFactory);
             }

@@ -20,15 +20,15 @@ public class BlockMaster {
         T returnBlock = Registry.register(Registries.BLOCK,identifier,block);
         if(asItem){
             BlockItem isItem = new BlockItem(block,new Item.Settings());
-            ItemMaster.registerGroup(isItem,name);
+            BlockItems.FISHE_FERMENTER = ItemMaster.registerGroup(isItem,name);
         }
         return returnBlock;
     }
 
 
-    public static final FishePasterBlock FISHE_PASTER = register(
-            new FishePasterBlock(FabricBlockSettings.copyOf(Blocks.STONE)),
-            "fishe_paster",
+    public static final FisheFermenterBlock FISHE_FERMENTER = register(
+            new FisheFermenterBlock(FabricBlockSettings.copyOf(Blocks.STONE)),
+            "fishe_fermenter",
             true
     );
 
@@ -37,5 +37,7 @@ public class BlockMaster {
     public static void Initialize() {
         ModBlockEntities.Initialize();
         ModScreenHandler.Initialize();
+
+        BlockItems.Initialise();
     }
 }

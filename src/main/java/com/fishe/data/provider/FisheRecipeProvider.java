@@ -1,5 +1,6 @@
 package com.fishe.data.provider;
 
+import com.fishe.Blocks.BlockItems;
 import com.fishe.Fishe;
 import com.fishe.Items.ItemMaster;
 import com.fishe.Items.ItemsFishe;
@@ -11,12 +12,19 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.tag.TagProvider;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.PositionImpl;
 
+import javax.swing.text.html.HTML;
 import java.util.function.Consumer;
 
 public class FisheRecipeProvider extends FabricRecipeProvider {
@@ -29,6 +37,7 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
         genMiningFisheRecipe(consumer);
         genNightFisheRecipe(consumer);
         genToolRecipes(consumer);
+        genFisheFermenter(consumer);
     }
 
     private void genMiningFisheRecipe(Consumer<RecipeJsonProvider> consumer) {
@@ -159,6 +168,21 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 .offerTo(consumer, new Identifier(specialTag + getRecipeName(output)));
         Fishe.LOGGER.info("Successfully registered "+output.getName().getString());
 
+    }
+
+    private void genFisheFermenter(Consumer<RecipeJsonProvider> consumer){
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockItems.FISHE_FERMENTER)
+                .pattern("pcp")
+                .pattern("pip")
+                .pattern("pbp")
+                .input('p', ItemTags.PLANKS)
+                .input('c',ItemsFishe.COPPER_FISHE)
+                .input('i',ItemsFishe.IRON_FISHE)
+                .input('b',ItemsFishe.COAL_FISHE)
+                .criterion(FabricRecipeProvider.hasItem(ItemsFishe.COPPER_FISHE)
+                ,FabricRecipeProvider.conditionsFromItem(ItemsFishe.COPPER_FISHE))
+                .offerTo(consumer,new Identifier(getRecipeName(BlockItems.FISHE_FERMENTER)));
     }
 
 }

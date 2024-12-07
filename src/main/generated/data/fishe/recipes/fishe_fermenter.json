@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "fishe:coal_fishe"
+    },
+    "c": {
+      "item": "fishe:copper_fishe"
+    },
+    "i": {
+      "item": "fishe:iron_fishe"
+    },
+    "p": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "pcp",
+    "pip",
+    "pbp"
+  ],
+  "result": {
+    "item": "fishe:fishe_fermenter"
+  },
+  "show_notification": true
+}

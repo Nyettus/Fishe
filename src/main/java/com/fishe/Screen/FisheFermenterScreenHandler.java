@@ -1,7 +1,7 @@
 package com.fishe.Screen;
 
-import com.fishe.Blocks.Entity.FishePasterBlockEntity;
-import com.fishe.Blocks.Entity.FishePasterOutputSlot;
+import com.fishe.Blocks.Entity.FisheFermenterBlockEntity;
+import com.fishe.Blocks.Entity.FisheFermenterOutputSlot;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -13,29 +13,29 @@ import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 
-public class FishePasterScreenHandler extends ScreenHandler {
+public class FisheFermenterScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propretyDelegate;
-    public final FishePasterBlockEntity blockEntity;
+    public final FisheFermenterBlockEntity blockEntity;
 
 
-    public FishePasterScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf){
+    public FisheFermenterScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf){
         this(syncId,inventory,inventory.player.getWorld().getBlockEntity(buf.readBlockPos()),
                 new ArrayPropertyDelegate(2));
     }
 
 
 
-    public FishePasterScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
+    public FisheFermenterScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
         super(ModScreenHandler.FISHE_PASTER_SCREEN_HANDLER_SCREEN_HANDLER,syncId);
         checkSize((Inventory) blockEntity,2);
         this.inventory = (Inventory) blockEntity;
         playerInventory.onOpen(playerInventory.player);
         this.propretyDelegate = arrayPropertyDelegate;
-        this.blockEntity = (FishePasterBlockEntity) blockEntity;
+        this.blockEntity = (FisheFermenterBlockEntity) blockEntity;
 
         this.addSlot(new Slot(inventory,0,80,11));
-        this.addSlot(new FishePasterOutputSlot(inventory,1,80,59));
+        this.addSlot(new FisheFermenterOutputSlot(inventory,1,80,59));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
