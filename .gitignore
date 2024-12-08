@@ -46,3 +46,4 @@ $RECYCLE.BIN/
 
 
 **/.cache/
+/src/main/generated/.cache

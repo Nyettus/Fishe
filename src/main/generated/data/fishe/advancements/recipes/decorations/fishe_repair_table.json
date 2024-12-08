@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:fishe_fermenter"
+        "recipe": "minecraft:fishe_repair_table"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:fishe_fermenter"
+      "minecraft:fishe_repair_table"
     ]
   },
   "sends_telemetry_event": false

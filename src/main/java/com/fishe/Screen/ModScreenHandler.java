@@ -12,6 +12,10 @@ public class ModScreenHandler {
             Registry.register(Registries.SCREEN_HANDLER, new Identifier(Fishe.MOD_ID, "fishe_paster_ui"),
                     new ExtendedScreenHandlerType<>(FisheFermenterScreenHandler::new));
 
+    public static final ScreenHandlerType<FisheRepairTableScreenHandler> FISHE_REPAIR_TABLE_SCREEN_HANDLER_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER,new Identifier(Fishe.MOD_ID,"fishe_repair_table_ui"),
+                    new ExtendedScreenHandlerType<>(FisheRepairTableScreenHandler::new));
+
     public static void Initialize(){
 
     }

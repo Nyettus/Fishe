@@ -2,6 +2,7 @@ package com.fishe;
 
 import com.fishe.Blocks.BlockMaster;
 import com.fishe.Items.ItemMaster;
+import com.fishe.Utils.FisheModTags;
 import com.fishe.Utils.ModLootTableModifier;
 import com.fishe.enchantments.EnchantmentMaster;
 import com.fishe.recipe.ModRecipes;
@@ -28,6 +29,7 @@ public class Fishe implements ModInitializer {
 
 		ItemMaster.Initialize();
 		BlockMaster.Initialize();
+		FisheModTags.Initialize();
 
 		ModRecipes.Initialize();
 

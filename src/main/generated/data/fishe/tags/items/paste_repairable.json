@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "fishe:copper_rod",
+    "fishe:iron_rod",
+    "fishe:gold_rod",
+    "fishe:diamond_rod",
+    "fishe:diamondfishe_axe",
+    "fishe:copperfishe_shovel",
+    "fishe:ironfishe_axe",
+    "fishe:diamondfishe_shovel",
+    "fishe:goldfishe_hoe",
+    "fishe:copperfishe_sword",
+    "fishe:copperfishe_hoe",
+    "fishe:ironfishe_shovel",
+    "fishe:diamondfishe_hoe",
+    "fishe:goldfishe_pickaxe",
+    "fishe:goldfishe_shovel",
+    "fishe:ironfishe_hoe",
+    "fishe:goldfishe_axe",
+    "fishe:copperfishe_pickaxe",
+    "fishe:goldfishe_sword",
+    "fishe:diamondfishe_pickaxe",
+    "fishe:ironfishe_pickaxe",
+    "fishe:copperfishe_axe",
+    "fishe:diamondfishe_sword",
+    "fishe:ironfishe_sword"
+  ]
+}

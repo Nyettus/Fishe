@@ -2,8 +2,10 @@ package com.fishe.data.provider;
 
 
 import com.fishe.Fishe;
+import com.fishe.Items.ItemMaster;
 import com.fishe.Items.ItemsFishe;
 import com.fishe.Items.ItemsTools;
+import com.fishe.Utils.FisheModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.ItemTagProvider;
 import net.minecraft.item.Item;
@@ -16,13 +18,14 @@ import net.minecraft.util.Identifier;
 import java.util.concurrent.CompletableFuture;
 
 
-public class FisheModTagProvider extends ItemTagProvider{
-    public FisheModTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture){
-        super(output,registriesFuture);
+
+public class FisheModTagProvider extends ItemTagProvider {
+    public FisheModTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
 
     }
 
-    private static final TagKey<Item> SPECIAL_RODS = TagKey.of(RegistryKeys.ITEM, new Identifier(Fishe.MOD_ID,"fishing_rods"));
+
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
@@ -44,13 +47,30 @@ public class FisheModTagProvider extends ItemTagProvider{
                 .add(ItemsTools.GOLD_ROD)
                 .add(ItemsTools.DIAMOND_ROD);
 
-        getOrCreateTagBuilder(SPECIAL_RODS)
+        getOrCreateTagBuilder(FisheModTags.SPECIAL_RODS)
                 .add(ItemsTools.COPPER_ROD)
                 .add(ItemsTools.IRON_ROD)
                 .add(ItemsTools.GOLD_ROD)
                 .add(ItemsTools.DIAMOND_ROD);
 
+        assignRepairableTag();
+
+    }
+
+
+    private void assignRepairableTag() {
+        var tagBuilder = getOrCreateTagBuilder(FisheModTags.PASTE_REPAIRABLE);
+        //Manually do fishing rods
+        tagBuilder.add(ItemsTools.COPPER_ROD)
+                .add(ItemsTools.IRON_ROD)
+                .add(ItemsTools.GOLD_ROD)
+                .add(ItemsTools.DIAMOND_ROD);
+
+        for (Item tool : ItemMaster.ToolMap.values()) {
+            tagBuilder.add(tool);
+        }
 
 
     }
+
 }

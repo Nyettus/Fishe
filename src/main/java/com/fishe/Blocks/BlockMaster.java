@@ -32,6 +32,12 @@ public class BlockMaster {
             true
     );
 
+    public static final FisheRepairTableBlock FISHE_REPAIR_TABLE = register(
+            new FisheRepairTableBlock(FabricBlockSettings.copyOf(Blocks.STONE)),
+            "fishe_repair_table",
+            true
+    );
+
 
 
     public static void Initialize() {

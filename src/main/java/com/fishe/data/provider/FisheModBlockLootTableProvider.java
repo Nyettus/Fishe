@@ -22,5 +22,6 @@ public class FisheModBlockLootTableProvider extends FabricBlockLootTableProvider
     @Override
     public void generate(){
         addDrop(BlockMaster.FISHE_FERMENTER);
+        addDrop(BlockMaster.FISHE_REPAIR_TABLE);
     }
 }
