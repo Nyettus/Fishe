@@ -171,7 +171,7 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
     }
 
     private void genFisheFermenter(Consumer<RecipeJsonProvider> consumer){
-
+        
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockItems.FISHE_FERMENTER)
                 .pattern("pcp")
                 .pattern("pip")

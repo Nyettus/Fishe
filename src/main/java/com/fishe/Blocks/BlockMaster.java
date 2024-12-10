@@ -27,7 +27,7 @@ public class BlockMaster {
 
 
     public static final FisheFermenterBlock FISHE_FERMENTER = register(
-            new FisheFermenterBlock(FabricBlockSettings.copyOf(Blocks.STONE)),
+            new FisheFermenterBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)),
             "fishe_fermenter",
             true
     );
@@ -35,6 +35,12 @@ public class BlockMaster {
     public static final FisheRepairTableBlock FISHE_REPAIR_TABLE = register(
             new FisheRepairTableBlock(FabricBlockSettings.copyOf(Blocks.STONE)),
             "fishe_repair_table",
+            true
+    );
+
+    public static final Block FISHE_PASTE_BLOCK = register(
+            new Block(FabricBlockSettings.copyOf(Blocks.DIRT)),
+            "fishe_paste_block",
             true
     );
 

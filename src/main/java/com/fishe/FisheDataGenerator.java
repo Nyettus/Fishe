@@ -13,6 +13,7 @@ public class FisheDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(FisheRecipeProvider::new);
 		pack.addProvider(FisheModBlockLootTableProvider::new);
 		pack.addProvider(FisheModTagProvider::new);
+		pack.addProvider(FisheModBlockTagProvider::new);
 
 	}
 }

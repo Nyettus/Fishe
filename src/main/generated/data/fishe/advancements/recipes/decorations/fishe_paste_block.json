@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:fishe_repair_table"
+        "recipe": "minecraft:fishe_paste_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:fishe_repair_table"
+      "minecraft:fishe_paste_block"
     ]
   },
   "sends_telemetry_event": false
