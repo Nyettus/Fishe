@@ -20,7 +20,7 @@ public class BlockMaster {
         T returnBlock = Registry.register(Registries.BLOCK,identifier,block);
         if(asItem){
             BlockItem isItem = new BlockItem(block,new Item.Settings());
-            BlockItems.FISHE_FERMENTER = ItemMaster.registerGroup(isItem,name);
+            ItemMaster.registerGroup(isItem,name);
         }
         return returnBlock;
     }

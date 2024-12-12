@@ -1,5 +1,6 @@
 package com.fishe.data.provider;
 
+import com.fishe.Blocks.BlockItems;
 import com.fishe.Blocks.BlockMaster;
 import com.fishe.Fishe;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -19,8 +20,8 @@ public class FisheModBlockLootTableProvider extends FabricBlockLootTableProvider
 
     @Override
     public void generate(){
-        addDrop(BlockMaster.FISHE_FERMENTER,drops(Registries.ITEM.get(new Identifier(Fishe.MOD_ID,"fishe_fermenter"))));
-        addDrop(BlockMaster.FISHE_REPAIR_TABLE,drops(Registries.ITEM.get(new Identifier(Fishe.MOD_ID,"fishe_repair_table"))));
-        addDrop(BlockMaster.FISHE_PASTE_BLOCK,drops(Registries.ITEM.get(new Identifier(Fishe.MOD_ID,"fishe_paste_block"))));
+        addDrop(BlockMaster.FISHE_FERMENTER,drops(BlockItems.FISHE_FERMENTER));
+        addDrop(BlockMaster.FISHE_REPAIR_TABLE,drops(BlockItems.FISHE_REPAIR_TABLE));
+        addDrop(BlockMaster.FISHE_PASTE_BLOCK,drops(BlockItems.FISHE_PASTE_BLOCK));
     }
 }

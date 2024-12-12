@@ -1,5 +1,6 @@
 package com.fishe.Blocks.Entity;
 
+import com.fishe.Blocks.BlockItems;
 import com.fishe.Items.ItemsFishe;
 import com.fishe.Screen.FisheRepairTableScreenHandler;
 import com.fishe.Utils.FisheModTags;
@@ -144,6 +145,10 @@ public class FisheRepairTableBlockEntity extends BlockEntity implements Extended
         if(slop >= maxSlop) return;
         if(this.getStack(SLOP_SLOT).getItem() == ItemsFishe.FISHE_PASTE){
             slop++;
+            this.removeStack(SLOP_SLOT,1);
+        }
+        else if(this.getStack(SLOP_SLOT).getItem() == BlockItems.FISHE_PASTE_BLOCK){
+            slop+=9;
             this.removeStack(SLOP_SLOT,1);
         }
     }

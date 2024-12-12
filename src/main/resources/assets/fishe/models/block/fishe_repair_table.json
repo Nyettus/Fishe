@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "fishe:block/fishe_repair_table_bottom",
+    "front": "fishe:block/fishe_repair_table_front",
+    "side": "fishe:block/fishe_repair_table_side",
+    "top": "fishe:block/fishe_repair_table_top"
+  }
+}

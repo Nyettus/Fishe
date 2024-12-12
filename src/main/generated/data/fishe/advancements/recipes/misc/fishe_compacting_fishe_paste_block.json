@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper_fishe": {
+    "has_fishe_paste_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "fishe:copper_fishe"
+              "fishe:fishe_paste_block"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:fishe_paste_block"
+        "recipe": "minecraft:fishe_compacting_fishe_paste_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_copper_fishe",
+      "has_fishe_paste_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:fishe_paste_block"
+      "minecraft:fishe_compacting_fishe_paste_block"
     ]
   },
   "sends_telemetry_event": false

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "fishe:fishe_paste"
+    },
+    {
+      "item": "fishe:fishe_paste"
+    },
+    {
+      "item": "fishe:fishe_paste"
+    },
+    {
+      "item": "fishe:fishe_paste"
+    },
+    {
+      "item": "fishe:fishe_paste"
+    },
+    {
+      "item": "fishe:fishe_paste"
+    },
+    {
+      "item": "fishe:fishe_paste"
+    },
+    {
+      "item": "fishe:fishe_paste"
+    },
+    {
+      "item": "fishe:fishe_paste"
+    }
+  ],
+  "result": {
+    "item": "fishe:fishe_paste_block"
+  }
+}

@@ -92,5 +92,7 @@ public class FisheEnLanguageProvider extends FabricLanguageProvider {
 
     private void GenerateBlockNames(TranslationBuilder builder){
         builder.add(BlockMaster.FISHE_FERMENTER,"Fishe Fermenter");
+        builder.add(BlockMaster.FISHE_PASTE_BLOCK, "Fishe Paste Block");
+        builder.add(BlockMaster.FISHE_REPAIR_TABLE, "Fishe Repair Table");
     }
 }

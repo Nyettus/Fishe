@@ -59,6 +59,6 @@ public class FisheModelProvider extends FabricModelProvider {
     }
 
     private void genBlockModels(BlockStateModelGenerator generator){
-        generator.registerSimpleCubeAll(BlockMaster.FISHE_REPAIR_TABLE);
+        generator.registerSimpleCubeAll(BlockMaster.FISHE_PASTE_BLOCK);
     }
 }

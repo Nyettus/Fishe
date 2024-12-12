@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "fishe:fishe_paste_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "fishe:fishe_paste"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "fishe:copper_fishe"
+    },
+    "f": {
+      "item": "fishe:fishe_paste_block"
+    },
+    "i": {
+      "item": "fishe:iron_fishe"
+    },
+    "l": {
+      "item": "fishe:lapis_fishe"
+    }
+  },
+  "pattern": [
+    "ifi",
+    " l ",
+    "ccc"
+  ],
+  "result": {
+    "item": "fishe:fishe_repair_table"
+  },
+  "show_notification": true
+}

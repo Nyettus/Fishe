@@ -37,7 +37,9 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
         genMiningFisheRecipe(consumer);
         genNightFisheRecipe(consumer);
         genToolRecipes(consumer);
+        genCompactingRecipe(consumer);
         genFisheFermenter(consumer);
+        genFisheRepairTable(consumer);
     }
 
     private void genMiningFisheRecipe(Consumer<RecipeJsonProvider> consumer) {
@@ -171,7 +173,7 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
     }
 
     private void genFisheFermenter(Consumer<RecipeJsonProvider> consumer){
-        
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockItems.FISHE_FERMENTER)
                 .pattern("pcp")
                 .pattern("pip")
@@ -183,6 +185,40 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ItemsFishe.COPPER_FISHE)
                 ,FabricRecipeProvider.conditionsFromItem(ItemsFishe.COPPER_FISHE))
                 .offerTo(consumer,new Identifier(getRecipeName(BlockItems.FISHE_FERMENTER)));
+    }
+    private void genFisheRepairTable(Consumer<RecipeJsonProvider> consumer){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockItems.FISHE_REPAIR_TABLE)
+                .pattern("ifi")
+                .pattern(" l ")
+                .pattern("ccc")
+                .input('i',ItemsFishe.IRON_FISHE)
+                .input('f',BlockItems.FISHE_PASTE_BLOCK)
+                .input('l',ItemsFishe.LAPIS_FISHE)
+                .input('c',ItemsFishe.COPPER_FISHE)
+                .criterion(FabricRecipeProvider.hasItem(ItemsFishe.COPPER_FISHE)
+                        ,FabricRecipeProvider.conditionsFromItem(ItemsFishe.COPPER_FISHE))
+                .offerTo(consumer,new Identifier(getRecipeName(BlockItems.FISHE_REPAIR_TABLE)));
+    }
+
+    private void genCompactingRecipe(Consumer<RecipeJsonProvider> consumer){
+        CompactingRecipe(consumer,ItemsFishe.FISHE_PASTE,BlockItems.FISHE_PASTE_BLOCK);
+    }
+
+
+
+    private void CompactingRecipe(Consumer<RecipeJsonProvider> consumer, Item smaller, Item larger){
+        ShapelessRecipeJsonBuilder compacting = ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, larger, 1);
+        for(int i = 0; i<9;i++){
+            compacting.input(smaller);
+        }
+        compacting.criterion(hasItem(smaller), conditionsFromItem(smaller))
+                .offerTo(consumer, new Identifier(Fishe.MOD_ID+"_compacting_" + getRecipeName(smaller)));
+
+
+        ShapelessRecipeJsonBuilder expanding = ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, smaller, 9);
+        expanding.input(larger);
+        expanding.criterion(hasItem(larger), conditionsFromItem(larger))
+                .offerTo(consumer, new Identifier(Fishe.MOD_ID+"_compacting_" + getRecipeName(larger)));
     }
 
 }

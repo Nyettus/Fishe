@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "fishe:block/fishe_repair_table"
+    "all": "fishe:block/fishe_paste_block"
   }
 }
