@@ -76,7 +76,7 @@ public class FisheFermenterBlockEntity extends BlockEntity implements ExtendedSc
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Fishe Fermenter");
+        return Text.literal("Fermenter");
     }
 
 

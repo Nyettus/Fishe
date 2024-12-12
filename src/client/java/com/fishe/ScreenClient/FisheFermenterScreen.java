@@ -41,7 +41,7 @@ public class FisheFermenterScreen extends HandledScreen<FisheFermenterScreenHand
 
     private void renderProgressArrow(DrawContext context, int x, int y) {
         if(handler.isCrafting()){
-            context.drawTexture(TEXTURE, x+85,y+30,176,0,8,handler.getScaledProgress());
+            context.drawTexture(TEXTURE, x+82,y+32,176,0,9,handler.getScaledProgress());
         }
     }
 

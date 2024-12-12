@@ -37,7 +37,8 @@ public class FisheRepairTableScreen extends HandledScreen<FisheRepairTableScreen
     }
 
     private void renderProgressBar(DrawContext context, int x, int y) {
-        context.drawTexture(TEXTURE,x+11,y+21,176,0,52,handler.getScaledProgress());
+        int progress=handler.getScaledProgress();
+        context.drawTexture(TEXTURE,x+11,y+72-progress,176,0,52,progress);
     }
 
     @Override

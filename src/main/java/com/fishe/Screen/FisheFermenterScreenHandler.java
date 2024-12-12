@@ -34,7 +34,7 @@ public class FisheFermenterScreenHandler extends ScreenHandler {
         this.propretyDelegate = arrayPropertyDelegate;
         this.blockEntity = (FisheFermenterBlockEntity) blockEntity;
 
-        this.addSlot(new Slot(inventory,0,80,11));
+        this.addSlot(new Slot(inventory,0,80,12));
         this.addSlot(new FisheFermenterOutputSlot(inventory,1,80,59));
 
         addPlayerInventory(playerInventory);
@@ -90,7 +90,7 @@ public class FisheFermenterScreenHandler extends ScreenHandler {
     public int getScaledProgress(){
         int progress = this.propretyDelegate.get(0);
         int maxProgress = this.propretyDelegate.get(1);
-        int progressArrowSize = 26;
+        int progressArrowSize = 23;
 
         return maxProgress != 0 && progress !=0 ? progress*progressArrowSize / maxProgress : 0;
     }
