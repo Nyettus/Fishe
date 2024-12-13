@@ -1,0 +1,61 @@
+{
+  "name": "Mining Fishe",
+  "icon": "fishe:stone_fishe",
+  "category": "fishe:fishe_category",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "Stone Fishe",
+      "text": "A basic stone fishe (legally distinct from the dangerous one)",
+      "recipe":"fishe:fishestone_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Coal Fishe",
+      "text": "Can be burnt or converted into coal",
+      "recipe":"fishe:fishecoal_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Copper Fishe",
+      "text": "Copper, a window into eternity",
+      "recipe":"fishe:fishecopper_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Iron Fishe",
+      "text": "Add to a the cooking process in case of sallow skin, unexplainable fatigue or rapid heartbeat",
+      "recipe":"fishe:fisheiron_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Red Fishe",
+      "text": "A swarm of tiny bugs that somehow gets caught at once",
+      "recipe":"fishe:fishered_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Gold Fishe",
+      "text": ":>",
+      "recipe":"fishe:fishegold_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Lapis Fishe",
+      "text": "It would make more sense if the sprite was a coelacanth",
+      "recipe":"fishe:fishelapis_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Emerald Fishe",
+      "text": "snakeman with a snakeplan (capitalism)",
+      "recipe":"fishe:fisheemerald_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Diamond Fishe",
+      "text": "diamond fishe",
+      "recipe":"fishe:fishediamond_fishe"
+    }
+  ]
+}
