@@ -1,0 +1,39 @@
+{
+  "name": "Night Fishe",
+  "icon": "fishe:spider_fishe",
+  "category": "fishe:fishe_category",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "Rot Fishe",
+      "text": "disgusting, rotten and good for paste",
+      "recipe":"fishe:fisherot_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Bone Fishe",
+      "text": "all roads lead to bone",
+      "recipe":"fishe:fishebone_fishe",
+      "recipe2":"fishe:fishebbone_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Spider Fishe",
+      "text": "string? eyes? you want them I got them",
+      "recipe":"fishe:fishespider_fishe",
+      "recipe2":"fishe:fishebspider_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Creepy Fishe",
+      "text": "Spooky, explosive",
+      "recipe":"fishe:fishecreepy_fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "Ender Fishe",
+      "text": "The most illusive fish of the night. It's a miracle it can be caught to begin with",
+      "recipe":"fishe:fisheender_fishe"
+    }
+  ]
+}
