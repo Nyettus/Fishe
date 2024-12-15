@@ -1,0 +1,17 @@
+{
+  "name": "Fishe Fermenter",
+  "icon": "fishe:fishe_fermenter",
+  "category": "fishe:machines_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Fishe Fermenter",
+      "text": "Converts fishe into fishe paste. The amount varies depending on the fishe."
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishe_fermenter"
+    }
+  ]
+}

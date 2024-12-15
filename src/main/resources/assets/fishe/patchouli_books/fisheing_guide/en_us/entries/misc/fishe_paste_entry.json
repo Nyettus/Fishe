@@ -1,0 +1,18 @@
+{
+  "name": "Fishe Paste",
+  "icon": "fishe:fishe_fermenter",
+  "category": "fishe:misc_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Fishe Paste",
+      "text": "The backbone of all fishe related content. Gained by fermenting fishe"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishe_compacting_fishe_paste",
+      "recipe2": "fishe:fishe_compacting_fishe_paste_block"
+    }
+  ]
+}

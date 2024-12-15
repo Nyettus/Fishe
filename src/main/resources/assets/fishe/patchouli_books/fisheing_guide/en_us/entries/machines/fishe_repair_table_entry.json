@@ -1,0 +1,17 @@
+{
+  "name": "Fishe Repair Table",
+  "icon": "fishe:fishe_repair_table",
+  "category": "fishe:machines_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Fishe Repair Table",
+      "text": "Load it up with fishe paste and repair up to 3 tools at a time."
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishe_repair_table"
+    }
+  ]
+}
