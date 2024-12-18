@@ -1,14 +1,8 @@
 package com.fishe.Items;
 
-import com.fishe.Fishe;
 import com.fishe.Items.materials.FisheToolMaterials;
-import com.fishe.ModFishingRodItem;
 import com.fishe.Utils.RodTiers;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 
 public class ItemsTools extends ItemMaster{
     public static void initialize(){
@@ -133,5 +127,7 @@ public class ItemsTools extends ItemMaster{
     public static final SwordItem DIAMONDFISHE_SWORD = registerTool(
             new SwordItem(FisheToolMaterials.IRONFISHE,swordAttackDamage,swordAttackSpeed,new Item.Settings()),
             "diamondfishe_sword");
+
+    public static Item FISHE_STAFF = registerGroup(new Item(new Item.Settings()),"fishe_staff");
 
 }

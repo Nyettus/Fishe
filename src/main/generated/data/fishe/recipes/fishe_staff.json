@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "c": {
+      "item": "fishe:copper_fishe"
+    },
+    "t": {
+      "item": "fishe:copper_truth"
+    }
+  },
+  "pattern": [
+    " t ",
+    " c ",
+    " c "
+  ],
+  "result": {
+    "item": "fishe:fishe_staff"
+  },
+  "show_notification": true
+}

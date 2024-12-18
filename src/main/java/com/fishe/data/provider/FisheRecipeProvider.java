@@ -4,6 +4,7 @@ import com.fishe.Blocks.BlockItems;
 import com.fishe.Fishe;
 import com.fishe.Items.ItemMaster;
 import com.fishe.Items.ItemsFishe;
+import com.fishe.Items.ItemsMisc;
 import com.fishe.Items.ItemsTools;
 import com.fishe.Items.ItemsTools.ToolType;
 import com.fishe.Items.materials.FisheToolMaterials;
@@ -40,6 +41,8 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
         genCompactingRecipe(consumer);
         genFisheFermenter(consumer);
         genFisheRepairTable(consumer);
+        genCopperTruth(consumer);
+        genFisheStaff(consumer);
     }
 
     private void genMiningFisheRecipe(Consumer<RecipeJsonProvider> consumer) {
@@ -104,62 +107,67 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
 
 
     private void genToolRecipes(Consumer<RecipeJsonProvider> consumer) {
-        for(String key : ItemMaster.MetalFishMap.keySet()){
-            Item fishe = ItemMaster.MetalFishMap.get(key);;
+        for (String key : ItemMaster.MetalFishMap.keySet()) {
+            Item fishe = ItemMaster.MetalFishMap.get(key);
+            ;
 
-            for(ToolType tool : ToolType.values()){
-                GetScaffold(tool,consumer,key,fishe);
+            for (ToolType tool : ToolType.values()) {
+                GetScaffold(tool, consumer, key, fishe);
             }
         }
     }
 
-    private void GetScaffold(ToolType num,Consumer<RecipeJsonProvider> consumer, String key, Item input){
-        switch(num){
+    private void GetScaffold(ToolType num, Consumer<RecipeJsonProvider> consumer, String key, Item input) {
+        switch (num) {
 
             case Shovel -> {
-                Item shovel = ItemMaster.ToolMap.get(key +"_shovel");
-                ShovelScaffold(consumer,shovel,input);}
+                Item shovel = ItemMaster.ToolMap.get(key + "_shovel");
+                ShovelScaffold(consumer, shovel, input);
+            }
             case Pickaxe -> {
-                Item pickaxe = ItemMaster.ToolMap.get(key +"_pickaxe");
+                Item pickaxe = ItemMaster.ToolMap.get(key + "_pickaxe");
                 PickaxeScaffold(consumer, pickaxe, input);
             }
             case Axe -> {
-                Item axe = ItemMaster.ToolMap.get(key +"_axe");
+                Item axe = ItemMaster.ToolMap.get(key + "_axe");
                 AxeScaffold(consumer, axe, input);
             }
             case Hoe -> {
-                Item hoe = ItemMaster.ToolMap.get(key +"_hoe");
+                Item hoe = ItemMaster.ToolMap.get(key + "_hoe");
                 HoeScaffold(consumer, hoe, input);
             }
             case Sword -> {
-                Item sword = ItemMaster.ToolMap.get(key +"_sword");
+                Item sword = ItemMaster.ToolMap.get(key + "_sword");
                 SwordScaffold(consumer, sword, input);
             }
         }
     }
 
 
-    private void ShovelScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input){
-        ToolScaffold(consumer,output,input,Fishe.MOD_ID," f "," s "," s ");
+    private void ShovelScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input) {
+        ToolScaffold(consumer, output, input, Fishe.MOD_ID, " f ", " s ", " s ");
     }
-    private void PickaxeScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input){
-        ToolScaffold(consumer,output,input,Fishe.MOD_ID,"fff"," s "," s ");
+
+    private void PickaxeScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input) {
+        ToolScaffold(consumer, output, input, Fishe.MOD_ID, "fff", " s ", " s ");
     }
-    private void AxeScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input){
-        ToolScaffold(consumer,output,input,Fishe.MOD_ID," ff"," sf"," s ");
-        ToolScaffold(consumer,output,input,Fishe.MOD_ID+'b',"ff ","fs "," s ");
+
+    private void AxeScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input) {
+        ToolScaffold(consumer, output, input, Fishe.MOD_ID, " ff", " sf", " s ");
+        ToolScaffold(consumer, output, input, Fishe.MOD_ID + 'b', "ff ", "fs ", " s ");
     }
-    private void HoeScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input){
-        ToolScaffold(consumer,output,input,Fishe.MOD_ID,"ff "," s "," s ");
-        ToolScaffold(consumer,output,input,Fishe.MOD_ID+'b'," ff"," s "," s ");
+
+    private void HoeScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input) {
+        ToolScaffold(consumer, output, input, Fishe.MOD_ID, "ff ", " s ", " s ");
+        ToolScaffold(consumer, output, input, Fishe.MOD_ID + 'b', " ff", " s ", " s ");
     }
-    private void SwordScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input){
-        ToolScaffold(consumer,output,input,Fishe.MOD_ID," f "," f "," s ");
+
+    private void SwordScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input) {
+        ToolScaffold(consumer, output, input, Fishe.MOD_ID, " f ", " f ", " s ");
     }
 
 
-
-    private void ToolScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input, String specialTag ,String toprow, String midrow, String lastrow) {
+    private void ToolScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input, String specialTag, String toprow, String midrow, String lastrow) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output).pattern(toprow).pattern(midrow).pattern(lastrow)
                 .input('s', Items.STICK)
                 .input('f', input)
@@ -168,57 +176,82 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.STICK)
                         , FabricRecipeProvider.conditionsFromItem(Items.STICK))
                 .offerTo(consumer, new Identifier(specialTag + getRecipeName(output)));
-        Fishe.LOGGER.info("Successfully registered "+output.getName().getString());
+        Fishe.LOGGER.info("Successfully registered " + output.getName().getString());
 
     }
 
-    private void genFisheFermenter(Consumer<RecipeJsonProvider> consumer){
+    private void genFisheFermenter(Consumer<RecipeJsonProvider> consumer) {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockItems.FISHE_FERMENTER)
                 .pattern("pcp")
                 .pattern("pip")
                 .pattern("pbp")
                 .input('p', ItemTags.PLANKS)
-                .input('c',ItemsFishe.COPPER_FISHE)
-                .input('i',ItemsFishe.IRON_FISHE)
-                .input('b',ItemsFishe.COAL_FISHE)
+                .input('c', ItemsFishe.COPPER_FISHE)
+                .input('i', ItemsFishe.IRON_FISHE)
+                .input('b', ItemsFishe.COAL_FISHE)
                 .criterion(FabricRecipeProvider.hasItem(ItemsFishe.COPPER_FISHE)
-                ,FabricRecipeProvider.conditionsFromItem(ItemsFishe.COPPER_FISHE))
-                .offerTo(consumer,new Identifier(getRecipeName(BlockItems.FISHE_FERMENTER)));
+                        , FabricRecipeProvider.conditionsFromItem(ItemsFishe.COPPER_FISHE))
+                .offerTo(consumer, new Identifier(getRecipeName(BlockItems.FISHE_FERMENTER)));
     }
-    private void genFisheRepairTable(Consumer<RecipeJsonProvider> consumer){
+
+    private void genFisheRepairTable(Consumer<RecipeJsonProvider> consumer) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockItems.FISHE_REPAIR_TABLE)
                 .pattern("ifi")
                 .pattern(" l ")
                 .pattern("ccc")
-                .input('i',ItemsFishe.IRON_FISHE)
-                .input('f',BlockItems.FISHE_PASTE_BLOCK)
-                .input('l',ItemsFishe.LAPIS_FISHE)
-                .input('c',ItemsFishe.COPPER_FISHE)
+                .input('i', ItemsFishe.IRON_FISHE)
+                .input('f', BlockItems.FISHE_PASTE_BLOCK)
+                .input('l', ItemsFishe.LAPIS_FISHE)
+                .input('c', ItemsFishe.COPPER_FISHE)
                 .criterion(FabricRecipeProvider.hasItem(ItemsFishe.COPPER_FISHE)
-                        ,FabricRecipeProvider.conditionsFromItem(ItemsFishe.COPPER_FISHE))
-                .offerTo(consumer,new Identifier(getRecipeName(BlockItems.FISHE_REPAIR_TABLE)));
+                        , FabricRecipeProvider.conditionsFromItem(ItemsFishe.COPPER_FISHE))
+                .offerTo(consumer, new Identifier(getRecipeName(BlockItems.FISHE_REPAIR_TABLE)));
     }
 
-    private void genCompactingRecipe(Consumer<RecipeJsonProvider> consumer){
-        CompactingRecipe(consumer,ItemsFishe.FISHE_PASTE,BlockItems.FISHE_PASTE_BLOCK);
+    private void genCompactingRecipe(Consumer<RecipeJsonProvider> consumer) {
+        CompactingRecipe(consumer, ItemsFishe.FISHE_PASTE, BlockItems.FISHE_PASTE_BLOCK);
     }
 
 
-
-    private void CompactingRecipe(Consumer<RecipeJsonProvider> consumer, Item smaller, Item larger){
+    private void CompactingRecipe(Consumer<RecipeJsonProvider> consumer, Item smaller, Item larger) {
         ShapelessRecipeJsonBuilder compacting = ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, larger, 1);
-        for(int i = 0; i<9;i++){
+        for (int i = 0; i < 9; i++) {
             compacting.input(smaller);
         }
         compacting.criterion(hasItem(smaller), conditionsFromItem(smaller))
-                .offerTo(consumer, new Identifier(Fishe.MOD_ID+"_compacting_" + getRecipeName(smaller)));
+                .offerTo(consumer, new Identifier(Fishe.MOD_ID + "_compacting_" + getRecipeName(smaller)));
 
 
         ShapelessRecipeJsonBuilder expanding = ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, smaller, 9);
         expanding.input(larger);
         expanding.criterion(hasItem(larger), conditionsFromItem(larger))
-                .offerTo(consumer, new Identifier(Fishe.MOD_ID+"_compacting_" + getRecipeName(larger)));
+                .offerTo(consumer, new Identifier(Fishe.MOD_ID + "_compacting_" + getRecipeName(larger)));
+    }
+
+    private void genCopperTruth(Consumer<RecipeJsonProvider> consumer) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemsMisc.COPPER_TRUTH)
+                .pattern("ccc")
+                .pattern("ded")
+                .pattern("ccc")
+                .input('c', ItemsFishe.COPPER_FISHE)
+                .input('d', ItemsFishe.DIAMOND_FISHE)
+                .input('e', Items.ENDER_PEARL)
+                .criterion(FabricRecipeProvider.hasItem(ItemsFishe.DIAMOND_FISHE)
+                        , FabricRecipeProvider.conditionsFromItem(ItemsFishe.DIAMOND_FISHE))
+                .offerTo(consumer, new Identifier(getRecipeName(ItemsMisc.COPPER_TRUTH)));
+    }
+
+    private void genFisheStaff(Consumer<RecipeJsonProvider> consumer) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ItemsTools.FISHE_STAFF)
+                .pattern(" t ")
+                .pattern(" c ")
+                .pattern(" c ")
+                .input('t', ItemsMisc.COPPER_TRUTH)
+                .input('c', ItemsFishe.COPPER_FISHE)
+                .criterion(FabricRecipeProvider.hasItem(ItemsMisc.COPPER_TRUTH)
+                        , FabricRecipeProvider.conditionsFromItem(ItemsMisc.COPPER_TRUTH))
+                .offerTo(consumer, new Identifier(getRecipeName(ItemsTools.FISHE_STAFF)));
     }
 
 }

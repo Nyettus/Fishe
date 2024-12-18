@@ -1,0 +1,12 @@
+{
+  "name": "Call of the Night",
+  "icon": "minecraft:enchanted_book",
+  "category": "fishe:misc_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Call of the Night",
+      "text": "Enchantment for fishing rods.$(br2)Increases chance of getting night fishe during the night.$(br)Gives rare chance to catch night fishe during the day.$(br)Does not work on the vanilla fishing rod"
+    }
+  ]
+}

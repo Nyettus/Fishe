@@ -1,6 +1,5 @@
 package com.fishe.enchantments;
 
-import com.fishe.ModFishingRodItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;

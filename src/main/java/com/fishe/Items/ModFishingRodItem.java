@@ -1,9 +1,8 @@
-package com.fishe;
+package com.fishe.Items;
 
 import com.fishe.Utils.RodTiers.RodTier;
 import com.fishe.enchantments.EnchantmentMaster;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FishingRodItem;
 import net.minecraft.item.ItemStack;

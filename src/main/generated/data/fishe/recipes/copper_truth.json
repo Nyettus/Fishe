@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "fishe:copper_fishe"
+    },
+    "d": {
+      "item": "fishe:diamond_fishe"
+    },
+    "e": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "pattern": [
+    "ccc",
+    "ded",
+    "ccc"
+  ],
+  "result": {
+    "item": "fishe:copper_truth"
+  },
+  "show_notification": true
+}

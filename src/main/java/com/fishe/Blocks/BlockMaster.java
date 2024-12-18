@@ -1,6 +1,8 @@
 package com.fishe.Blocks;
 
 import com.fishe.Blocks.Entity.ModBlockEntities;
+import com.fishe.Blocks.fisheomancy.FisheomancyAlter;
+import com.fishe.Blocks.fisheomancy.FisheomancyExpander;
 import com.fishe.Fishe;
 import com.fishe.Items.ItemMaster;
 import com.fishe.Screen.ModScreenHandler;
@@ -41,6 +43,18 @@ public class BlockMaster {
     public static final Block FISHE_PASTE_BLOCK = register(
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT)),
             "fishe_paste_block",
+            true
+    );
+
+    public static final FisheomancyAlter FISHEOMANCY_ALTER = register(
+            new FisheomancyAlter(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
+            "fisheomancy_alter",
+            true
+    );
+
+    public static final FisheomancyExpander FISHEOMANCY_EXTENDER = register(
+            new FisheomancyExpander(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
+            "fisheomancy_extender",
             true
     );
 

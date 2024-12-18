@@ -1,6 +1,7 @@
 package com.fishe;
 
 import com.fishe.Items.ItemsTools;
+import com.fishe.Items.ModFishingRodItem;
 import com.fishe.Screen.ModScreenHandler;
 import com.fishe.ScreenClient.FisheFermenterScreen;
 import com.fishe.ScreenClient.FisheRepairTableScreen;

@@ -1,6 +1,6 @@
 package com.fishe.mixin.client;
 
-import com.fishe.ModFishingRodItem;
+import com.fishe.Items.ModFishingRodItem;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.FishingBobberEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;

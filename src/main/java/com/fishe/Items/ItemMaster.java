@@ -55,6 +55,7 @@ public class ItemMaster
         Registry.register(Registries.ITEM_GROUP, FISHE_ITEMS_KEYS, FISHE_ITEM_GROUP);
         ItemsFishe.initialize();
         ItemsTools.initialize();
+        ItemsMisc.initialize();
 
 
     }

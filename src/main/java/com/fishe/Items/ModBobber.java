@@ -1,8 +1,7 @@
-package com.fishe;
+package com.fishe.Items;
 
 import com.fishe.Utils.ModLootPool;
 import com.fishe.Utils.RodTiers.RodTier;
-import com.fishe.enchantments.NightEnchantment;
 import com.fishe.mixin.AccessBobberMethods;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.EntityStatuses;
@@ -17,7 +16,6 @@ import net.minecraft.loot.context.LootContextParameterSet;
 import net.minecraft.loot.context.LootContextParameters;
 import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.server.command.ReturnCommand;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.stat.Stats;
@@ -27,10 +25,9 @@ import net.minecraft.world.World;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class ModBobber extends FishingBobberEntity {
-    public ModBobber(PlayerEntity thrower, World world, int luckOfTheSeaLevel, int lureLevel, RodTier tier,int nightEnchantTier) {
+    public ModBobber(PlayerEntity thrower, World world, int luckOfTheSeaLevel, int lureLevel, RodTier tier, int nightEnchantTier) {
         super(thrower, world, luckOfTheSeaLevel, lureLevel);
         rodTier = tier;
         this.nightEnchantTier = nightEnchantTier;
@@ -90,11 +87,16 @@ public class ModBobber extends FishingBobberEntity {
     private Identifier whichLootTable() {
         Identifier returnIden = LootTables.FISHING_GAMEPLAY;
 
-        if(this.getWorld().isNight()){
-            float randomValue = this.random.nextFloat();
-            float threshold = 0.25f + (0.25f*nightEnchantTier);
-            if(randomValue<threshold) return ModLootPool.NIGHT_POOL;
+        //Call of the night enchantment also gives a chance for the night pool to be active at day
+        //this is for servers where people instantly sleep at night.
+        float randomValue = this.random.nextFloat();
+        float threshold = 0;
+        if (this.getWorld().isNight()) {
+            threshold = 0.25f + (0.25f * nightEnchantTier);
+        } else {
+            threshold = 0.05f * nightEnchantTier;
         }
+        if (randomValue < threshold) return ModLootPool.NIGHT_POOL;
 
 
         switch (rodTier) {
