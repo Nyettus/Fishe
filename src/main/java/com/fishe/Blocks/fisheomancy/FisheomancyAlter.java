@@ -1,7 +1,6 @@
 package com.fishe.Blocks.fisheomancy;
 
 import com.fishe.Blocks.Entity.FisheomancyAlterBlockEntity;
-import com.fishe.Blocks.Entity.FisheomancyExtenderBlockEntity;
 import com.fishe.Fishe;
 import com.fishe.Items.ItemsTools;
 import net.minecraft.block.BlockEntityProvider;
@@ -16,7 +15,6 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import vazkii.patchouli.client.book.text.Word;
 
 public class FisheomancyAlter extends BlockWithEntity implements BlockEntityProvider {
     public FisheomancyAlter(Settings settings) {
@@ -39,6 +37,8 @@ public class FisheomancyAlter extends BlockWithEntity implements BlockEntityProv
 
             if (!activateWithWand(state, world, pos, player)) {
                 //This is where the screen handling stuff will go
+                var entity = world.getBlockEntity(pos);
+                ((FisheomancyAlterBlockEntity) entity).ValidateMultiblock();
             }
 
 
@@ -51,7 +51,7 @@ public class FisheomancyAlter extends BlockWithEntity implements BlockEntityProv
         var entity = world.getBlockEntity(pos);
         Fishe.LOGGER.info(""+(entity));
         if (entity instanceof FisheomancyAlterBlockEntity) {
-            ((FisheomancyAlterBlockEntity) entity).detectExtenders(world, pos);
+            ((FisheomancyAlterBlockEntity) entity).detectExtenders(world, pos,state);
             return true;
         }
         return false;
