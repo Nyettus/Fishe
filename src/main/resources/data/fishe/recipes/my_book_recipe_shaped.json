@@ -1,0 +1,17 @@
+{
+  "type": "patchouli:shaped_book_recipe",
+  "pattern": [
+    " # ",
+    "#b#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "fishe:copper_fishe"
+    },
+    "b": {
+      "item": "minecraft:book"
+    }
+  },
+  "book": "fishe:fishenomicon"
+}
