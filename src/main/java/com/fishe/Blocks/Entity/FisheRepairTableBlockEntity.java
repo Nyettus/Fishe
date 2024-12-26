@@ -34,7 +34,7 @@ public class FisheRepairTableBlockEntity extends BlockEntity implements Extended
     private static final int[] TOOL_SLOTS = {1,2,3};
 
     protected final PropertyDelegate propertyDelegate;
-    private int slop =0;
+    private int slop = 0;
     private int maxSlop = 128;
 
     public FisheRepairTableBlockEntity(BlockPos pos, BlockState state) {

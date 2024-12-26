@@ -1,6 +1,6 @@
 package com.fishe.Blocks.Entity;
 
-import com.fishe.Fishe;
+import com.fishe.Screen.FisheomancyExtenderScreenHandler;
 import com.fishe.Utils.ImplementedInventory;
 import com.fishe.Utils.UsefulBox;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
@@ -19,7 +19,7 @@ import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
 
 public class FisheomancyExtenderBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(7, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
     public BlockPos controllerPos = null;
     public FisheomancyAlterBlockEntity.ExtenderPositionsEnum style;
@@ -44,22 +44,22 @@ public class FisheomancyExtenderBlockEntity extends BlockEntity implements Exten
 
     @Override
     public DefaultedList<ItemStack> getItems() {
-        return null;
+        return inventory;
     }
 
     @Override
     public void writeScreenOpeningData(ServerPlayerEntity serverPlayerEntity, PacketByteBuf packetByteBuf) {
-
+        packetByteBuf.writeBlockPos(this.pos);
     }
 
     @Override
     public Text getDisplayName() {
-        return null;
+        return Text.literal("Fisheomancy Extender");
     }
 
     @Override
     public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return null;
+        return new FisheomancyExtenderScreenHandler(syncId, playerInventory,this);
     }
 
 

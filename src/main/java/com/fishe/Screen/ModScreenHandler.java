@@ -13,10 +13,20 @@ public class ModScreenHandler {
                     new ExtendedScreenHandlerType<>(FisheFermenterScreenHandler::new));
 
     public static final ScreenHandlerType<FisheRepairTableScreenHandler> FISHE_REPAIR_TABLE_SCREEN_HANDLER_SCREEN_HANDLER =
-            Registry.register(Registries.SCREEN_HANDLER,new Identifier(Fishe.MOD_ID,"fishe_repair_table_ui"),
+            Registry.register(Registries.SCREEN_HANDLER, new Identifier(Fishe.MOD_ID, "fishe_repair_table_ui"),
                     new ExtendedScreenHandlerType<>(FisheRepairTableScreenHandler::new));
 
-    public static void Initialize(){
+    public static final ScreenHandlerType<FisheomancyAlterScreenHandler> FISHEOMANCY_ALTER_SCREEN_HANDLER_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, new Identifier(Fishe.MOD_ID, "fisheomancy_alter_ui"),
+                    new ExtendedScreenHandlerType<>(FisheomancyAlterScreenHandler::new));
+
+    public static final ScreenHandlerType<FisheomancyExtenderScreenHandler> FISHEOMANCY_EXPANDER_SCREEN_HANDLER_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, new Identifier(Fishe.MOD_ID, "fisheomancy_expander_ui"),
+                    new ExtendedScreenHandlerType<>(FisheomancyExtenderScreenHandler::new));
+
+
+
+    public static void Initialize() {
 
     }
 

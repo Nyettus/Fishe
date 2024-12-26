@@ -1,8 +1,8 @@
 package com.fishe.Blocks;
 
 import com.fishe.Blocks.Entity.ModBlockEntities;
-import com.fishe.Blocks.fisheomancy.FisheomancyAlter;
-import com.fishe.Blocks.fisheomancy.FisheomancyExpander;
+import com.fishe.Blocks.fisheomancy.FisheomancyAlterBlock;
+import com.fishe.Blocks.fisheomancy.FisheomancyExtenderBlock;
 import com.fishe.Fishe;
 import com.fishe.Items.ItemMaster;
 import com.fishe.Screen.ModScreenHandler;
@@ -46,14 +46,14 @@ public class BlockMaster {
             true
     );
 
-    public static final FisheomancyAlter FISHEOMANCY_ALTER = register(
-            new FisheomancyAlter(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
+    public static final FisheomancyAlterBlock FISHEOMANCY_ALTER = register(
+            new FisheomancyAlterBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
             "fisheomancy_alter",
             true
     );
 
-    public static final FisheomancyExpander FISHEOMANCY_EXTENDER = register(
-            new FisheomancyExpander(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
+    public static final FisheomancyExtenderBlock FISHEOMANCY_EXTENDER = register(
+            new FisheomancyExtenderBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
             "fisheomancy_extender",
             true
     );

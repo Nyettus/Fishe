@@ -10,6 +10,7 @@ import com.fishe.Utils.FisheModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.ItemTagProvider;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
@@ -54,6 +55,9 @@ public class FisheModTagProvider extends ItemTagProvider {
                 .add(ItemsTools.IRON_ROD)
                 .add(ItemsTools.GOLD_ROD)
                 .add(ItemsTools.DIAMOND_ROD);
+
+        getOrCreateTagBuilder(FisheModTags.FISHEOMANCY_CATALYST)
+                .add(Items.BOOK);
 
         assignRepairableTag();
 

@@ -1,16 +1,22 @@
 package com.fishe.Blocks.Entity;
 
+import com.fishe.Blocks.BlockItems;
 import com.fishe.Fishe;
+import com.fishe.Items.ItemsFishe;
+import com.fishe.Screen.FisheomancyAlterScreenHandler;
 import com.fishe.Utils.ImplementedInventory;
 import com.fishe.Utils.UsefulBox;
+import com.google.common.base.FinalizableSoftReference;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
+import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
@@ -22,16 +28,25 @@ import org.joml.Vector2i;
 
 
 public class FisheomancyAlterBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(7, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(8, ItemStack.EMPTY);
 
-    private boolean attemptCraft = false;
+    private static final int SLOP_SLOT = 0;
+    private static final int CATALYST_SLOT = 1;
+    private static final int[] BASIC_SLOT = {2, 3, 4, 5, 6};
+
+    protected final PropertyDelegate propertyDelegate;
+
+    private int slopAmount;
+    private int slopMax = 512;
+    private int progress;
+    private int maxProgress = 200;
 
     /**
      * Give the position of a possible extender relative to an origin
      * Vector2i x = x and y = z
      * as world Y positions are irrelevant
      */
-    class ExtenderPositions {
+    static class ExtenderPositions {
         public Vector2i forwardPos;
         public Vector2i rightPos;
         public Vector2i leftPos;
@@ -75,11 +90,39 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
 
     public FisheomancyAlterBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.FISHEOMANCY_ALTER_BLOCK_ENTITY_BLOCK_ENTITY, pos, state);
+        this.propertyDelegate = new PropertyDelegate() {
+            @Override
+            public int get(int index) {
+                return switch (index) {
+                    case 0 -> FisheomancyAlterBlockEntity.this.slopAmount;
+                    case 1 -> FisheomancyAlterBlockEntity.this.slopMax;
+                    case 2 -> FisheomancyAlterBlockEntity.this.progress;
+                    case 3 -> FisheomancyAlterBlockEntity.this.maxProgress;
+                    default -> 0;
+                };
+            }
+
+            @Override
+            public void set(int index, int value) {
+                switch (index){
+                    case 0 -> FisheomancyAlterBlockEntity.this.slopAmount = value;
+                    case 1 -> FisheomancyAlterBlockEntity.this.progress = value;
+                }
+            }
+
+            @Override
+            public int size() {
+                return 4;
+            }
+        };
     }
 
     @Override
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
+
+        Inventories.writeNbt(nbt, inventory);
+        nbt.putInt("fisheomancy_alter.slop_amount", slopAmount);
 
         nbt.putLong("fisheomancy_alter.forward_extender", UsefulBox.BlockPosToLong(forwardExtender));
         nbt.putLong("fisheomancy_alter.right_extender", UsefulBox.BlockPosToLong(rightExtender));
@@ -91,6 +134,9 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
     public void readNbt(NbtCompound nbt) {
         super.readNbt(nbt);
 
+        Inventories.writeNbt(nbt, inventory);
+        slopAmount = nbt.getInt("fisheomancy_alter.slop_amount");
+
         forwardExtender = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_alter.forward_extender"));
         rightExtender = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_alter.right_extender"));
         leftExtender = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_alter.left_extender"));
@@ -98,26 +144,27 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
 
     @Override
     public DefaultedList<ItemStack> getItems() {
-        return null;
+        return inventory;
     }
 
     @Override
     public void writeScreenOpeningData(ServerPlayerEntity serverPlayerEntity, PacketByteBuf packetByteBuf) {
-
+        packetByteBuf.writeBlockPos(this.pos);
     }
 
     @Override
     public Text getDisplayName() {
-        return null;
+        return Text.literal("Alter");
     }
 
     @Override
     public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return null;
+        return new FisheomancyAlterScreenHandler(syncId,playerInventory,this,this.propertyDelegate);
     }
 
+    //<editor-fold desc="Multiblock Section">
 
-    public void detectExtenders(World world, BlockPos pos,BlockState state) {
+    public void detectExtenders(World world, BlockPos pos, BlockState state) {
         int configurationsFound = 0;
         Fishe.LOGGER.info("Triggered extenders check");
         for (ExtenderPositions positions : extenderDirections) {
@@ -125,13 +172,13 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
             if (configurationsFound > 1) {
                 anullExtenders();
                 Fishe.LOGGER.info("Too many possible configs");
-                markDirty(world,pos,state);
+                markDirty(world, pos, state);
                 return;
             }
         }
         if (configurationsFound == 1) Fishe.LOGGER.info("Successful Config");
         else Fishe.LOGGER.info("No Configs");
-        markDirty(world,pos,state);
+        markDirty(world, pos, state);
     }
 
     /**
@@ -183,7 +230,8 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
         if (leftExtender != null) amount++;
         Fishe.LOGGER.info("Amount of multiblock is " + amount);
     }
-    public void RemoveExtender(ExtenderPositionsEnum positionEnum){
+
+    public void RemoveExtender(ExtenderPositionsEnum positionEnum) {
         switch (positionEnum) {
             case forward -> forwardExtender = null;
             case right -> rightExtender = null;
@@ -191,5 +239,35 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
         }
         this.markDirty();
     }
+
+//</editor-fold>
+
+    //<editor-fold desc="Tick Section">
+    public void tick(World world, BlockPos pos, BlockState state){
+        if(world.isClient) return;
+        tickSlopSection();
+        tickCraftSection();
+
+    }
+
+    private void tickSlopSection(){
+        if(slopAmount >= slopMax) return;
+        if(this.getStack(SLOP_SLOT).getItem() == ItemsFishe.FISHE_PASTE){
+            slopAmount++;
+            this.removeStack(SLOP_SLOT,1);
+        }
+        else if(this.getStack(SLOP_SLOT).getItem() == BlockItems.FISHE_PASTE_BLOCK){
+            slopAmount+=9;
+            this.removeStack(SLOP_SLOT,1);
+        }
+    }
+
+    private void tickCraftSection(){
+
+    }
+
+
+
+    //</editor-fold>
 
 }

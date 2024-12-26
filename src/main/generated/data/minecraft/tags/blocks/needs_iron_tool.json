@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "fishe:fishe_repair_table",
     "fishe:fisheomancy_alter",
     "fishe:fisheomancy_extender"
   ]

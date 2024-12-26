@@ -20,12 +20,18 @@ public class FisheModBlockTagProvider extends BlockTagProvider {
     }
 
 
-    private void assignMineableTag(){
+    private void assignMineableTag() {
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(BlockMaster.FISHE_REPAIR_TABLE);
 
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(BlockMaster.FISHEOMANCY_ALTER)
+                .add(BlockMaster.FISHEOMANCY_EXTENDER);
+
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(BlockMaster.FISHE_REPAIR_TABLE);
+                .add(BlockMaster.FISHE_REPAIR_TABLE)
+                .add(BlockMaster.FISHEOMANCY_ALTER)
+                .add(BlockMaster.FISHEOMANCY_EXTENDER);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(BlockMaster.FISHE_FERMENTER);

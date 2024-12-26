@@ -23,5 +23,7 @@ public class FisheModBlockLootTableProvider extends FabricBlockLootTableProvider
         addDrop(BlockMaster.FISHE_FERMENTER,drops(BlockItems.FISHE_FERMENTER));
         addDrop(BlockMaster.FISHE_REPAIR_TABLE,drops(BlockItems.FISHE_REPAIR_TABLE));
         addDrop(BlockMaster.FISHE_PASTE_BLOCK,drops(BlockItems.FISHE_PASTE_BLOCK));
+        addDrop(BlockMaster.FISHEOMANCY_ALTER,drops(BlockItems.FISHEOMANCY_ALTER));
+        addDrop(BlockMaster.FISHEOMANCY_EXTENDER,drops(BlockItems.FISHEOMANCY_EXTENDER));
     }
 }
