@@ -4,15 +4,16 @@ import com.fishe.Blocks.BlockItems;
 import com.fishe.Fishe;
 import com.fishe.Items.ItemsFishe;
 import com.fishe.Screen.FisheomancyAlterScreenHandler;
+import com.fishe.Utils.FisheModTags;
 import com.fishe.Utils.ImplementedInventory;
 import com.fishe.Utils.UsefulBox;
-import com.google.common.base.FinalizableSoftReference;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
@@ -22,12 +23,13 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector2i;
 
 
-public class FisheomancyAlterBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
+public class FisheomancyAlterBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory, SidedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(8, ItemStack.EMPTY);
 
     private static final int SLOP_SLOT = 0;
@@ -40,6 +42,32 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
     private int slopMax = 512;
     private int progress;
     private int maxProgress = 200;
+
+    @Override
+    public int[] getAvailableSlots(Direction side) {
+        return new int[]{0, 1, 2, 3, 4, 5, 6, 7};
+    }
+
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction dir) {
+        boolean canInsert = false;
+        if (dir == Direction.UP) {
+            canInsert = (slot == CATALYST_SLOT && stack.isIn(FisheModTags.FISHEOMANCY_CATALYST) && inventory.get(slot).isEmpty());
+        }
+        else if(stack.isOf(ItemsFishe.FISHE_PASTE)||stack.isOf(BlockItems.FISHE_PASTE_BLOCK)){
+            canInsert = slot==SLOP_SLOT;
+        }
+        else{
+            canInsert = inventory.get(slot).isEmpty() && slot!=CATALYST_SLOT;
+        }
+
+        return canInsert;
+    }
+
+    @Override
+    public boolean canExtract(int slot, ItemStack stack, Direction dir) {
+        return slot==CATALYST_SLOT && (!stack.isIn(FisheModTags.FISHEOMANCY_CATALYST));
+    }
 
     /**
      * Give the position of a possible extender relative to an origin
@@ -104,7 +132,7 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
 
             @Override
             public void set(int index, int value) {
-                switch (index){
+                switch (index) {
                     case 0 -> FisheomancyAlterBlockEntity.this.slopAmount = value;
                     case 1 -> FisheomancyAlterBlockEntity.this.progress = value;
                 }
@@ -159,25 +187,22 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
 
     @Override
     public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new FisheomancyAlterScreenHandler(syncId,playerInventory,this,this.propertyDelegate);
+        return new FisheomancyAlterScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
     }
 
     //<editor-fold desc="Multiblock Section">
 
     public void detectExtenders(World world, BlockPos pos, BlockState state) {
         int configurationsFound = 0;
-        Fishe.LOGGER.info("Triggered extenders check");
         for (ExtenderPositions positions : extenderDirections) {
             configurationsFound += detectExtenderAtPos(positions, world, pos);
             if (configurationsFound > 1) {
                 anullExtenders();
-                Fishe.LOGGER.info("Too many possible configs");
                 markDirty(world, pos, state);
                 return;
             }
         }
-        if (configurationsFound == 1) Fishe.LOGGER.info("Successful Config");
-        else Fishe.LOGGER.info("No Configs");
+        AttemptCraft(world);
         markDirty(world, pos, state);
     }
 
@@ -243,29 +268,51 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
 //</editor-fold>
 
     //<editor-fold desc="Tick Section">
-    public void tick(World world, BlockPos pos, BlockState state){
-        if(world.isClient) return;
+    public void tick(World world, BlockPos pos, BlockState state) {
+        if (world.isClient) return;
         tickSlopSection();
-        tickCraftSection();
 
     }
 
-    private void tickSlopSection(){
-        if(slopAmount >= slopMax) return;
-        if(this.getStack(SLOP_SLOT).getItem() == ItemsFishe.FISHE_PASTE){
+    private void tickSlopSection() {
+        if (slopAmount >= slopMax) return;
+        if (this.getStack(SLOP_SLOT).getItem() == ItemsFishe.FISHE_PASTE) {
             slopAmount++;
-            this.removeStack(SLOP_SLOT,1);
-        }
-        else if(this.getStack(SLOP_SLOT).getItem() == BlockItems.FISHE_PASTE_BLOCK){
-            slopAmount+=9;
-            this.removeStack(SLOP_SLOT,1);
+            this.removeStack(SLOP_SLOT, 1);
+        } else if (this.getStack(SLOP_SLOT).getItem() == BlockItems.FISHE_PASTE_BLOCK) {
+            slopAmount += 9;
+            this.removeStack(SLOP_SLOT, 1);
         }
     }
 
-    private void tickCraftSection(){
 
+    private void AttemptCraft(World world) {
+        var allItems = concatInventories(world);
+        for(var element : allItems){
+            Fishe.LOGGER.info(""+element.getName());
+        }
     }
 
+    private DefaultedList<ItemStack> concatInventories(World world){
+        DefaultedList<ItemStack> rawList = inventory;
+        if(forwardExtender!=null){
+           var holding = ((FisheomancyExtenderBlockEntity)world.getBlockEntity(forwardExtender)).inventory;
+            rawList =UsefulBox.ConcatDefaultedList(rawList,holding,ItemStack.EMPTY);
+        }
+        if(rightExtender!=null){
+            var holding = ((FisheomancyExtenderBlockEntity)world.getBlockEntity(rightExtender)).inventory;
+            rawList =UsefulBox.ConcatDefaultedList(rawList,holding,ItemStack.EMPTY);
+        }
+        if(leftExtender!=null){
+            var holding = ((FisheomancyExtenderBlockEntity)world.getBlockEntity(leftExtender)).inventory;
+            rawList =UsefulBox.ConcatDefaultedList(rawList,holding,ItemStack.EMPTY);
+        }
+        if(rawList.get(0)!=ItemStack.EMPTY) rawList.set(0,ItemStack.EMPTY);
+
+        return UsefulBox.ShrinkDefaultedList(rawList,ItemStack.EMPTY);
+
+
+    }
 
 
     //</editor-fold>
