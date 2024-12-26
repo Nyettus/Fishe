@@ -8,6 +8,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
@@ -35,6 +36,7 @@ public class FisheomancyExtenderBlockEntity extends BlockEntity implements Exten
         super.writeNbt(nbt);
         if(style!=null) nbt.putInt("fisheomancy_extender.style",style.ordinal());
         nbt.putLong("fisheomancy_extender.controller_pos", UsefulBox.BlockPosToLong(controllerPos));
+        Inventories.writeNbt(nbt,inventory);
     }
 
     @Override
@@ -42,6 +44,7 @@ public class FisheomancyExtenderBlockEntity extends BlockEntity implements Exten
         super.readNbt(nbt);
         style =  FisheomancyAlterBlockEntity.ExtenderPositionsEnum.values()[nbt.getInt("fisheomancy_extender.style")];
         controllerPos = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_extender.controller_pos"));
+        Inventories.readNbt(nbt,inventory);
     }
 
     @Override

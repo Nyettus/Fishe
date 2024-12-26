@@ -7,13 +7,16 @@ import com.fishe.Screen.FisheomancyAlterScreenHandler;
 import com.fishe.Utils.FisheModTags;
 import com.fishe.Utils.ImplementedInventory;
 import com.fishe.Utils.UsefulBox;
+import com.fishe.recipe.FisheomancyRecipe;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SidedInventory;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
@@ -27,6 +30,8 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector2i;
+
+import java.util.Optional;
 
 
 public class FisheomancyAlterBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory, SidedInventory {
@@ -162,7 +167,7 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
     public void readNbt(NbtCompound nbt) {
         super.readNbt(nbt);
 
-        Inventories.writeNbt(nbt, inventory);
+        Inventories.readNbt(nbt, inventory);
         slopAmount = nbt.getInt("fisheomancy_alter.slop_amount");
 
         forwardExtender = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_alter.forward_extender"));
@@ -199,7 +204,6 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
             if (configurationsFound > 1) {
                 anullExtenders();
                 markDirty(world, pos, state);
-                return;
             }
         }
         AttemptCraft(world);
@@ -288,12 +292,22 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
 
     private void AttemptCraft(World world) {
         var allItems = concatInventories(world);
-        for(var element : allItems){
-            Fishe.LOGGER.info(""+element.getName());
-        }
+
+        Optional<FisheomancyRecipe> match = world.getRecipeManager().getFirstMatch(FisheomancyRecipe.Type.INSTANCE,allItems,world);
+        Fishe.LOGGER.info(""+match.isPresent());
+        if(!match.isPresent()) return;
+        CraftItem(match.get().getOutput(null));
     }
 
-    private DefaultedList<ItemStack> concatInventories(World world){
+    private void CraftItem(ItemStack output){
+        //Purge all items in crafter
+        Fishe.LOGGER.info(""+output);
+    }
+
+    private SimpleInventory concatInventories(World world){
+        //No catalyst no recipe
+        if(inventory.get(1)==ItemStack.EMPTY) return new SimpleInventory(0);
+
         DefaultedList<ItemStack> rawList = inventory;
         if(forwardExtender!=null){
            var holding = ((FisheomancyExtenderBlockEntity)world.getBlockEntity(forwardExtender)).inventory;
@@ -308,8 +322,16 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
             rawList =UsefulBox.ConcatDefaultedList(rawList,holding,ItemStack.EMPTY);
         }
         if(rawList.get(0)!=ItemStack.EMPTY) rawList.set(0,ItemStack.EMPTY);
+        rawList.set(1,ItemStack.EMPTY);
+        var finalList = UsefulBox.ShrinkDefaultedList(rawList,ItemStack.EMPTY);
+        SimpleInventory returnInv = new SimpleInventory(finalList.size());
+        Fishe.LOGGER.info(""+finalList);
+        for(int i = 0;i<finalList.size();i++){
+            returnInv.setStack(i,finalList.get(i));
+            Fishe.LOGGER.info(""+finalList.get(i));
+        }
 
-        return UsefulBox.ShrinkDefaultedList(rawList,ItemStack.EMPTY);
+        return returnInv;
 
 
     }

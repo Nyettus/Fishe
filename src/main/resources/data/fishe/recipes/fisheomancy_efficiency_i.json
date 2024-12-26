@@ -1,0 +1,13 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "catalyst": "minecraft:book",
+  "slop_amount": 64,
+  "output": "fishe:copper_fishe"
+
+
+}
