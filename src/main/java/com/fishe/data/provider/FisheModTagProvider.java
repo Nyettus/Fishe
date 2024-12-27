@@ -53,7 +53,8 @@ public class FisheModTagProvider extends ItemTagProvider {
 
         getOrCreateTagBuilder(FisheModTags.FISHEOMANCY_CATALYST)
                 .add(Items.BOOK)
-                .add(ItemsMisc.REINFORCED_COPPER);
+                .add(ItemsMisc.REINFORCED_COPPER)
+                .add(ItemsFishe.STONE_FISHE);
 
         assignRepairableTag();
 

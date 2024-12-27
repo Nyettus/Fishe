@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "d": {
+      "item": "fishe:diamond_fishe"
+    },
+    "g": {
+      "item": "fishe:gold_fishe"
+    },
+    "s": {
+      "item": "minecraft:stone"
+    },
+    "t": {
+      "item": "fishe:reinforced_copper"
+    }
+  },
+  "pattern": [
+    "ggg",
+    "dtd",
+    "sss"
+  ],
+  "result": {
+    "item": "minecraft:air"
+  },
+  "show_notification": true
+}

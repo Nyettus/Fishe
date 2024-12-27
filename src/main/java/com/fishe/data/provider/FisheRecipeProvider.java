@@ -33,8 +33,9 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
         genCompactingRecipe(consumer);
         genFisheFermenter(consumer);
         genFisheRepairTable(consumer);
-        genCopperTruth(consumer);
+        genReinforcedCopper(consumer);
         genFisheStaff(consumer);
+        genFisheomancyAlter(consumer);
     }
 
     private void genMiningFisheRecipe(Consumer<RecipeJsonProvider> consumer) {
@@ -221,7 +222,7 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 .offerTo(consumer, new Identifier(Fishe.MOD_ID + "_compacting_" + getRecipeName(larger)));
     }
 
-    private void genCopperTruth(Consumer<RecipeJsonProvider> consumer) {
+    private void genReinforcedCopper(Consumer<RecipeJsonProvider> consumer) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemsMisc.REINFORCED_COPPER)
                 .pattern("ccc")
                 .pattern("ded")
@@ -244,6 +245,20 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ItemsMisc.REINFORCED_COPPER)
                         , FabricRecipeProvider.conditionsFromItem(ItemsMisc.REINFORCED_COPPER))
                 .offerTo(consumer, new Identifier(getRecipeName(ItemsTools.FISHE_STAFF)));
+    }
+
+    private void genFisheomancyAlter(Consumer<RecipeJsonProvider> consumer) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockItems.FISHEOMANCY_ALTAR)
+                .pattern("ggg")
+                .pattern("dtd")
+                .pattern("sss")
+                .input('g', ItemsFishe.GOLD_FISHE)
+                .input('t', ItemsMisc.REINFORCED_COPPER)
+                .input('d',ItemsFishe.DIAMOND_FISHE)
+                .input('s',Items.STONE)
+                .criterion(FabricRecipeProvider.hasItem(ItemsMisc.REINFORCED_COPPER)
+                        , FabricRecipeProvider.conditionsFromItem(ItemsMisc.REINFORCED_COPPER))
+                .offerTo(consumer, new Identifier(getRecipeName(BlockItems.FISHEOMANCY_ALTAR)));
     }
 
 }

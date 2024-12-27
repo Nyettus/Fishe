@@ -1,0 +1,32 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "catalyst": {
+    "item": "fishe:stone_fishe"
+  },
+  "slop_amount": 32,
+  "enchantment": [
+  ],
+  "output": {
+    "item": "minecraft:obsidian"
+  }
+}
