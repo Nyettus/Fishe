@@ -3,10 +3,7 @@ package com.fishe.Blocks.fisheomancy;
 import com.fishe.Blocks.Entity.FisheomancyAltarBlockEntity;
 import com.fishe.Blocks.Entity.ModBlockEntities;
 import com.fishe.Items.ItemsTools;
-import net.minecraft.block.BlockEntityProvider;
-import net.minecraft.block.BlockRenderType;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.BlockWithEntity;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
@@ -61,6 +58,17 @@ public class FisheomancyAltarBlock extends BlockWithEntity implements BlockEntit
 
         }
         return ActionResult.SUCCESS;
+    }
+
+    @Override
+    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
+        if(world.isClient()) return;
+        if(world.isReceivingRedstonePower(pos)){
+            var entity = world.getBlockEntity(pos);
+            if(entity instanceof FisheomancyAltarBlockEntity){
+                ((FisheomancyAltarBlockEntity)entity).AttemptCraft(world);
+            }
+        }
     }
 
     @Override

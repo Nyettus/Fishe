@@ -290,7 +290,7 @@ public class FisheomancyAltarBlockEntity extends BlockEntity implements Extended
     }
 
 
-    private void AttemptCraft(World world) {
+    public void AttemptCraft(World world) {
         var allItems = concatInventories(world);
 
         Optional<FisheomancyRecipe> match = world.getRecipeManager().getFirstMatch(FisheomancyRecipe.Type.INSTANCE,allItems,world);
