@@ -5,8 +5,8 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.slot.Slot;
 
-public class FisheomancyAlterCatalystSlot extends Slot {
-    public FisheomancyAlterCatalystSlot(Inventory inventory, int index, int x, int y) {
+public class FisheomancyAltarCatalystSlot extends Slot {
+    public FisheomancyAltarCatalystSlot(Inventory inventory, int index, int x, int y) {
         super(inventory, index, x, y);
     }
 

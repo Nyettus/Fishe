@@ -7,25 +7,17 @@ import com.fishe.Items.ItemsFishe;
 import com.fishe.Items.ItemsMisc;
 import com.fishe.Items.ItemsTools;
 import com.fishe.Items.ItemsTools.ToolType;
-import com.fishe.Items.materials.FisheToolMaterials;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.data.server.tag.TagProvider;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.PositionImpl;
 
-import javax.swing.text.html.HTML;
 import java.util.function.Consumer;
 
 public class FisheRecipeProvider extends FabricRecipeProvider {
@@ -230,7 +222,7 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
     }
 
     private void genCopperTruth(Consumer<RecipeJsonProvider> consumer) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemsMisc.COPPER_TRUTH)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ItemsMisc.REINFORCED_COPPER)
                 .pattern("ccc")
                 .pattern("ded")
                 .pattern("ccc")
@@ -239,7 +231,7 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 .input('e', Items.ENDER_PEARL)
                 .criterion(FabricRecipeProvider.hasItem(ItemsFishe.DIAMOND_FISHE)
                         , FabricRecipeProvider.conditionsFromItem(ItemsFishe.DIAMOND_FISHE))
-                .offerTo(consumer, new Identifier(getRecipeName(ItemsMisc.COPPER_TRUTH)));
+                .offerTo(consumer, new Identifier(getRecipeName(ItemsMisc.REINFORCED_COPPER)));
     }
 
     private void genFisheStaff(Consumer<RecipeJsonProvider> consumer) {
@@ -247,10 +239,10 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 .pattern(" t ")
                 .pattern(" c ")
                 .pattern(" c ")
-                .input('t', ItemsMisc.COPPER_TRUTH)
+                .input('t', ItemsMisc.REINFORCED_COPPER)
                 .input('c', ItemsFishe.COPPER_FISHE)
-                .criterion(FabricRecipeProvider.hasItem(ItemsMisc.COPPER_TRUTH)
-                        , FabricRecipeProvider.conditionsFromItem(ItemsMisc.COPPER_TRUTH))
+                .criterion(FabricRecipeProvider.hasItem(ItemsMisc.REINFORCED_COPPER)
+                        , FabricRecipeProvider.conditionsFromItem(ItemsMisc.REINFORCED_COPPER))
                 .offerTo(consumer, new Identifier(getRecipeName(ItemsTools.FISHE_STAFF)));
     }
 

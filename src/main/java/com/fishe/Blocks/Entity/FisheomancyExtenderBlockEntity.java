@@ -25,7 +25,7 @@ public class FisheomancyExtenderBlockEntity extends BlockEntity implements Exten
     public final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
     public BlockPos controllerPos = null;
-    public FisheomancyAlterBlockEntity.ExtenderPositionsEnum style;
+    public FisheomancyAltarBlockEntity.ExtenderPositionsEnum style;
 
     public FisheomancyExtenderBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.FISHEOMANCY_EXTENDER_BLOCK_ENTITY_BLOCK_ENTITY, pos, state);
@@ -42,7 +42,7 @@ public class FisheomancyExtenderBlockEntity extends BlockEntity implements Exten
     @Override
     public void readNbt(NbtCompound nbt) {
         super.readNbt(nbt);
-        style =  FisheomancyAlterBlockEntity.ExtenderPositionsEnum.values()[nbt.getInt("fisheomancy_extender.style")];
+        style =  FisheomancyAltarBlockEntity.ExtenderPositionsEnum.values()[nbt.getInt("fisheomancy_extender.style")];
         controllerPos = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_extender.controller_pos"));
         Inventories.readNbt(nbt,inventory);
     }
@@ -68,7 +68,7 @@ public class FisheomancyExtenderBlockEntity extends BlockEntity implements Exten
     }
 
 
-    public void initialize(BlockPos pos, FisheomancyAlterBlockEntity.ExtenderPositionsEnum positionEnum){
+    public void initialize(BlockPos pos, FisheomancyAltarBlockEntity.ExtenderPositionsEnum positionEnum){
         this.controllerPos = pos;
         this.style = positionEnum;
         this.markDirty();

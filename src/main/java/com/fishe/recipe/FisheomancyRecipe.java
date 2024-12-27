@@ -1,28 +1,20 @@
 package com.fishe.recipe;
 
-import com.fishe.Blocks.Entity.FisheomancyAlterBlockEntity;
-import com.fishe.Fishe;
 import com.fishe.Utils.UsefulBox;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.enchantment.MendingEnchantment;
 import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.registry.DynamicRegistryManager;
-import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
 import java.util.*;
-import java.util.function.BiFunction;
 
 public class FisheomancyRecipe implements Recipe<SimpleInventory> {
     private final Identifier Id;

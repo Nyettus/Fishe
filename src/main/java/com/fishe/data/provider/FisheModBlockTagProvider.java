@@ -1,7 +1,6 @@
 package com.fishe.data.provider;
 
 import com.fishe.Blocks.BlockMaster;
-import com.fishe.Fishe;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.BlockTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -25,12 +24,12 @@ public class FisheModBlockTagProvider extends BlockTagProvider {
                 .add(BlockMaster.FISHE_REPAIR_TABLE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(BlockMaster.FISHEOMANCY_ALTER)
+                .add(BlockMaster.FISHEOMANCY_ALTAR)
                 .add(BlockMaster.FISHEOMANCY_EXTENDER);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(BlockMaster.FISHE_REPAIR_TABLE)
-                .add(BlockMaster.FISHEOMANCY_ALTER)
+                .add(BlockMaster.FISHEOMANCY_ALTAR)
                 .add(BlockMaster.FISHEOMANCY_EXTENDER);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)

@@ -4,8 +4,8 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.slot.Slot;
 
-public class FisheomancyAlterBasicSlot extends Slot {
-    public FisheomancyAlterBasicSlot(Inventory inventory, int index, int x, int y) {
+public class FisheomancyAltarBasicSlot extends Slot {
+    public FisheomancyAltarBasicSlot(Inventory inventory, int index, int x, int y) {
         super(inventory, index, x, y);
     }
 

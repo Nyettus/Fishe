@@ -3,7 +3,7 @@ package com.fishe.Blocks.Entity;
 import com.fishe.Blocks.BlockItems;
 import com.fishe.Fishe;
 import com.fishe.Items.ItemsFishe;
-import com.fishe.Screen.FisheomancyAlterScreenHandler;
+import com.fishe.Screen.FisheomancyAltarScreenHandler;
 import com.fishe.Utils.FisheModTags;
 import com.fishe.Utils.ImplementedInventory;
 import com.fishe.Utils.UsefulBox;
@@ -11,10 +11,7 @@ import com.fishe.recipe.FisheomancyRecipe;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -33,15 +30,11 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector2i;
-import org.lwjgl.system.linux.FOwnerEx;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
-import java.util.Random;
 
 
-public class FisheomancyAlterBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory, SidedInventory {
+public class FisheomancyAltarBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory, SidedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(8, ItemStack.EMPTY);
 
     private static final int SLOP_SLOT = 0;
@@ -128,16 +121,16 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
                     new Vector2i(1, 2)),
     };
 
-    public FisheomancyAlterBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.FISHEOMANCY_ALTER_BLOCK_ENTITY_BLOCK_ENTITY, pos, state);
+    public FisheomancyAltarBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.FISHEOMANCY_ALTAR_BLOCK_ENTITY_BLOCK_ENTITY, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> FisheomancyAlterBlockEntity.this.slopAmount;
-                    case 1 -> FisheomancyAlterBlockEntity.this.slopMax;
-                    case 2 -> FisheomancyAlterBlockEntity.this.progress;
-                    case 3 -> FisheomancyAlterBlockEntity.this.maxProgress;
+                    case 0 -> FisheomancyAltarBlockEntity.this.slopAmount;
+                    case 1 -> FisheomancyAltarBlockEntity.this.slopMax;
+                    case 2 -> FisheomancyAltarBlockEntity.this.progress;
+                    case 3 -> FisheomancyAltarBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -145,8 +138,8 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0 -> FisheomancyAlterBlockEntity.this.slopAmount = value;
-                    case 1 -> FisheomancyAlterBlockEntity.this.progress = value;
+                    case 0 -> FisheomancyAltarBlockEntity.this.slopAmount = value;
+                    case 1 -> FisheomancyAltarBlockEntity.this.progress = value;
                 }
             }
 
@@ -199,7 +192,7 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
 
     @Override
     public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new FisheomancyAlterScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
+        return new FisheomancyAltarScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
     }
 
     //<editor-fold desc="Multiblock Section">
@@ -344,10 +337,8 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
         if(rawList.get(0)!=ItemStack.EMPTY) rawList.set(0,ItemStack.EMPTY);
         var finalList = UsefulBox.ShrinkDefaultedList(rawList,ItemStack.EMPTY);
         SimpleInventory returnInv = new SimpleInventory(finalList.size());
-        Fishe.LOGGER.info(""+finalList);
         for(int i = 0;i<finalList.size();i++){
             returnInv.setStack(i,finalList.get(i));
-            Fishe.LOGGER.info(""+finalList.get(i));
         }
 
         return returnInv;

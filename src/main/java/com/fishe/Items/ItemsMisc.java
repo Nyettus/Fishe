@@ -10,7 +10,7 @@ public class ItemsMisc extends ItemMaster {
 
 
 
-    public static Item COPPER_TRUTH = registerGroup(new Item(new Item.Settings()),"copper_truth");
+    public static Item REINFORCED_COPPER = registerGroup(new Item(new Item.Settings()),"reinforced_copper");
 
 
 }

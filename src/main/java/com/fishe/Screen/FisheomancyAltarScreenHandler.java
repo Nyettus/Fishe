@@ -2,10 +2,9 @@ package com.fishe.Screen;
 
 import com.fishe.Blocks.BlockItems;
 import com.fishe.Blocks.Entity.FisheRepairSlopSlot;
-import com.fishe.Blocks.Entity.FisheomancyAlterBasicSlot;
-import com.fishe.Blocks.Entity.FisheomancyAlterBlockEntity;
-import com.fishe.Blocks.Entity.FisheomancyAlterCatalystSlot;
-import com.fishe.Fishe;
+import com.fishe.Blocks.Entity.FisheomancyAltarBasicSlot;
+import com.fishe.Blocks.Entity.FisheomancyAltarBlockEntity;
+import com.fishe.Blocks.Entity.FisheomancyAltarCatalystSlot;
 import com.fishe.Items.ItemsFishe;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -18,32 +17,32 @@ import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 
-public class FisheomancyAlterScreenHandler extends ScreenHandler {
+public class FisheomancyAltarScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
-    public final FisheomancyAlterBlockEntity blockEntity;
+    public final FisheomancyAltarBlockEntity blockEntity;
 
-    public FisheomancyAlterScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
+    public FisheomancyAltarScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(buf.readBlockPos()),
                 new ArrayPropertyDelegate(4));
     }
 
-    public FisheomancyAlterScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
-        super(ModScreenHandler.FISHEOMANCY_ALTER_SCREEN_HANDLER_SCREEN_HANDLER, syncId);
+    public FisheomancyAltarScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
+        super(ModScreenHandler.FISHEOMANCY_ALTAR_SCREEN_HANDLER_SCREEN_HANDLER, syncId);
         checkSize((Inventory) blockEntity, 8);
         this.inventory = (Inventory) blockEntity;
         playerInventory.onOpen(playerInventory.player);
         this.propertyDelegate = arrayPropertyDelegate;
-        this.blockEntity = (FisheomancyAlterBlockEntity) blockEntity;
+        this.blockEntity = (FisheomancyAltarBlockEntity) blockEntity;
 
         this.addSlot(new FisheRepairSlopSlot(inventory, 0, 26, 39));
-        this.addSlot(new FisheomancyAlterCatalystSlot(inventory, 1, 98, 39));
-        this.addSlot(new FisheomancyAlterBasicSlot(inventory, 2, 88, 19));
-        this.addSlot(new FisheomancyAlterBasicSlot(inventory, 3, 108, 19));
-        this.addSlot(new FisheomancyAlterBasicSlot(inventory, 4, 78, 39));
-        this.addSlot(new FisheomancyAlterBasicSlot(inventory, 5, 118, 39));
-        this.addSlot(new FisheomancyAlterBasicSlot(inventory, 6, 88, 59));
-        this.addSlot(new FisheomancyAlterBasicSlot(inventory, 7, 108, 59));
+        this.addSlot(new FisheomancyAltarCatalystSlot(inventory, 1, 98, 39));
+        this.addSlot(new FisheomancyAltarBasicSlot(inventory, 2, 88, 19));
+        this.addSlot(new FisheomancyAltarBasicSlot(inventory, 3, 108, 19));
+        this.addSlot(new FisheomancyAltarBasicSlot(inventory, 4, 78, 39));
+        this.addSlot(new FisheomancyAltarBasicSlot(inventory, 5, 118, 39));
+        this.addSlot(new FisheomancyAltarBasicSlot(inventory, 6, 88, 59));
+        this.addSlot(new FisheomancyAltarBasicSlot(inventory, 7, 108, 59));
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
         addProperties(arrayPropertyDelegate);

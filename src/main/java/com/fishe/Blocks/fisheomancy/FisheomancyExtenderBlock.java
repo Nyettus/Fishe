@@ -1,13 +1,12 @@
 package com.fishe.Blocks.fisheomancy;
 
-import com.fishe.Blocks.Entity.FisheomancyAlterBlockEntity;
+import com.fishe.Blocks.Entity.FisheomancyAltarBlockEntity;
 import com.fishe.Blocks.Entity.FisheomancyExtenderBlockEntity;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.util.ActionResult;
@@ -41,8 +40,8 @@ public class FisheomancyExtenderBlock extends BlockWithEntity implements BlockEn
 
                 if (((FisheomancyExtenderBlockEntity) thisEntity).controllerPos != null) {
                     var controllerEntity = world.getBlockEntity(((FisheomancyExtenderBlockEntity) thisEntity).controllerPos);
-                    if (controllerEntity instanceof FisheomancyAlterBlockEntity) {
-                        ((FisheomancyAlterBlockEntity) controllerEntity).RemoveExtender(((FisheomancyExtenderBlockEntity) thisEntity).style);
+                    if (controllerEntity instanceof FisheomancyAltarBlockEntity) {
+                        ((FisheomancyAltarBlockEntity) controllerEntity).RemoveExtender(((FisheomancyExtenderBlockEntity) thisEntity).style);
                     }
                 }
                 ItemScatterer.spawn(world,pos,(FisheomancyExtenderBlockEntity) thisEntity);

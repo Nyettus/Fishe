@@ -1,8 +1,6 @@
 package com.fishe.data.provider;
 
 
-import com.fishe.Blocks.BlockMaster;
-import com.fishe.Fishe;
 import com.fishe.Items.ItemMaster;
 import com.fishe.Items.ItemsFishe;
 import com.fishe.Items.ItemsMisc;
@@ -12,12 +10,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.ItemTagProvider;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -59,7 +53,7 @@ public class FisheModTagProvider extends ItemTagProvider {
 
         getOrCreateTagBuilder(FisheModTags.FISHEOMANCY_CATALYST)
                 .add(Items.BOOK)
-                .add(ItemsMisc.COPPER_TRUTH);
+                .add(ItemsMisc.REINFORCED_COPPER);
 
         assignRepairableTag();
 

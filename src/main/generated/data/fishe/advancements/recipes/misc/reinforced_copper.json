@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:copper_truth"
+        "recipe": "minecraft:reinforced_copper"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:copper_truth"
+      "minecraft:reinforced_copper"
     ]
   },
   "sends_telemetry_event": false

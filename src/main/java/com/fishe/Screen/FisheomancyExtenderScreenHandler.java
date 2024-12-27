@@ -1,6 +1,6 @@
 package com.fishe.Screen;
 
-import com.fishe.Blocks.Entity.FisheomancyAlterBasicSlot;
+import com.fishe.Blocks.Entity.FisheomancyAltarBasicSlot;
 import com.fishe.Blocks.Entity.FisheomancyExtenderBlockEntity;
 import com.fishe.Fishe;
 import net.minecraft.block.entity.BlockEntity;
@@ -26,9 +26,9 @@ public class FisheomancyExtenderScreenHandler extends ScreenHandler {
         this.inventory = (Inventory) blockEntity;
         this.blockEntity = (FisheomancyExtenderBlockEntity) blockEntity;
 
-        this.addSlot(new FisheomancyAlterBasicSlot(inventory,0,44,47));
-        this.addSlot(new FisheomancyAlterBasicSlot(inventory,1,80,26));
-        this.addSlot(new FisheomancyAlterBasicSlot(inventory,2,116,47));
+        this.addSlot(new FisheomancyAltarBasicSlot(inventory,0,44,47));
+        this.addSlot(new FisheomancyAltarBasicSlot(inventory,1,80,26));
+        this.addSlot(new FisheomancyAltarBasicSlot(inventory,2,116,47));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
@@ -54,7 +54,6 @@ public class FisheomancyExtenderScreenHandler extends ScreenHandler {
         if (slot != null && slot.hasStack()) {
             ItemStack originalStack = slot.getStack();
             newStack = originalStack.copy();
-            Fishe.LOGGER.info(""+inventory.size());
             if (invSlot < this.inventory.size()) {
                 if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) {
                     return ItemStack.EMPTY;

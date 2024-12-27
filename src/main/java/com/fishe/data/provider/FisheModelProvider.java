@@ -10,7 +10,6 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.Item;
-import org.apache.logging.log4j.message.ExitMessage;
 
 public class FisheModelProvider extends FabricModelProvider {
     public FisheModelProvider(FabricDataOutput output) {
@@ -60,6 +59,6 @@ public class FisheModelProvider extends FabricModelProvider {
 
     private void genBlockModels(BlockStateModelGenerator generator){
         generator.registerSimpleCubeAll(BlockMaster.FISHE_PASTE_BLOCK);
-        generator.registerSimpleCubeAll(BlockMaster.FISHEOMANCY_ALTER);
+        generator.registerSimpleCubeAll(BlockMaster.FISHEOMANCY_ALTAR);
     }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper_truth": {
+    "has_reinforced_copper": {
       "conditions": {
         "items": [
           {
             "items": [
-              "fishe:copper_truth"
+              "fishe:reinforced_copper"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_copper_truth",
+      "has_reinforced_copper",
       "has_the_recipe"
     ]
   ],
