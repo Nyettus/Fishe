@@ -36,6 +36,7 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
         genReinforcedCopper(consumer);
         genFisheStaff(consumer);
         genFisheomancyAlter(consumer);
+        genFisheomancyExtender(consumer);
     }
 
     private void genMiningFisheRecipe(Consumer<RecipeJsonProvider> consumer) {
@@ -259,6 +260,19 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ItemsMisc.REINFORCED_COPPER)
                         , FabricRecipeProvider.conditionsFromItem(ItemsMisc.REINFORCED_COPPER))
                 .offerTo(consumer, new Identifier(getRecipeName(BlockItems.FISHEOMANCY_ALTAR)));
+    }
+
+    private void genFisheomancyExtender(Consumer<RecipeJsonProvider> consumer) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockItems.FISHEOMANCY_EXTENDER)
+                .pattern("ggg")
+                .pattern("oto")
+                .pattern("ooo")
+                .input('g', ItemsFishe.LAPIS_FISHE)
+                .input('t', ItemsMisc.REINFORCED_COPPER)
+                .input('o',Items.OBSIDIAN)
+                .criterion(FabricRecipeProvider.hasItem(ItemsMisc.REINFORCED_COPPER)
+                        , FabricRecipeProvider.conditionsFromItem(ItemsMisc.REINFORCED_COPPER))
+                .offerTo(consumer, new Identifier(getRecipeName(BlockItems.FISHEOMANCY_EXTENDER)));
     }
 
 }

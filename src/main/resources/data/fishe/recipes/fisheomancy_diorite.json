@@ -1,0 +1,17 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "fishe:bone_fishe"
+    }
+  ],
+  "catalyst": {
+    "item": "fishe:stone_fishe"
+  },
+  "slop_amount": 1,
+  "enchantment": [
+  ],
+  "output": {
+    "item": "minecraft:diorite"
+  }
+}

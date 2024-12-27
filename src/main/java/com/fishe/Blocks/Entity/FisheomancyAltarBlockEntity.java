@@ -63,7 +63,7 @@ public class FisheomancyAltarBlockEntity extends BlockEntity implements Extended
             canInsert = slot==SLOP_SLOT;
         }
         else{
-            canInsert = inventory.get(slot).isEmpty() && slot!=CATALYST_SLOT;
+            canInsert = inventory.get(slot).isEmpty() && slot>CATALYST_SLOT;
         }
 
         return canInsert;

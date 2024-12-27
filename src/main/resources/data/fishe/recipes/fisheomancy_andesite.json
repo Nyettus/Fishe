@@ -1,0 +1,17 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    }
+  ],
+  "catalyst": {
+    "item": "fishe:stone_fishe"
+  },
+  "slop_amount": 1,
+  "enchantment": [
+  ],
+  "output": {
+    "item": "minecraft:diorite"
+  }
+}
