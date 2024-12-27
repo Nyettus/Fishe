@@ -3,11 +3,22 @@
   "ingredients": [
     {
       "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
     }
   ],
-  "catalyst": "minecraft:book",
+  "catalyst": {
+    "item": "minecraft:book"
+  },
   "slop_amount": 64,
-  "output": "fishe:copper_fishe"
-
-
+  "enchantment": [
+    {
+      "identifier": "minecraft:efficiency",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
 }

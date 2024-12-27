@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "minecraft:book"
+    "minecraft:book",
+    "fishe:copper_truth"
   ]
 }

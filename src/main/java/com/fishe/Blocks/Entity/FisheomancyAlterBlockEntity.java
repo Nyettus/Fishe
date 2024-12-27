@@ -11,6 +11,9 @@ import com.fishe.recipe.FisheomancyRecipe;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -30,8 +33,12 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector2i;
+import org.lwjgl.system.linux.FOwnerEx;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
+import java.util.Random;
 
 
 public class FisheomancyAlterBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory, SidedInventory {
@@ -294,14 +301,27 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
         var allItems = concatInventories(world);
 
         Optional<FisheomancyRecipe> match = world.getRecipeManager().getFirstMatch(FisheomancyRecipe.Type.INSTANCE,allItems,world);
-        Fishe.LOGGER.info(""+match.isPresent());
         if(!match.isPresent()) return;
-        CraftItem(match.get().getOutput(null));
+        if(!CheckRemainingParameters(match)) return;
+        CraftItem(match);
+    }
+    private boolean CheckRemainingParameters(Optional<FisheomancyRecipe> match){
+        return match.get().SlopAmount <=slopAmount;
     }
 
-    private void CraftItem(ItemStack output){
-        //Purge all items in crafter
-        Fishe.LOGGER.info(""+output);
+    private void CraftItem(Optional<FisheomancyRecipe> match){
+        ItemStack output = match.get().getOutput(null);
+        PurgeInventories();
+        SpendSlop(match);
+        if(match.get().getEnchantment()!=null){
+            EnchantmentHelper.set(match.get().getEnchantment(), output);
+        }
+
+        inventory.set(CATALYST_SLOT,output);
+    }
+
+    private void SpendSlop(Optional<FisheomancyRecipe> match) {
+        slopAmount-=match.get().SlopAmount;
     }
 
     private SimpleInventory concatInventories(World world){
@@ -322,7 +342,6 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
             rawList =UsefulBox.ConcatDefaultedList(rawList,holding,ItemStack.EMPTY);
         }
         if(rawList.get(0)!=ItemStack.EMPTY) rawList.set(0,ItemStack.EMPTY);
-        rawList.set(1,ItemStack.EMPTY);
         var finalList = UsefulBox.ShrinkDefaultedList(rawList,ItemStack.EMPTY);
         SimpleInventory returnInv = new SimpleInventory(finalList.size());
         Fishe.LOGGER.info(""+finalList);
@@ -334,6 +353,19 @@ public class FisheomancyAlterBlockEntity extends BlockEntity implements Extended
         return returnInv;
 
 
+    }
+
+    private void PurgeInventories(){
+        inventory.clear();
+        if(forwardExtender!=null){
+            ((FisheomancyExtenderBlockEntity)world.getBlockEntity(forwardExtender)).inventory.clear();
+        }
+        if(rightExtender!=null){
+            ((FisheomancyExtenderBlockEntity)world.getBlockEntity(rightExtender)).inventory.clear();
+        }
+        if(leftExtender!=null){
+            ((FisheomancyExtenderBlockEntity)world.getBlockEntity(leftExtender)).inventory.clear();
+        }
     }
 
 

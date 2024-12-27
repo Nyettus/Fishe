@@ -1,14 +1,18 @@
 package com.fishe.Utils;
 
 import com.fishe.Fishe;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.ibm.icu.impl.UResource;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class UsefulBox {
     private static BlockPos nullpos = new BlockPos(0, 500, 0);
@@ -68,6 +72,29 @@ public class UsefulBox {
 
         E[] test = (E[]) asList.toArray();
         return DefaultedList.copyOf(defaultValue,test);
+    }
+
+    public static Map<String,Integer> StringMapFromJson(JsonArray object){
+        Map<String,Integer> returnMap = new HashMap<>();
+
+        for(JsonElement element:object){
+            JsonObject asObj = element.getAsJsonObject();
+            int level = asObj.get("level").getAsInt();
+            returnMap.put(asObj.get("identifier").getAsString(),level);
+        }
+        return returnMap;
+    }
+
+    public static Map<Enchantment,Integer> StringMapToEnchantment(Map<String,Integer> original){
+        Map<Enchantment,Integer> returnMap = new HashMap<>();
+        for(Map.Entry<String,Integer> entry:original.entrySet()){
+            Enchantment asEnchant = Registries.ENCHANTMENT.get(
+                    new Identifier(entry.getKey())
+            );
+            Integer level = entry.getValue();
+            returnMap.put(asEnchant,level);
+        }
+        return returnMap;
     }
 
 

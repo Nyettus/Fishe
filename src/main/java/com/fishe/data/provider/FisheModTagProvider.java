@@ -5,6 +5,7 @@ import com.fishe.Blocks.BlockMaster;
 import com.fishe.Fishe;
 import com.fishe.Items.ItemMaster;
 import com.fishe.Items.ItemsFishe;
+import com.fishe.Items.ItemsMisc;
 import com.fishe.Items.ItemsTools;
 import com.fishe.Utils.FisheModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -57,7 +58,8 @@ public class FisheModTagProvider extends ItemTagProvider {
                 .add(ItemsTools.DIAMOND_ROD);
 
         getOrCreateTagBuilder(FisheModTags.FISHEOMANCY_CATALYST)
-                .add(Items.BOOK);
+                .add(Items.BOOK)
+                .add(ItemsMisc.COPPER_TRUTH);
 
         assignRepairableTag();
 
