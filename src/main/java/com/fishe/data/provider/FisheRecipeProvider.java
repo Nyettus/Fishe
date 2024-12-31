@@ -35,7 +35,7 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
         genFisheRepairTable(consumer);
         genReinforcedCopper(consumer);
         genFisheStaff(consumer);
-        genFisheomancyAlter(consumer);
+        genFisheomancyAltar(consumer);
         genFisheomancyExtender(consumer);
     }
 
@@ -248,7 +248,7 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 .offerTo(consumer, new Identifier(getRecipeName(ItemsTools.FISHE_STAFF)));
     }
 
-    private void genFisheomancyAlter(Consumer<RecipeJsonProvider> consumer) {
+    private void genFisheomancyAltar(Consumer<RecipeJsonProvider> consumer) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, BlockItems.FISHEOMANCY_ALTAR)
                 .pattern("ggg")
                 .pattern("dtd")

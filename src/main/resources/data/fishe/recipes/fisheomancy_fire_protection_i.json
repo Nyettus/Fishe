@@ -1,0 +1,36 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:fire_protection",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:air"
+        "recipe": "minecraft:fisheomancy_altar"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:air"
+      "minecraft:fisheomancy_altar"
     ]
   },
   "sends_telemetry_event": false

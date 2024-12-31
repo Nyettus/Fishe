@@ -17,7 +17,7 @@ public class ModScreenHandler {
                     new ExtendedScreenHandlerType<>(FisheRepairTableScreenHandler::new));
 
     public static final ScreenHandlerType<FisheomancyAltarScreenHandler> FISHEOMANCY_ALTAR_SCREEN_HANDLER_SCREEN_HANDLER =
-            Registry.register(Registries.SCREEN_HANDLER, new Identifier(Fishe.MOD_ID, "fisheomancy_alter_ui"),
+            Registry.register(Registries.SCREEN_HANDLER, new Identifier(Fishe.MOD_ID, "fisheomancy_altar_ui"),
                     new ExtendedScreenHandlerType<>(FisheomancyAltarScreenHandler::new));
 
     public static final ScreenHandlerType<FisheomancyExtenderScreenHandler> FISHEOMANCY_EXPANDER_SCREEN_HANDLER_SCREEN_HANDLER =

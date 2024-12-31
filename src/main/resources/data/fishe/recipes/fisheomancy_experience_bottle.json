@@ -1,0 +1,59 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:glass_bottle"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+  ],
+  "output": {
+    "item": "minecraft:experience_bottle"
+  }
+}

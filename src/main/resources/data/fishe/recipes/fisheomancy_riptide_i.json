@@ -1,0 +1,42 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:prismarine_shard"
+    },
+    {
+      "item": "minecraft:prismarine_shard"
+    },
+    {
+      "item": "minecraft:phantom_membrane"
+    },
+    {
+      "item": "minecraft:phantom_membrane"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:riptide",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

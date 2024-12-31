@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "fishe:rot_fishe"
+    },
+    {
+      "item": "fishe:rot_fishe"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "minecraft:spider_eye"
+    },
+    {
+      "item": "minecraft:spider_eye"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 128,
+  "enchantment": [
+    {
+      "identifier": "fishe:call_of_the_night",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

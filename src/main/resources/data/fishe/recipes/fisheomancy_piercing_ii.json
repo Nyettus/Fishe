@@ -1,0 +1,36 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:tripwire_hook"
+    },
+    {
+      "item": "minecraft:tripwire_hook"
+    },
+    {
+      "item": "minecraft:iron_bars"
+    },
+    {
+      "item": "minecraft:iron_bars"
+    },
+    {
+      "item": "minecraft:target"
+    },
+    {
+      "item": "minecraft:target"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:piercing",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

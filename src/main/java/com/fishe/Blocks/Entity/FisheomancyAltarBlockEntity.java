@@ -155,11 +155,11 @@ public class FisheomancyAltarBlockEntity extends BlockEntity implements Extended
         super.writeNbt(nbt);
 
         Inventories.writeNbt(nbt, inventory);
-        nbt.putInt("fisheomancy_alter.slop_amount", slopAmount);
+        nbt.putInt("fisheomancy_altar.slop_amount", slopAmount);
 
-        nbt.putLong("fisheomancy_alter.forward_extender", UsefulBox.BlockPosToLong(forwardExtender));
-        nbt.putLong("fisheomancy_alter.right_extender", UsefulBox.BlockPosToLong(rightExtender));
-        nbt.putLong("fisheomancy_alter.left_extender", UsefulBox.BlockPosToLong(leftExtender));
+        nbt.putLong("fisheomancy_altar.forward_extender", UsefulBox.BlockPosToLong(forwardExtender));
+        nbt.putLong("fisheomancy_altar.right_extender", UsefulBox.BlockPosToLong(rightExtender));
+        nbt.putLong("fisheomancy_altar.left_extender", UsefulBox.BlockPosToLong(leftExtender));
 
     }
 
@@ -168,11 +168,11 @@ public class FisheomancyAltarBlockEntity extends BlockEntity implements Extended
         super.readNbt(nbt);
 
         Inventories.readNbt(nbt, inventory);
-        slopAmount = nbt.getInt("fisheomancy_alter.slop_amount");
+        slopAmount = nbt.getInt("fisheomancy_altar.slop_amount");
 
-        forwardExtender = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_alter.forward_extender"));
-        rightExtender = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_alter.right_extender"));
-        leftExtender = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_alter.left_extender"));
+        forwardExtender = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_altar.forward_extender"));
+        rightExtender = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_altar.right_extender"));
+        leftExtender = UsefulBox.LongToBlockPos(nbt.getLong("fisheomancy_altar.left_extender"));
     }
 
     @Override
@@ -187,7 +187,7 @@ public class FisheomancyAltarBlockEntity extends BlockEntity implements Extended
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Alter");
+        return Text.literal("Altar");
     }
 
     @Override

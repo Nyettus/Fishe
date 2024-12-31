@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 128,
+  "enchantment": [
+    {
+      "identifier": "minecraft:luck_of_the_sea",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "minecraft:deepslate"
+    },
+    {
+      "item": "minecraft:deepslate"
+    },
+    {
+      "item": "minecraft:deepslate"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 512,
+  "enchantment": [
+    {
+      "identifier": "minecraft:protection",
+      "level": 4
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

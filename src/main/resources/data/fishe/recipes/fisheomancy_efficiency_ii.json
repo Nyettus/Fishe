@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:efficiency",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

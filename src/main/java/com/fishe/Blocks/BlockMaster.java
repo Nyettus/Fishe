@@ -48,7 +48,7 @@ public class BlockMaster {
 
     public static final FisheomancyAltarBlock FISHEOMANCY_ALTAR = register(
             new FisheomancyAltarBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
-            "fisheomancy_alter",
+            "fisheomancy_altar",
             true
     );
 

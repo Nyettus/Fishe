@@ -1,0 +1,33 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:bow"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 16,
+  "enchantment": [
+    {
+      "identifier": "minecraft:punch",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

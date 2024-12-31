@@ -1,0 +1,54 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 256,
+  "enchantment": [
+    {
+      "identifier": "minecraft:blast_protection",
+      "level": 3
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:seeping_edge",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

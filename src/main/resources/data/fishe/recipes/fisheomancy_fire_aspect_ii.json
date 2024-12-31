@@ -1,0 +1,33 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:flint_and_steel"
+    },
+    {
+      "item": "minecraft:flint_and_steel"
+    },
+    {
+      "item": "minecraft:flint_and_steel"
+    },
+    {
+      "item": "minecraft:flint_and_steel"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 128,
+  "enchantment": [
+    {
+      "identifier": "minecraft:fire_aspect",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

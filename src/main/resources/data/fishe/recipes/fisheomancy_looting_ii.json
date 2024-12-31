@@ -1,0 +1,54 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "minecraft:wither_skeleton_skull"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 256,
+  "enchantment": [
+    {
+      "identifier": "minecraft:looting",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:iron_block"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:slime_block"
+    },
+    {
+      "item": "minecraft:magma_block"
+    },
+    {
+      "item": "minecraft:magma_block"
+    },
+    {
+      "item": "minecraft:magma_block"
+    },
+    {
+      "item": "minecraft:magma_block"
+    },
+    {
+      "item": "minecraft:lava_bucket"
+    },
+    {
+      "item": "minecraft:lava_bucket"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:crying_obsidian"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 512,
+  "enchantment": [
+    {
+      "identifier": "minecraft:fire_protection",
+      "level": 4
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "minecraft:firework_rocket"
+    },
+    {
+      "item": "minecraft:firework_rocket"
+    },
+    {
+      "item": "minecraft:firework_rocket"
+    },
+    {
+      "item": "minecraft:firework_rocket"
+    },
+    {
+      "item": "fishe:gold_fishe"
+    },
+    {
+      "item": "fishe:gold_fishe"
+    },
+    {
+      "item": "minecraft:crossbow"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 128,
+  "enchantment": [
+    {
+      "identifier": "minecraft:multishot",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

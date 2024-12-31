@@ -1,11 +1,11 @@
-// 1.20.1	2024-12-27T20:09:09.6516101	fishe/Model Definitions
+// 1.20.1	2024-12-30T13:51:35.2334231	fishe/Model Definitions
 4a0b2569d0c872e46cc1ab33c10254e3c0ea4299 assets\fishe\models\item\fishe_paste_block.json
-d345cdf78c480576f0b3d7e8a6a254e268fd6797 assets\fishe\models\block\fisheomancy_alter.json
 e1b1c5059fe47824ce2ab29b836cf740bbaa7d0c assets\fishe\models\item\goldfishe_axe.json
 1b695812cd6216301399472d15b77ac7fea39b0a assets\fishe\models\item\bone_fishe.json
 bd8a7be55159998f16c64d7de3dcde25b292d91b assets\fishe\models\item\copper_fishe.json
 08dc50d69f3c8ac16e8beb146c600fb5fb30d0e8 assets\fishe\models\item\goldfishe_shovel.json
 82abb52be012bc28d5a827417a89716e193d8a35 assets\fishe\models\item\fishe_paste.json
+723c9352f993d47f4c7fc239404e5b7415bd6178 assets\fishe\blockstates\fisheomancy_altar.json
 7c01d7637440d202eac0f7745d7d8da4db8daaed assets\fishe\models\item\copperfishe_shovel.json
 b16fe39c6895597ec0954c9ae1c5adb35b6922ea assets\fishe\models\item\lapis_fishe.json
 70ae7b824a47d702172d20da0d73ebe913614a05 assets\fishe\models\item\diamondfishe_pickaxe.json
@@ -14,12 +14,13 @@ c36da47c3e294a8a1fba43cd1b8d6447f6aae3f4 assets\fishe\models\item\spider_fishe.j
 b835c82cfa78e7b49f7e3097c3a6e8b44bd23b7a assets\fishe\models\item\iron_rod_cast.json
 1c5403eb05321f70d620cf3d0b655e4962a2a79f assets\fishe\models\item\diamondfishe_shovel.json
 17888fbeb4da8cacd88e088c75bf21a554305496 assets\fishe\models\item\gold_fishe.json
+40ff686b9e07a8c08dc5106a7369b4eca278facd assets\fishe\models\block\fisheomancy_altar.json
 d3dd744cf6099ceae97de9b9c037726da848d65c assets\fishe\models\item\copperfishe_axe.json
 914f01cda19b46d880ebeee0c83bdb0a4b226834 assets\fishe\models\item\ironfishe_axe.json
 6fca4c0d4f9d60452148969ef77dabc7d5ad804d assets\fishe\models\item\creepy_fishe.json
 e4b56d7609ee380ad67dc4928b1c92a1e2d73f1d assets\fishe\models\item\stone_fishe.json
-844bfc8895f21f811c59c61d9cf95cf649af295a assets\fishe\models\item\diamondfishe_hoe.json
 983449934f69ae04047f656df10466b44e482b0f assets\fishe\models\item\ender_fishe.json
+844bfc8895f21f811c59c61d9cf95cf649af295a assets\fishe\models\item\diamondfishe_hoe.json
 82ac6ba9383e6a43736910f068c6be2d174c186a assets\fishe\models\item\ironfishe_shovel.json
 4246fe9cc2e80258c7ed9494265ca6ddb891988a assets\fishe\models\item\goldfishe_sword.json
 15bb6373cb0701c2e370a5e5b8846baede82451e assets\fishe\models\item\goldfishe_hoe.json
@@ -41,10 +42,9 @@ d96eb5b115555f5b1739b51879cf9e9fc087db85 assets\fishe\models\item\copperfishe_pi
 78d0510ac7fda448273eaeb6282cb643e282b7cf assets\fishe\models\item\copper_rod_cast.json
 ea3f89242099bc26a4a0da2bf3be051caca514b0 assets\fishe\models\block\fishe_paste_block.json
 5099aa535e4dd77d38b0a31747a89eb0a9827f87 assets\fishe\models\item\gold_rod_cast.json
+b166f1d6748fd110c9995d36580c1ac22a2224f7 assets\fishe\models\item\fisheomancy_altar.json
 7136dc838065e26a1dd80235a93438d757d8e053 assets\fishe\models\item\red_fishe.json
 8c02a781cd4f9b5689d6d90d3cc2cce987f73263 assets\fishe\blockstates\fishe_paste_block.json
-f54f5c78826adde87568e4b04252d513a2245ea2 assets\fishe\models\item\fisheomancy_alter.json
-a0fecbaa92d361e07913f03b2736a3b47ffd3416 assets\fishe\models\item\copperfishe_sword.json
 612ac8764495282cec226ec5ee82c0c715c349e2 assets\fishe\models\item\ironfishe_sword.json
+a0fecbaa92d361e07913f03b2736a3b47ffd3416 assets\fishe\models\item\copperfishe_sword.json
 d53b6cc7e8f9c474c10348db26e516f4c058260d assets\fishe\models\item\diamond_rod_cast.json
-1651d757ba14f6c31ace258a05a37fd1663e2f1d assets\fishe\blockstates\fisheomancy_alter.json

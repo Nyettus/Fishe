@@ -1,0 +1,48 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:cobweb"
+    },
+    {
+      "item": "minecraft:cobweb"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:grass"
+    },
+    {
+      "item": "minecraft:grass"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:vine"
+    },
+    {
+      "item": "minecraft:vine"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 128,
+  "enchantment": [
+    {
+      "identifier": "minecraft:silk_touch",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

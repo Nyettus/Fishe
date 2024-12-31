@@ -1,0 +1,27 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 16,
+  "enchantment": [
+    {
+      "identifier": "minecraft:power",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

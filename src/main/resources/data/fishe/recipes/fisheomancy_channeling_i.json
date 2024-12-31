@@ -1,0 +1,63 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:sponge"
+    },
+    {
+      "item": "minecraft:sponge"
+    },
+    {
+      "item": "minecraft:prismarine_bricks"
+    },
+    {
+      "item": "minecraft:prismarine_bricks"
+    },
+    {
+      "item": "minecraft:prismarine_bricks"
+    },
+    {
+      "item": "minecraft:prismarine_bricks"
+    },
+    {
+      "item": "minecraft:sea_lantern"
+    },
+    {
+      "item": "minecraft:sea_lantern"
+    },
+    {
+      "item": "minecraft:sea_lantern"
+    },
+    {
+      "item": "minecraft:sea_lantern"
+    },
+    {
+      "item": "minecraft:sea_lantern"
+    },
+    {
+      "item": "minecraft:sea_lantern"
+    },
+    {
+      "item": "minecraft:lightning_rod"
+    },
+    {
+      "item": "minecraft:lightning_rod"
+    },
+    {
+      "item": "minecraft:heart_of_the_sea"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 512,
+  "enchantment": [
+    {
+      "identifier": "minecraft:channeling",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

@@ -11,7 +11,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class FisheomancyAltarScreen extends HandledScreen<FisheomancyAltarScreenHandler> {
-    private static final Identifier TEXTURE = new Identifier(Fishe.MOD_ID,"textures/gui/fisheomancy_alter_gui.png");
+    private static final Identifier TEXTURE = new Identifier(Fishe.MOD_ID,"textures/gui/fisheomancy_altar_gui.png");
     public FisheomancyAltarScreen(FisheomancyAltarScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }

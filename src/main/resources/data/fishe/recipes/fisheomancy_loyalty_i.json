@@ -1,0 +1,24 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:prismarine_shard"
+    },
+    {
+      "item": "minecraft:lead"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 32,
+  "enchantment": [
+    {
+      "identifier": "minecraft:loyalty",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

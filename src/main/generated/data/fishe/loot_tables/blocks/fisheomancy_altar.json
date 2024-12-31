@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:air"
+          "name": "fishe:fisheomancy_altar"
         }
       ],
       "rolls": 1.0

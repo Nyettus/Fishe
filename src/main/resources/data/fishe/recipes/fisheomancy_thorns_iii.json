@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:golden_sword"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 32,
+  "enchantment": [
+    {
+      "identifier": "minecraft:thorns",
+      "level": 3
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

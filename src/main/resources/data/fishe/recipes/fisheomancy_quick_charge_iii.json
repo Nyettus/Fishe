@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:tripwire_hook"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:cobweb"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 128,
+  "enchantment": [
+    {
+      "identifier": "minecraft:quick_charge",
+      "level": 3
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

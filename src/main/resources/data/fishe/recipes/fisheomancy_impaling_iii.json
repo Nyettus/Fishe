@@ -1,0 +1,42 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:prismarine"
+    },
+    {
+      "item": "minecraft:prismarine"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:sea_lantern"
+    },
+    {
+      "item": "minecraft:sea_lantern"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 128,
+  "enchantment": [
+    {
+      "identifier": "minecraft:impaling",
+      "level": 3
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

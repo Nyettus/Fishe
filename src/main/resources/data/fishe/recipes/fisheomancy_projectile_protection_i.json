@@ -1,0 +1,36 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "minecraft:bow"
+    },
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "minecraft:arrow"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 32,
+  "enchantment": [
+    {
+      "identifier": "minecraft:projectile_protection",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

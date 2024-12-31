@@ -1,0 +1,42 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:stone_sword"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:sharpness",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

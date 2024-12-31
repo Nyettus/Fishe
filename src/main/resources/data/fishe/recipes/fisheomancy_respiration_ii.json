@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "fishe:copper_fishe"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:respiration",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

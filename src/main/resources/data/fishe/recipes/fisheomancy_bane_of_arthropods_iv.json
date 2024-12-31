@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    {
+      "item": "minecraft:fermented_spider_eye"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 56,
+  "enchantment": [
+    {
+      "identifier": "minecraft:bane_of_arthropods",
+      "level": 4
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

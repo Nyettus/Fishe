@@ -1,0 +1,54 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:blue_ice"
+    },
+    {
+      "item": "minecraft:blue_ice"
+    },
+    {
+      "item": "minecraft:blue_ice"
+    },
+    {
+      "item": "minecraft:blue_ice"
+    },
+    {
+      "item": "minecraft:blue_ice"
+    },
+    {
+      "item": "minecraft:blue_ice"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "minecraft:magma_block"
+    },
+    {
+      "item": "minecraft:campfire"
+    },
+    {
+      "item": "minecraft:campfire"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 256,
+  "enchantment": [
+    {
+      "identifier": "minecraft:frost_walker",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

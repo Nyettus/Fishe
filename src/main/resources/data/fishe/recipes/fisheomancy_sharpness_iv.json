@@ -1,0 +1,54 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_sword"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item": "minecraft:pointed_dripstone"
+    },
+    {
+      "item": "minecraft:dripstone_block"
+    },
+    {
+      "item": "minecraft:dripstone_block"
+    },
+    {
+      "item": "minecraft:dripstone_block"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 256,
+  "enchantment": [
+    {
+      "identifier": "minecraft:sharpness",
+      "level": 4
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

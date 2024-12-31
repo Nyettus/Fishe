@@ -1,0 +1,63 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:experience_bottle"
+    },
+    {
+      "item": "minecraft:experience_bottle"
+    },
+    {
+      "item": "minecraft:experience_bottle"
+    },
+    {
+      "item": "minecraft:experience_bottle"
+    },
+    {
+      "item": "minecraft:experience_bottle"
+    },
+    {
+      "item": "minecraft:experience_bottle"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "fishe:reinforced_copper"
+    },
+    {
+      "item": "minecraft:diamond_block"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 512,
+  "enchantment": [
+    {
+      "identifier": "minecraft:mending",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

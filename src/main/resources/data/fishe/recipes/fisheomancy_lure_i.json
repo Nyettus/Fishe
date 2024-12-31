@@ -1,0 +1,30 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "fishe:copper_fishe"
+    },
+    {
+      "item": "fishe:copper_fishe"
+    },
+    {
+      "item": "fishe:copper_fishe"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:lure",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

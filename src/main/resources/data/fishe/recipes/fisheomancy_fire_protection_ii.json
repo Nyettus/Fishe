@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:flint_and_steel"
+    },
+    {
+      "item": "minecraft:flint_and_steel"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:magma_block"
+    },
+    {
+      "item": "minecraft:magma_block"
+    },
+    {
+      "item": "minecraft:lava_bucket"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 128,
+  "enchantment": [
+    {
+      "identifier": "minecraft:fire_protection",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

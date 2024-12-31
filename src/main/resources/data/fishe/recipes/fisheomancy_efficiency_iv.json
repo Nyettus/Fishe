@@ -1,0 +1,57 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_block"
+    },
+    {
+      "item": "minecraft:gold_block"
+    },
+    {
+      "item": "minecraft:gold_block"
+    },
+    {
+      "item": "minecraft:gold_block"
+    },
+    {
+      "item": "minecraft:lapis_block"
+    },
+    {
+      "item": "minecraft:lapis_block"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "fishe:diamond_fishe"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 256,
+  "enchantment": [
+    {
+      "identifier": "minecraft:efficiency",
+      "level": 4
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

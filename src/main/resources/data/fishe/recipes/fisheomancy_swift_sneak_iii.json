@@ -1,0 +1,54 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:calibrated_sculk_sensor"
+    },
+    {
+      "item": "minecraft:calibrated_sculk_sensor"
+    },
+    {
+      "item": "minecraft:sculk_sensor"
+    },
+    {
+      "item": "minecraft:sculk_sensor"
+    },
+    {
+      "item": "minecraft:sculk_catalyst"
+    },
+    {
+      "item": "minecraft:sculk_catalyst"
+    },
+    {
+      "item": "minecraft:deepslate_bricks"
+    },
+    {
+      "item": "minecraft:deepslate_bricks"
+    },
+    {
+      "item": "minecraft:deepslate_bricks"
+    },
+    {
+      "item": "minecraft:deepslate_bricks"
+    },
+    {
+      "item": "minecraft:sculk_shrieker"
+    },
+    {
+      "item": "minecraft:sculk_shrieker"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 256,
+  "enchantment": [
+    {
+      "identifier": "minecraft:swift_sneak",
+      "level": 3
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

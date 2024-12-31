@@ -1,0 +1,36 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:stone"
+    },
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:aqua_affinity",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

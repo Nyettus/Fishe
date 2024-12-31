@@ -1,0 +1,51 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:netherrack"
+    },
+    {
+      "item": "minecraft:netherrack"
+    },
+    {
+      "item": "minecraft:netherrack"
+    },
+    {
+      "item": "minecraft:netherrack"
+    },
+    {
+      "item": "minecraft:bone_block"
+    },
+    {
+      "item": "minecraft:bone_block"
+    },
+    {
+      "item": "minecraft:soul_sand"
+    },
+    {
+      "item": "minecraft:soul_soil"
+    },
+    {
+      "item": "minecraft:soul_soil"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 192,
+  "enchantment": [
+    {
+      "identifier": "minecraft:soul_speed",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

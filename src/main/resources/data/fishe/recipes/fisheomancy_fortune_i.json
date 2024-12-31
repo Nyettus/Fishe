@@ -1,0 +1,45 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:fortune",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

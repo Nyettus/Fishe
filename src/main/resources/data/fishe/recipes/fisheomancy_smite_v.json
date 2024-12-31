@@ -1,0 +1,54 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_sword"
+    },
+    {
+      "item": "minecraft:gold_block"
+    },
+    {
+      "item": "minecraft:gold_block"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:glowstone"
+    },
+    {
+      "item": "minecraft:glowstone"
+    },
+    {
+      "item": "minecraft:glowstone"
+    },
+    {
+      "item": "minecraft:glowstone"
+    },
+    {
+      "item": "minecraft:phantom_membrane"
+    },
+    {
+      "item": "minecraft:phantom_membrane"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 512,
+  "enchantment": [
+    {
+      "identifier": "minecraft:smite",
+      "level": 5
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

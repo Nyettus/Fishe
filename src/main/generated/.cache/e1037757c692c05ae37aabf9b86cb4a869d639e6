@@ -1,4 +1,4 @@
-// 1.20.1	2024-12-27T20:09:09.6491004	fishe/Recipes
+// 1.20.1	2024-12-30T13:51:35.231923	fishe/Recipes
 62a11c3183f31b13c1df76e4cfb33024522991e8 data\fishe\recipes\fishecopper_fishe.json
 78528dedb2b3c3778c500931c84deb7034030fdb data\fishe\advancements\recipes\tools\fishediamondfishe_sword.json
 7968ff5d85a02d5522e399d446aa60a3f1ee61e6 data\fishe\recipes\reinforced_copper.json
@@ -16,7 +16,6 @@ f1281f5697fa4f22b19de30a89df64518d4b68e0 data\fishe\recipes\fishe_staff.json
 7c5affb09a79aa11324dfebab70489302ad8a7d1 data\fishe\recipes\fishespider_fishe.json
 5991d07770b69036bd28681419dcd56f0638993c data\fishe\advancements\recipes\tools\fisheiron_rod.json
 0d68910d9bdab256ea0ed6b5ddbc6aa0eb843895 data\fishe\recipes\fishe_repair_table.json
-14e272c573feb840929b236100945d9a0d52078d data\fishe\advancements\recipes\decorations\air.json
 2d54bec5fc8d42d2cd3ef517909d6320ea36a57e data\fishe\recipes\fishegold_fishe.json
 14781f20cb6592c2b77158032c7d7c5093e8f9a0 data\fishe\recipes\fishediamondfishe_pickaxe.json
 10648a7d590214bd04a275627a86f5bb8fd3b0e5 data\fishe\advancements\recipes\tools\fishebdiamondfishe_axe.json
@@ -35,6 +34,7 @@ f859f944d41e938a0f8bfc5a595c73dbdaa77426 data\fishe\recipes\fishecreepy_fishe.js
 e735b3c91d7312d6024e9c6ed78ba1d21f398728 data\fishe\recipes\fishebbone_fishe.json
 3218635ea8efa6c25fd0f38076efb0c88e93d300 data\fishe\recipes\fishebcopper_rod.json
 754aebd84f7775f05445852f4c84453ce7338fe4 data\fishe\recipes\fishebironfishe_hoe.json
+39830b3802beb8ba49cfe176ed2336cef6d105e0 data\fishe\recipes\fisheomancy_altar.json
 cbce2588d5724a6a9639afa97e1666d0ed5ba212 data\fishe\advancements\recipes\tools\fishediamondfishe_shovel.json
 4fda29902a4edf770f761f49dc8aee6d2a178455 data\fishe\advancements\recipes\tools\fishecopperfishe_axe.json
 5b9cf0264dba24c45bfae0102a67a332465bed0f data\fishe\advancements\recipes\tools\fishediamondfishe_hoe.json
@@ -75,7 +75,6 @@ c50dbcb3fe3d99c99c1e85b64004e02f95096eb0 data\fishe\recipes\fisheironfishe_picka
 fb7e8e5fccbafe0d6c015e559d549ede0fc4339c data\fishe\recipes\fishegoldfishe_shovel.json
 aac0a784de268b4f4e4b272b11f8084cc58e7614 data\fishe\recipes\fishecopperfishe_axe.json
 ecb4af3ae19c849294ba205179e5752c1de5cd20 data\fishe\recipes\fishebdiamondfishe_hoe.json
-678a7aabb974f6ab12ccb091ff63c626821a494d data\fishe\recipes\air.json
 16dd216438093927f6b0bb8511258f5a296e5afa data\fishe\advancements\recipes\tools\fishe_staff.json
 900c8d7ba5b5d7f01a0a42d50a963b3cfd459ca8 data\fishe\recipes\fishered_fishe.json
 50e925f7f3e2684fdc82197425b09e33b6dd0c4c data\fishe\recipes\fishebgoldfishe_axe.json
@@ -91,13 +90,14 @@ d9fa5315e6a00ec36470b35454b129db54cb0a31 data\fishe\recipes\fishediamondfishe_ho
 8ecd30c26984bfaeabbe9f2eecc5a0be950a7b14 data\fishe\recipes\fishecoal_fishe.json
 c96b07aa905a09522de0eb444d9b287377f683c7 data\fishe\advancements\recipes\misc\fisheiron_fishe.json
 c6049fcc5cdb8c61ce339548d1798796c949f941 data\fishe\advancements\recipes\misc\fishecreepy_fishe.json
+1d78c644cab1aa57afcb6fe89c0dfc840f83ab4b data\fishe\advancements\recipes\decorations\fisheomancy_altar.json
 a42587dc73b7ffc37d2a9e82024a91d0ea95d640 data\fishe\advancements\recipes\misc\fishespider_fishe.json
 171e89e60447b85f22e0d867f4bb49482416acb3 data\fishe\recipes\fishebdiamondfishe_axe.json
 0272107bf6b8d4195b2cc25351c02808d0ee1059 data\fishe\recipes\fishebspider_fishe.json
 dfb5d04d5ae9e1ebbc5a0fad9ea02a3edc93b2b3 data\fishe\recipes\fisheironfishe_axe.json
 fed2d290003ef026593dd3fe0a51111b824bcb15 data\fishe\recipes\fishebcopperfishe_axe.json
-c9811f9073e5eca5a848a2142339ed83e7426bec data\fishe\advancements\recipes\misc\fishe_compacting_fishe_paste_block.json
 84f1181acbc9dfc023adda90b4ae76079a577578 data\fishe\recipes\fishe_compacting_fishe_paste.json
+c9811f9073e5eca5a848a2142339ed83e7426bec data\fishe\advancements\recipes\misc\fishe_compacting_fishe_paste_block.json
 07f7716bbf8a2ca80143533abeb794f40149f70a data\fishe\advancements\recipes\misc\fisheender_fishe.json
 35534c13fcc230cfcacb234017e0415750fab165 data\fishe\advancements\recipes\misc\fishebbone_fishe.json
 3d261feee69deef4d4efac6634843c84fbbf4d22 data\fishe\recipes\fisheironfishe_sword.json

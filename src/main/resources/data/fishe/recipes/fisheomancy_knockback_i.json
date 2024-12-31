@@ -1,0 +1,36 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:wooden_sword"
+    },
+    {
+      "item": "minecraft:wooden_sword"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 64,
+  "enchantment": [
+    {
+      "identifier": "minecraft:knockback",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

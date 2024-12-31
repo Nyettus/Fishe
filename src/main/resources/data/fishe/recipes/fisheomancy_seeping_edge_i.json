@@ -1,0 +1,36 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 32,
+  "enchantment": [
+    {
+      "identifier": "minecraft:seeping_edge",
+      "level": 1
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}

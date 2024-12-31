@@ -48,7 +48,6 @@ public class FisheomancyRecipe implements Recipe<SimpleInventory> {
                 inv.add(inventory.getStack(i));
             }
 
-            //I hate everything about this but i dont know how to compare the stacks
             for (Ingredient quickref : recipeItems) {
                 boolean hasFoundMatch = false;
                 for(ItemStack item : inv){

@@ -16,13 +16,11 @@ import net.minecraft.registry.tag.ItemTags;
 import java.util.concurrent.CompletableFuture;
 
 
-
 public class FisheModTagProvider extends ItemTagProvider {
     public FisheModTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
 
     }
-
 
 
     @Override
@@ -54,7 +52,8 @@ public class FisheModTagProvider extends ItemTagProvider {
         getOrCreateTagBuilder(FisheModTags.FISHEOMANCY_CATALYST)
                 .add(Items.BOOK)
                 .add(ItemsMisc.REINFORCED_COPPER)
-                .add(ItemsFishe.STONE_FISHE);
+                .add(ItemsFishe.STONE_FISHE)
+                .add(Items.GLASS_BOTTLE);
 
         assignRepairableTag();
 

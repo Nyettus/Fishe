@@ -1,0 +1,42 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "minecraft:shield"
+    },
+    {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    {
+      "item": "minecraft:cobbled_deepslate"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:book"
+  },
+  "slop_amount": 128,
+  "enchantment": [
+    {
+      "identifier": "minecraft:protection",
+      "level": 2
+    }
+  ],
+  "output": {
+    "item": "minecraft:enchanted_book"
+  }
+}
