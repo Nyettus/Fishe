@@ -2,16 +2,22 @@
   "type": "fishe:fisheomancy_recipe",
   "ingredients": [
     {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:glass_pane"
     },
     {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:glass_pane"
     },
     {
-      "item": "minecraft:lapis_lazuli"
+      "item": "minecraft:glass_pane"
     },
     {
-      "item": "minecraft:lapis_lazuli"
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:glass_pane"
     }
   ],
   "catalyst": {
@@ -20,7 +26,7 @@
   "slop_amount": 32,
   "enchantment": [
     {
-      "identifier": "minecraft:efficiency",
+      "identifier": "minecraft:sweeping",
       "level": 1
     }
   ],

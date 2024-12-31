@@ -20,23 +20,23 @@
       "item": "minecraft:glass_pane"
     },
     {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:gold_ingot"
     },
     {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:gold_ingot"
     },
     {
-      "item": "minecraft:lapis_lazuli"
+      "item": "minecraft:emerald"
     }
   ],
   "catalyst": {
     "item": "minecraft:book"
   },
-  "slop_amount": 64,
+  "slop_amount": 128,
   "enchantment": [
     {
-      "identifier": "minecraft:seeping_edge",
-      "level": 2
+      "identifier": "minecraft:sweeping",
+      "level": 3
     }
   ],
   "output": {
