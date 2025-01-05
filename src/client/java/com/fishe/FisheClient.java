@@ -1,5 +1,6 @@
 package com.fishe;
 
+import com.fishe.Blocks.BlockMaster;
 import com.fishe.Items.ItemsTools;
 import com.fishe.Items.ModFishingRodItem;
 import com.fishe.Screen.ModScreenHandler;
@@ -8,8 +9,10 @@ import com.fishe.ScreenClient.FisheRepairTableScreen;
 import com.fishe.ScreenClient.FisheomancyAltarScreen;
 import com.fishe.ScreenClient.FisheomancyExtenderScreen;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FishingRodItem;
 import net.minecraft.util.Identifier;
@@ -23,6 +26,8 @@ public class FisheClient implements ClientModInitializer {
 		HandledScreens.register(ModScreenHandler.FISHE_REPAIR_TABLE_SCREEN_HANDLER_SCREEN_HANDLER, FisheRepairTableScreen::new);
 		HandledScreens.register(ModScreenHandler.FISHEOMANCY_ALTAR_SCREEN_HANDLER_SCREEN_HANDLER, FisheomancyAltarScreen::new);
 		HandledScreens.register(ModScreenHandler.FISHEOMANCY_EXPANDER_SCREEN_HANDLER_SCREEN_HANDLER, FisheomancyExtenderScreen::new);
+
+		BlockRenderLayerMap.INSTANCE.putBlock(BlockMaster.FISHEOMANCY_ALTAR, RenderLayer.getCutout());
 	}
 
 	private static void InitRod() {
