@@ -28,6 +28,7 @@ public class FisheClient implements ClientModInitializer {
 		HandledScreens.register(ModScreenHandler.FISHEOMANCY_EXPANDER_SCREEN_HANDLER_SCREEN_HANDLER, FisheomancyExtenderScreen::new);
 
 		BlockRenderLayerMap.INSTANCE.putBlock(BlockMaster.FISHEOMANCY_ALTAR, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(BlockMaster.FISHEOMANCY_EXTENDER, RenderLayer.getCutout());
 	}
 
 	private static void InitRod() {
