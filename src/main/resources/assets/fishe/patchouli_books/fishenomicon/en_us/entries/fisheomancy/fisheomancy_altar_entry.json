@@ -1,0 +1,17 @@
+{
+  "name": "Fisheomancy Altar",
+  "icon": "fishe:fisheomancy_altar",
+  "category": "fishe:fisheomancy_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Fisheomancy Altar",
+      "text": "Conjure items using fishe paste and a catalyst. All recipes are shapeless except for the catalyst which needs to go in the center"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fisheomancy_altar"
+    }
+  ]
+}

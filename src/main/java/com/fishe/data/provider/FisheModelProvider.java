@@ -3,6 +3,7 @@ package com.fishe.data.provider;
 import com.fishe.Blocks.BlockMaster;
 import com.fishe.Items.ItemMaster;
 import com.fishe.Items.ItemsFishe;
+import com.fishe.Items.ItemsMisc;
 import com.fishe.Items.ItemsTools;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -40,7 +41,7 @@ public class FisheModelProvider extends FabricModelProvider {
 
 
         genToolModels(itemModelGenerator);
-
+        genMiscModels(itemModelGenerator);
 
 
     }
@@ -57,7 +58,15 @@ public class FisheModelProvider extends FabricModelProvider {
         }
     }
 
+    private void genMiscModels(ItemModelGenerator generator){
+        generator.register(ItemsMisc.REINFORCED_COPPER,Models.GENERATED);
+        generator.register(ItemsTools.FISHE_STAFF,Models.HANDHELD_ROD);
+    }
+
     private void genBlockModels(BlockStateModelGenerator generator){
         generator.registerSimpleCubeAll(BlockMaster.FISHE_PASTE_BLOCK);
     }
+
+
+
 }

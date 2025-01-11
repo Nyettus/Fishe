@@ -1,0 +1,17 @@
+{
+  "name": "Reinforced Copper",
+  "icon": "fishe:reinforced_copper",
+  "category": "fishe:misc_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Reinforced Copper",
+      "text": "Stronger copper"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:reinforced_copper"
+    }
+  ]
+}

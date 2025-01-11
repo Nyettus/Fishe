@@ -2,6 +2,7 @@ package com.fishe.data.provider;
 
 import com.fishe.Blocks.BlockMaster;
 import com.fishe.Items.ItemsFishe;
+import com.fishe.Items.ItemsMisc;
 import com.fishe.Items.ItemsTools;
 import com.fishe.enchantments.EnchantmentMaster;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -41,6 +42,9 @@ public class FisheEnLanguageProvider extends FabricLanguageProvider {
         GenerateBlockNames(translationBuilder);
 
         translationBuilder.add(EnchantmentMaster.CALL_OF_THE_NIGHT,"Call of the Night");
+
+        translationBuilder.add(ItemsMisc.REINFORCED_COPPER,"Reinforced Copper");
+        translationBuilder.add(ItemsTools.FISHE_STAFF,"Fishe Wand");
 
         GenerateToolNames(translationBuilder,"Copperfishe",
                 ItemsTools.COPPERFISHE_SHOVEL,
@@ -94,5 +98,7 @@ public class FisheEnLanguageProvider extends FabricLanguageProvider {
         builder.add(BlockMaster.FISHE_FERMENTER,"Fishe Fermenter");
         builder.add(BlockMaster.FISHE_PASTE_BLOCK, "Fishe Paste Block");
         builder.add(BlockMaster.FISHE_REPAIR_TABLE, "Fishe Repair Table");
+        builder.add(BlockMaster.FISHEOMANCY_ALTAR, "Fisheomancy Altar");
+        builder.add(BlockMaster.FISHEOMANCY_EXTENDER, "Fisheomancy Extender");
     }
 }

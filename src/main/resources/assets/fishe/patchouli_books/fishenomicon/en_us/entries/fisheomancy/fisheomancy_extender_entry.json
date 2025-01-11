@@ -1,0 +1,17 @@
+{
+  "name": "Fisheomancy Extender",
+  "icon": "fishe:fisheomancy_extender",
+  "category": "fishe:fisheomancy_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Fisheomancy Extender",
+      "text": "Add up to 3 of these to add more crafting slots to the altar"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fisheomancy_extender"
+    }
+  ]
+}
