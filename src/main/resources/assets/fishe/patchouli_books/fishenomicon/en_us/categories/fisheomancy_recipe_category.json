@@ -1,0 +1,6 @@
+{
+  "name": "Recipes",
+  "parent": "fishe:fisheomancy_category",
+  "description": "All things fisheomancy",
+  "icon": "minecraft:crafting_table"
+}

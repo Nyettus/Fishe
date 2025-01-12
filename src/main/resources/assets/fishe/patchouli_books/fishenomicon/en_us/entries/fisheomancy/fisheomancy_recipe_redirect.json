@@ -1,0 +1,12 @@
+{
+  "name": "Fisheomancy Recipes",
+  "icon": "minecraft:crafting_table",
+  "category": "fishe:fisheomancy_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Recipes",
+      "text": "There is a subcategory for recipes but its placed strangely so heres a $(l:fishe:fisheomancy_recipe_category)redirect$(/l)."
+    }
+  ]
+}

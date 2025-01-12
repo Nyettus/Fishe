@@ -6,7 +6,12 @@
     {
       "type": "patchouli:text",
       "title": "Fisheomancy Altar",
-      "text": "Conjure items using fishe paste and a catalyst. All recipes are shapeless except for the catalyst which needs to go in the center"
+      "text": "Conjure items using fishe paste and a catalyst. All recipes are shapeless except for the catalyst which needs to go in the center."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Special Interactions",
+      "text": "Hopper inputs insert to various slots.$(li)Top inserts catalyst alone$(li)Side inserts fishe paste or ingredients.$(li)Output only outputs finished item$(br)Redstone signals will craft but not $(l:fishe:fisheomancy/fishe_staff_entry)construct the multiblock$(/l)"
     },
     {
       "type": "crafting",

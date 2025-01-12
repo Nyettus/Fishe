@@ -1,0 +1,17 @@
+{
+  "name": "Fishe Wand",
+  "icon": "fishe:fishe_staff",
+  "category": "fishe:fisheomancy_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Fishe Wand",
+      "text": "The Fishe Wand will attempt to perform fisheomancy and bind any appropriate $(l:fishe:fisheomancy/fisheomancy_extender_entry)extenders$(/l)"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fisheomancy_altar"
+    }
+  ]
+}

@@ -6,7 +6,20 @@
     {
       "type": "patchouli:text",
       "title": "Fisheomancy Extender",
-      "text": "Add up to 3 of these to add more crafting slots to the altar"
+      "text": "Add up to 3 of these to add more crafting slots to the altar.$(br)The given multiblock is an example of a max level altar. The orientation can be rotated"
+    },
+    {
+      "type": "multiblock",
+      "name": "Fisheomancy Altar Set",
+      "multiblock": {
+        "pattern": [
+          [ "  E  ", "     ", "  0  ", "E   E"]
+        ],
+        "mapping": {
+          "E": "fishe:fisheomancy_extender",
+          "0": "fishe:fisheomancy_altar"
+        }
+      }
     },
     {
       "type": "crafting",
