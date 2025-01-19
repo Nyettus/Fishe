@@ -1,6 +1,7 @@
 {
   "name": "Silk Touch",
-  "icon": "minecraft:enchanted_book",
+  "icon": "minecraft:iron_pickaxe",
+  "sortnum": 1,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {

@@ -1,6 +1,7 @@
 {
   "name": "Punch",
-  "icon": "minecraft:enchanted_book",
+  "icon": "minecraft:bow",
+  "sortnum": 8,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {

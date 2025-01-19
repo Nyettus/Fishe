@@ -1,6 +1,7 @@
 {
   "name": "Respiration",
-  "icon": "minecraft:enchanted_book",
+  "icon": "minecraft:iron_helmet",
+  "sortnum": 3,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {

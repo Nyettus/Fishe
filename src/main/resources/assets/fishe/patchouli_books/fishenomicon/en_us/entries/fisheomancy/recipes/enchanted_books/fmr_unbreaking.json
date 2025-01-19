@@ -1,6 +1,7 @@
 {
   "name": "Unbreaking",
   "icon": "minecraft:enchanted_book",
+  "sortnum": 0,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {

@@ -1,6 +1,7 @@
 {
   "name": "Quick Charge",
-  "icon": "minecraft:enchanted_book",
+  "icon": "minecraft:crossbow",
+  "sortnum": 9,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {

@@ -1,0 +1,12 @@
+{
+  "name": "Diorite",
+  "icon": "minecraft:diorite",
+  "sortnum": 1,
+  "category": "fishe:fisheomancy_recipe_blocks_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_diorite"
+    }
+  ]
+}

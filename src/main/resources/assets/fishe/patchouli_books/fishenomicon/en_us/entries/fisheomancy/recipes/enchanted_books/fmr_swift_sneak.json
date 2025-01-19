@@ -1,6 +1,7 @@
 {
   "name": "Swift Sneak",
-  "icon": "minecraft:enchanted_book",
+  "icon": "minecraft:iron_leggings",
+  "sortnum": 5,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {

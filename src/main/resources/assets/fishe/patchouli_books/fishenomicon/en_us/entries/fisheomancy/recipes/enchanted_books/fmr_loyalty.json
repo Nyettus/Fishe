@@ -1,6 +1,7 @@
 {
   "name": "Loyalty",
-  "icon": "minecraft:enchanted_book",
+  "icon": "minecraft:trident",
+  "sortnum": 10,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {

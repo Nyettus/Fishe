@@ -1,6 +1,7 @@
 {
   "name": "Thorns",
-  "icon": "minecraft:enchanted_book",
+  "icon": "minecraft:iron_chestplate",
+  "sortnum": 4,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {

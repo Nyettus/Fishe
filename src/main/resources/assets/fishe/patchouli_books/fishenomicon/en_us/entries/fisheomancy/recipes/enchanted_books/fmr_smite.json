@@ -1,6 +1,7 @@
 {
   "name": "Smite",
-  "icon": "minecraft:enchanted_book",
+  "icon": "minecraft:iron_sword",
+  "sortnum": 7,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {

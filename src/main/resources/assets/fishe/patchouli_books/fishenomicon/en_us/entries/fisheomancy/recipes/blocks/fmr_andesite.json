@@ -1,0 +1,12 @@
+{
+  "name": "Andesite",
+  "icon": "minecraft:andesite",
+  "sortnum": 1,
+  "category": "fishe:fisheomancy_recipe_blocks_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_andesite"
+    }
+  ]
+}

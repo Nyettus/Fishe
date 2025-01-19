@@ -1,6 +1,7 @@
 {
   "name": "Feather Falling",
-  "icon": "minecraft:enchanted_book",
+  "icon": "minecraft:iron_boots",
+  "sortnum": 6,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {

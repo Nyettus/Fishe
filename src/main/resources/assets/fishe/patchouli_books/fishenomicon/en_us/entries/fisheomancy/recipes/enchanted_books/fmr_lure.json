@@ -1,6 +1,7 @@
 {
   "name": "Lure",
-  "icon": "minecraft:enchanted_book",
+  "icon": "minecraft:fishing_rod",
+  "sortnum": 2,
   "category": "fishe:fisheomancy_recipe_enchanting_books_category",
   "pages": [
     {
