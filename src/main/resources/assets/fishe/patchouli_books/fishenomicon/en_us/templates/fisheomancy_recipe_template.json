@@ -1,0 +1,171 @@
+{
+  "processor": "com.fishe.patchouli.processor.FisheomancyRecipeProcessor",
+  "components": [
+    {
+      "type": "patchouli:header",
+      "text": "#out_recipe",
+      "centered": true,
+      "x": -1,
+      "y": -1
+    },
+    {
+      "type": "patchouli:image",
+      "image": "fishe:textures/gui/patchouli/fisheomancy_recipe_patchouli.png",
+      "width": 200,
+      "height": 200,
+      "u": 40,
+      "v": 24,
+      "scale": 1
+    },
+    {
+      "type": "patchouli:text",
+      "text": "#slop_amount",
+      "x": 52,
+      "y": 107
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#catalyst",
+      "framed": false,
+      "recipe": true,
+      "x": 52,
+      "y" : 67
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#output",
+      "framed": false,
+      "recipe": true,
+      "x": 52,
+      "y" : 119
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input0",
+      "framed": false,
+      "recipe": true,
+      "x": 42,
+      "y" : 47
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input0",
+      "framed": false,
+      "recipe": true,
+      "x": 42,
+      "y" : 47
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input1",
+      "framed": false,
+      "recipe": true,
+      "x": 62,
+      "y" : 47
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input2",
+      "framed": false,
+      "recipe": true,
+      "x": 72,
+      "y" : 67
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input3",
+      "framed": false,
+      "recipe": true,
+      "x": 62,
+      "y" : 87
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input4",
+      "framed": false,
+      "recipe": true,
+      "x": 42,
+      "y" : 87
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input5",
+      "framed": false,
+      "recipe": true,
+      "x": 32,
+      "y" : 67
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input6",
+      "framed": false,
+      "recipe": true,
+      "x": 12,
+      "y" : 87
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input7",
+      "framed": false,
+      "recipe": true,
+      "x": 32,
+      "y" : 107
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input8",
+      "framed": false,
+      "recipe": true,
+      "x": 12,
+      "y" : 107
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input9",
+      "framed": false,
+      "recipe": true,
+      "x": 92,
+      "y" : 87
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input10",
+      "framed": false,
+      "recipe": true,
+      "x": 72,
+      "y" : 107
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input11",
+      "framed": false,
+      "recipe": true,
+      "x": 92,
+      "y" : 107
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input12",
+      "framed": false,
+      "recipe": true,
+      "x": 32,
+      "y" : 25
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input13",
+      "framed": false,
+      "recipe": true,
+      "x": 72,
+      "y" : 25
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input14",
+      "framed": false,
+      "recipe": true,
+      "x": 52,
+      "y" : 18
+    }
+  ]
+}

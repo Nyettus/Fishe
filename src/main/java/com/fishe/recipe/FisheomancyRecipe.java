@@ -3,9 +3,11 @@ package com.fishe.recipe;
 import com.fishe.Utils.UsefulBox;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import net.fabricmc.fabric.mixin.recipe.ingredient.IngredientMixin;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.registry.DynamicRegistryManager;
@@ -68,6 +70,27 @@ public class FisheomancyRecipe implements Recipe<SimpleInventory> {
     public Map<Enchantment,Integer> getEnchantment(){
         if(enchantment.isEmpty()) return null;
         return UsefulBox.StringMapToEnchantment(enchantment);
+    }
+
+    public String getSlopAsPercent(){
+        int percent = (int) Math.round(((double) SlopAmount / 512) * 100);
+        return ""+ percent + "%";
+    }
+
+    public Ingredient getInputAtPos(int i){
+        if(i>=recipeItems.size()) return Ingredient.EMPTY;
+        return recipeItems.get(i);
+    }
+
+    public String getName(){
+        if(Output.isOf(Items.ENCHANTED_BOOK)){
+            return UsefulBox.FirstEnchantmentRoman(UsefulBox.StringMapToEnchantment(enchantment));
+        }
+        return Output.getName().getString();
+    }
+
+    public Ingredient getCatalyst(){
+        return Catalyst;
     }
 
     @Override
