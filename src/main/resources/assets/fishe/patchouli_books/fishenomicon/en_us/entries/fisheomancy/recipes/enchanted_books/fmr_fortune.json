@@ -1,0 +1,19 @@
+{
+  "name": "Fortune",
+  "icon": "minecraft:enchanted_book",
+  "category": "fishe:fisheomancy_recipe_enchanting_books_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_fortune_i"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_fortune_ii"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_fortune_iii"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Call of the Night",
+  "icon": "minecraft:enchanted_book",
+  "category": "fishe:fisheomancy_recipe_enchanting_books_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_call_of_the_night_i"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_call_of_the_night_ii"
+    }
+  ]
+}

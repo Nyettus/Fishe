@@ -1,0 +1,19 @@
+{
+  "name": "Thorns",
+  "icon": "minecraft:enchanted_book",
+  "category": "fishe:fisheomancy_recipe_enchanting_books_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_thorns_i"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_thorns_ii"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_thorns_iii"
+    }
+  ]
+}

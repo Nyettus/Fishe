@@ -1,0 +1,7 @@
+{
+  "name": "Miscellaneous",
+  "parent": "fishe:fisheomancy_recipe_category",
+  "description": "All recipes that didn't fit in the others",
+  "icon": "minecraft:experience_bottle",
+  "sortnum": 100
+}

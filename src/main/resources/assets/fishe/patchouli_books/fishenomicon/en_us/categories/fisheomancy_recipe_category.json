@@ -1,6 +1,6 @@
 {
   "name": "Recipes",
   "parent": "fishe:fisheomancy_category",
-  "description": "All things fisheomancy",
+  "description": "Collection of all fisheomancy recipes.$(br)The percentage is the required fishe paste amount",
   "icon": "minecraft:crafting_table"
 }

@@ -1,0 +1,23 @@
+{
+  "name": "Piercing",
+  "icon": "minecraft:enchanted_book",
+  "category": "fishe:fisheomancy_recipe_enchanting_books_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_piercing_i"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_piercing_ii"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_piercing_iii"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_piercing_iv"
+    }
+  ]
+}

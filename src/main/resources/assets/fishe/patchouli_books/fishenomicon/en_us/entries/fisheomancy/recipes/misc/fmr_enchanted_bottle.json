@@ -1,0 +1,11 @@
+{
+  "name": "Bottle o' Enchanting",
+  "icon": "minecraft:experience_bottle",
+  "category": "fishe:fisheomancy_recipe_misc_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_experience_bottle"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Feather Falling",
+  "icon": "minecraft:enchanted_book",
+  "category": "fishe:fisheomancy_recipe_enchanting_books_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_feather_falling_i"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_feather_falling_ii"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_feather_falling_iii"
+    },
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_feather_falling_iv"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Enchanting Books",
+  "parent": "fishe:fisheomancy_recipe_category",
+  "description": "All enchanting book recipes",
+  "icon": "minecraft:enchanted_book"
+}

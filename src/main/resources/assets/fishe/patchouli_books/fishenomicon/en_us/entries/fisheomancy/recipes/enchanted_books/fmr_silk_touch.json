@@ -1,0 +1,11 @@
+{
+  "name": "Silk Touch",
+  "icon": "minecraft:enchanted_book",
+  "category": "fishe:fisheomancy_recipe_enchanting_books_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_silk_touch_i"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Blocks",
+  "parent": "fishe:fisheomancy_recipe_category",
+  "description": "All block recipes",
+  "icon": "minecraft:obsidian",
+  "sortnum": 1
+}

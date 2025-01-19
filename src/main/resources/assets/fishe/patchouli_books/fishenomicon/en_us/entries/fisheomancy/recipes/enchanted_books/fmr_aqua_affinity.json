@@ -1,0 +1,11 @@
+{
+  "name": "Aqua Affinity",
+  "icon": "minecraft:enchanted_book",
+  "category": "fishe:fisheomancy_recipe_enchanting_books_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_aqua_affinity_i"
+    }
+  ]
+}

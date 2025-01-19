@@ -45,6 +45,7 @@ public class FisheomancyRecipeProcessor implements IComponentProcessor {
 
     private ItemStack falseCraft(World world){
         ItemStack falseOutput = recipe.getOutput(world.getRegistryManager()).copy();
+        if(recipe.getEnchantment()==null) return falseOutput;
         EnchantmentHelper.set(recipe.getEnchantment(),falseOutput);
         return falseOutput;
     }
