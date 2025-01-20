@@ -1,6 +1,8 @@
 package com.fishe.data.provider;
 
 import com.fishe.Blocks.BlockMaster;
+import com.fishe.Fishe;
+import com.fishe.Items.ItemMaster;
 import com.fishe.Items.ItemsFishe;
 import com.fishe.Items.ItemsMisc;
 import com.fishe.Items.ItemsTools;
@@ -8,6 +10,10 @@ import com.fishe.enchantments.EnchantmentMaster;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.item.*;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableTextContent;
+import org.jetbrains.annotations.NotNull;
+
 
 public class FisheEnLanguageProvider extends FabricLanguageProvider {
     public FisheEnLanguageProvider(FabricDataOutput dataOutput) {
@@ -74,13 +80,22 @@ public class FisheEnLanguageProvider extends FabricLanguageProvider {
                 ItemsTools.DIAMONDFISHE_HOE,
                 ItemsTools.DIAMONDFISHE_SWORD);
 
+        addText(translationBuilder,ItemMaster.FISHE_ITEM_GROUP.getDisplayName(), "Fishe Items");
+
 
 
     }
 
 
 
-
+private static void addText(@NotNull TranslationBuilder builder, @NotNull Text text, @NotNull String value){
+        if(text.getContent() instanceof TranslatableTextContent translatableTextContent){
+            builder.add(translatableTextContent.getKey(),value);
+        }
+        else {
+            Fishe.LOGGER.error("Translation failed");
+        }
+}
 
 
 

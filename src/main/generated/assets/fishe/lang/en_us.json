@@ -45,5 +45,6 @@
   "item.fishe.reinforced_copper": "Reinforced Copper",
   "item.fishe.rot_fishe": "Rot Fishe",
   "item.fishe.spider_fishe": "Spider Fishe",
-  "item.fishe.stone_fishe": "Stone Fishe"
+  "item.fishe.stone_fishe": "Stone Fishe",
+  "itemGroup.FisheItems": "Fishe Items"
 }

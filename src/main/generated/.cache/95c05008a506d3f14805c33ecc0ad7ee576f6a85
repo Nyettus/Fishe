@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-11T14:46:04.8567786	fishe/Model Definitions
+// 1.20.1	2025-01-20T13:51:32.2402951	fishe/Model Definitions
 4a0b2569d0c872e46cc1ab33c10254e3c0ea4299 assets\fishe\models\item\fishe_paste_block.json
 e1b1c5059fe47824ce2ab29b836cf740bbaa7d0c assets\fishe\models\item\goldfishe_axe.json
 1b695812cd6216301399472d15b77ac7fea39b0a assets\fishe\models\item\bone_fishe.json
@@ -39,8 +39,8 @@ e5530dea285fe5452198b6e7c40a8a064aa3d01e assets\fishe\models\item\diamond_fishe.
 83f812e1ff2da41d0e3776ee16c7ea464152444b assets\fishe\models\item\iron_rod.json
 9bdd69e3d79278ad94d32264513ef612c4fa8d42 assets\fishe\models\item\gold_rod.json
 d96eb5b115555f5b1739b51879cf9e9fc087db85 assets\fishe\models\item\copperfishe_pickaxe.json
-78d0510ac7fda448273eaeb6282cb643e282b7cf assets\fishe\models\item\copper_rod_cast.json
 ea3f89242099bc26a4a0da2bf3be051caca514b0 assets\fishe\models\block\fishe_paste_block.json
+78d0510ac7fda448273eaeb6282cb643e282b7cf assets\fishe\models\item\copper_rod_cast.json
 5099aa535e4dd77d38b0a31747a89eb0a9827f87 assets\fishe\models\item\gold_rod_cast.json
 7136dc838065e26a1dd80235a93438d757d8e053 assets\fishe\models\item\red_fishe.json
 8c02a781cd4f9b5689d6d90d3cc2cce987f73263 assets\fishe\blockstates\fishe_paste_block.json

@@ -1,8 +1,10 @@
 {
   "name": "Fishenomicon",
-  "landing_text": "A pointless guide to all things Fishe",
+  "landing_text": "A meaningful guide to all things Fishe",
   "version": 1,
   "creative_tab": "fishe:item_group",
-  "use_resource_pack": true
+  "use_resource_pack": true,
+  "model": "fishe:book_fishenomicon",
+  "book_texture": "patchouli:textures/gui/book_gray.png"
 }
 
