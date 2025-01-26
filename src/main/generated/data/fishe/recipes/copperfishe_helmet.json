@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "i": {
+      "item": "fishe:copper_fishe"
+    }
+  },
+  "pattern": [
+    "iii",
+    "i i",
+    "   "
+  ],
+  "result": {
+    "item": "fishe:copperfishe_helmet"
+  },
+  "show_notification": true
+}

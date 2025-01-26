@@ -7,17 +7,20 @@ import com.fishe.Items.ItemsFishe;
 import com.fishe.Items.ItemsMisc;
 import com.fishe.Items.ItemsTools;
 import com.fishe.Items.ItemsTools.ToolType;
+import com.fishe.recipe.ModRecipes;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
+import java.util.Map;
 import java.util.function.Consumer;
 
 public class FisheRecipeProvider extends FabricRecipeProvider {
@@ -29,10 +32,14 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
     public void generate(Consumer<RecipeJsonProvider> consumer) {
         genMiningFisheRecipe(consumer);
         genNightFisheRecipe(consumer);
+
         genToolRecipes(consumer);
+        genArmorRecipe(consumer);
+
         genCompactingRecipe(consumer);
         genFisheFermenter(consumer);
         genFisheRepairTable(consumer);
+
         genReinforcedCopper(consumer);
         genFisheStaff(consumer);
         genFisheomancyAltar(consumer);
@@ -273,6 +280,83 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ItemsMisc.REINFORCED_COPPER)
                         , FabricRecipeProvider.conditionsFromItem(ItemsMisc.REINFORCED_COPPER))
                 .offerTo(consumer, new Identifier(getRecipeName(BlockItems.FISHEOMANCY_EXTENDER)));
+    }
+
+    private void genArmorRecipe(Consumer<RecipeJsonProvider> consumer){
+        Item input = null;
+        ArmorItem.Type type = null;
+        for(Map.Entry<String,Item> entry : ItemMaster.ArmorMap.entrySet()){
+            String[] split = entry.getKey().split("_");
+            switch (split[0]){
+                case "copperfishe" -> input = ItemsFishe.COPPER_FISHE;
+                case "ironfishe" -> input = ItemsFishe.IRON_FISHE;
+                case "goldfishe" -> input = ItemsFishe.GOLD_FISHE;
+                case "diamondfishe" -> input = ItemsFishe.DIAMOND_FISHE;
+                default -> throw new IllegalArgumentException("Incorrect fishe type: "+split[0]);
+            }
+            switch (split[1]){
+                case "helmet" -> type = ArmorItem.Type.HELMET;
+                case "chestplate" -> type = ArmorItem.Type.CHESTPLATE;
+                case "leggings" -> type = ArmorItem.Type.LEGGINGS;
+                case "boots" -> type = ArmorItem.Type.BOOTS;
+                default -> throw new IllegalArgumentException("Incorrect armor type: "+split[1]);
+            }
+            ArmorScaffold(consumer,entry.getValue(),input,type);
+        }
+    }
+    private void ArmorScaffold(Consumer<RecipeJsonProvider> consumer, Item output, Item input, ArmorItem.Type type){
+        String topRow = "   ";
+        String midRow = "   ";
+        String botRow = "   ";
+        switch (type){
+            case HELMET -> {
+                topRow = "iii";
+                midRow = "i i";
+            }
+            case CHESTPLATE -> {
+                topRow = "i i";
+                midRow = "iii";
+                botRow = "iii";
+            }
+            case LEGGINGS -> {
+                topRow = "iii";
+                midRow = "i i";
+                botRow = "i i";
+            }
+            case BOOTS -> {
+                BootsException(consumer,output,input);
+                return;
+            }
+        };
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS,output)
+                .pattern(topRow)
+                .pattern(midRow)
+                .pattern(botRow)
+                .input('i',input)
+                .criterion(FabricRecipeProvider.hasItem(input),FabricRecipeProvider.conditionsFromItem(input))
+                .offerTo(consumer,new Identifier(getRecipeName(output)));
+        Fishe.LOGGER.info("Successfully registered " + output.getName().getString());
+
+
+
+    }
+    private void BootsException(Consumer<RecipeJsonProvider> consumer, Item output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS,output)
+                .pattern("i i")
+                .pattern("i i")
+                .pattern("   ")
+                .input('i',input)
+                .criterion(FabricRecipeProvider.hasItem(input),FabricRecipeProvider.conditionsFromItem(input))
+                .offerTo(consumer,new Identifier(getRecipeName(output)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS,output)
+                .pattern("   ")
+                .pattern("i i")
+                .pattern("i i")
+                .input('i',input)
+                .criterion(FabricRecipeProvider.hasItem(input),FabricRecipeProvider.conditionsFromItem(input))
+                .offerTo(consumer,new Identifier("b_"+getRecipeName(output)));
+        Fishe.LOGGER.info("Successfully registered " + output.getName().getString());
+
     }
 
 }

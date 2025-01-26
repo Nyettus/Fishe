@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "i": {
+      "item": "fishe:iron_fishe"
+    }
+  },
+  "pattern": [
+    "iii",
+    "i i",
+    "   "
+  ],
+  "result": {
+    "item": "fishe:ironfishe_helmet"
+  },
+  "show_notification": true
+}

@@ -26,6 +26,7 @@ public class ItemMaster
     public static Map<String,Item> FishMap = new HashMap<>();
     public static Map<String,Item> MetalFishMap = new HashMap<>();
     public static Map<String,Item> ToolMap = new HashMap<>();
+    public static Map<String,Item> ArmorMap = new HashMap<>();
 
 
     public static <T extends Item>  T register(T item, String id) {
@@ -56,6 +57,7 @@ public class ItemMaster
         ItemsFishe.initialize();
         ItemsTools.initialize();
         ItemsMisc.initialize();
+        ItemsArmor.initialize();
 
 
     }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "i": {
+      "item": "fishe:iron_fishe"
+    }
+  },
+  "pattern": [
+    "   ",
+    "i i",
+    "i i"
+  ],
+  "result": {
+    "item": "fishe:ironfishe_boots"
+  },
+  "show_notification": true
+}
