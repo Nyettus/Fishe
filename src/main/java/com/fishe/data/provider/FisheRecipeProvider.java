@@ -48,10 +48,10 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
 
     private void genMiningFisheRecipe(Consumer<RecipeJsonProvider> consumer) {
         ShapelessLooper(consumer, RecipeCategory.BUILDING_BLOCKS, Items.COBBLESTONE, ItemsFishe.STONE_FISHE, 1);
-        ShapelessLooper(consumer, RecipeCategory.MISC, Items.COAL, ItemsFishe.COAL_FISHE, 4);
-        ShapelessLooper(consumer, RecipeCategory.MISC, Items.RAW_COPPER, ItemsFishe.COPPER_FISHE, 4);
-        ShapelessLooper(consumer, RecipeCategory.MISC, Items.RAW_IRON, ItemsFishe.IRON_FISHE, 4);
-        ShapelessLooper(consumer, RecipeCategory.MISC, Items.RAW_GOLD, ItemsFishe.GOLD_FISHE, 4);
+        ShapelessLooper(consumer, RecipeCategory.MISC, Items.COAL, ItemsFishe.COAL_FISHE, 3);
+        ShapelessLooper(consumer, RecipeCategory.MISC, Items.RAW_COPPER, ItemsFishe.COPPER_FISHE, 3);
+        ShapelessLooper(consumer, RecipeCategory.MISC, Items.RAW_IRON, ItemsFishe.IRON_FISHE, 3);
+        ShapelessLooper(consumer, RecipeCategory.MISC, Items.RAW_GOLD, ItemsFishe.GOLD_FISHE, 3);
         ShapelessLooper(consumer, RecipeCategory.MISC, Items.LAPIS_LAZULI, ItemsFishe.LAPIS_FISHE, 1);
         ShapelessLooper(consumer, RecipeCategory.MISC, Items.EMERALD, ItemsFishe.EMERALD_FISHE, 4);
         ShapelessLooper(consumer, RecipeCategory.MISC, Items.DIAMOND, ItemsFishe.DIAMOND_FISHE, 8);
@@ -324,8 +324,9 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
                 botRow = "i i";
             }
             case BOOTS -> {
-                BootsException(consumer,output,input);
-                return;
+                topRow = "i i";
+                midRow = "i i";
+
             }
         };
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS,output)
@@ -340,24 +341,7 @@ public class FisheRecipeProvider extends FabricRecipeProvider {
 
 
     }
-    private void BootsException(Consumer<RecipeJsonProvider> consumer, Item output, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS,output)
-                .pattern("i i")
-                .pattern("i i")
-                .pattern("   ")
-                .input('i',input)
-                .criterion(FabricRecipeProvider.hasItem(input),FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(consumer,new Identifier(getRecipeName(output)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS,output)
-                .pattern("   ")
-                .pattern("i i")
-                .pattern("i i")
-                .input('i',input)
-                .criterion(FabricRecipeProvider.hasItem(input),FabricRecipeProvider.conditionsFromItem(input))
-                .offerTo(consumer,new Identifier("b_"+getRecipeName(output)));
-        Fishe.LOGGER.info("Successfully registered " + output.getName().getString());
 
-    }
 
 }
 
