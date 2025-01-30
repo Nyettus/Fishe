@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-27T13:15:29.9862224	fishe/Recipes
+// 1.20.1	2025-01-30T14:11:58.9670134	fishe/Recipes
 7ceb7a1a7c9afafc9a3d3b852c732f353ac0ea57 data\fishe\recipes\fishecopper_fishe.json
 78528dedb2b3c3778c500931c84deb7034030fdb data\fishe\advancements\recipes\tools\fishediamondfishe_sword.json
 7968ff5d85a02d5522e399d446aa60a3f1ee61e6 data\fishe\recipes\reinforced_copper.json
@@ -10,8 +10,8 @@ f4d59689480e36ab65a379e7889f41feea66db66 data\fishe\advancements\recipes\misc\fi
 55fb363197c6f20de75dd17d135aae235e549124 data\fishe\advancements\recipes\tools\copperfishe_chestplate.json
 ec0be33cb45f915a6c4d0d7019df275527b3e9ba data\fishe\recipes\fishecopperfishe_hoe.json
 059565ca668ea81feac137877f293a8f6443bc60 data\fishe\advancements\recipes\misc\fishecopper_fishe.json
-9a41571036f65664f7a8b0d38af8a96ad809ba33 data\fishe\advancements\recipes\tools\goldfishe_leggings.json
 92d7697fa28321cc2f6cc2e8d162ba8deb153c28 data\fishe\recipes\ironfishe_leggings.json
+9a41571036f65664f7a8b0d38af8a96ad809ba33 data\fishe\advancements\recipes\tools\goldfishe_leggings.json
 4774d8a2e0cf7ea420d651b0b3bed5d00eda677d data\fishe\advancements\recipes\tools\fishegold_rod.json
 83054a1315c2ef07e6b1a2a7f4cdcf44048070f2 data\fishe\advancements\recipes\tools\ironfishe_boots.json
 f1281f5697fa4f22b19de30a89df64518d4b68e0 data\fishe\recipes\fishe_staff.json

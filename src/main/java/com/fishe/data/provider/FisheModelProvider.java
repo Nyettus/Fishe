@@ -41,6 +41,7 @@ public class FisheModelProvider extends FabricModelProvider {
 
 
         genToolModels(itemModelGenerator);
+        genArmorModels(itemModelGenerator);
         genMiscModels(itemModelGenerator);
 
 
@@ -67,6 +68,11 @@ public class FisheModelProvider extends FabricModelProvider {
         generator.registerSimpleCubeAll(BlockMaster.FISHE_PASTE_BLOCK);
     }
 
+    private void genArmorModels(ItemModelGenerator generator){
+        for(Item value : ItemMaster.ArmorMap.values()){
+            generator.register(value,Models.GENERATED);
+        }
+    }
 
 
 }
