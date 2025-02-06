@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 
 public class FisheModelProvider extends FabricModelProvider {
@@ -70,7 +71,7 @@ public class FisheModelProvider extends FabricModelProvider {
 
     private void genArmorModels(ItemModelGenerator generator){
         for(Item value : ItemMaster.ArmorMap.values()){
-            generator.register(value,Models.GENERATED);
+            generator.registerArmor((ArmorItem) value);
         }
     }
 
