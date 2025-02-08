@@ -3,13 +3,13 @@
 	"id": "fishe",
 	"version": "${version}",
 	"name": "fishe",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Fish for various fishe and perform fisheomancy!",
 	"authors": [
-		"Me!"
+		"Nyettus"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/project/fishe",
+		"sources": "https://github.com/Nyettus/Fishe"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/fishe/icon.png",
@@ -36,7 +36,8 @@
 		"fabricloader": ">=0.16.9",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"patchouli": "*"
 	},
 	"suggests": {
 		"another-mod": "*"
