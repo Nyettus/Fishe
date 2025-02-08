@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-03T12:53:41.7718331	fishe/Model Definitions
+// 1.20.1	2025-02-08T13:51:53.1016695	fishe/Model Definitions
 52a0365475a24796a2801d7259968e66926c590e assets\fishe\models\item\diamondfishe_chestplate_redstone_trim.json
 bd5e0577b8f321983e8768f1d9078d9f94ef1e4a assets\fishe\models\item\ironfishe_helmet_gold_trim.json
 46925a9a2b2d695acf4f81ebbe7134b6fd99cc16 assets\fishe\models\item\ironfishe_chestplate_gold_trim.json
@@ -8,8 +8,8 @@ a3c8506a40d256e1cc8d8da998fc6cf9a9a0c072 assets\fishe\models\item\copperfishe_bo
 82abb52be012bc28d5a827417a89716e193d8a35 assets\fishe\models\item\fishe_paste.json
 779069c497d8c3b43a9c2e43674c75af729de721 assets\fishe\models\item\goldfishe_leggings_emerald_trim.json
 7c01d7637440d202eac0f7745d7d8da4db8daaed assets\fishe\models\item\copperfishe_shovel.json
-b16fe39c6895597ec0954c9ae1c5adb35b6922ea assets\fishe\models\item\lapis_fishe.json
 0cad96d74a508faf99663042cb95004d30e12f07 assets\fishe\models\item\diamondfishe_helmet_copper_trim.json
+b16fe39c6895597ec0954c9ae1c5adb35b6922ea assets\fishe\models\item\lapis_fishe.json
 91bf64c62453b9d5642c53817add33f33908a387 assets\fishe\models\item\ironfishe_chestplate_redstone_trim.json
 5a4343cf595adbfa6091f6cf26ee8fd460fd8b7b assets\fishe\models\item\diamondfishe_chestplate_emerald_trim.json
 f2d0db5c90336eb4ed961438ab6e4c79bea01edf assets\fishe\models\item\copperfishe_helmet_gold_trim.json
@@ -112,8 +112,8 @@ e1b1c5059fe47824ce2ab29b836cf740bbaa7d0c assets\fishe\models\item\goldfishe_axe.
 10d3f1874531c45123f86b6df6871df0ea1335cf assets\fishe\models\item\goldfishe_chestplate_iron_trim.json
 75fe5f7e0471ec3bbfcc333856f418d3e1a5546e assets\fishe\models\item\copperfishe_leggings_diamond_trim.json
 53e022a59e95956521916d708f881923d59bb05a assets\fishe\models\item\diamondfishe_chestplate_copper_trim.json
-409f16ff70f42e1f5815cfbef392c56cebfa01e3 assets\fishe\models\item\diamondfishe_chestplate_iron_trim.json
 a38fcd7ebe8bfc505a47c5f99550cf212933c95a assets\fishe\models\item\goldfishe_chestplate_redstone_trim.json
+409f16ff70f42e1f5815cfbef392c56cebfa01e3 assets\fishe\models\item\diamondfishe_chestplate_iron_trim.json
 28dd05b18403df6f9fa51f4c160bbd3165b9591c assets\fishe\models\item\copperfishe_leggings_netherite_trim.json
 d6f7f6d44fc1877a8b597020e9a6139868ecb262 assets\fishe\models\item\ironfishe_helmet_iron_trim.json
 28e130ff2c6291e4801d4ab6d3b58a5065cb66cb assets\fishe\models\item\diamondfishe_leggings.json

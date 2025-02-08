@@ -1,0 +1,28 @@
+{
+  "name": "Sword",
+  "icon": "fishe:copperfishe_sword",
+  "category": "fishe:fishe_tools",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishecopperfishe_sword"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fisheironfishe_sword"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishegoldfishe_sword"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishediamondfishe_sword"
+    }
+  ]
+}
+

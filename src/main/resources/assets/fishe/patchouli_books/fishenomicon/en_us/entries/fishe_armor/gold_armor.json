@@ -1,0 +1,20 @@
+{
+  "name": "Gold",
+  "icon": "fishe:goldfishe_helmet",
+  "category": "fishe:fishe_armor",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:goldfishe_helmet",
+      "recipe2": "fishe:goldfishe_chestplate"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:goldfishe_leggings",
+      "recipe2": "fishe:goldfishe_boots"
+    }
+  ]
+}
+

@@ -1,0 +1,27 @@
+{
+  "name": "Pickaxes",
+  "icon": "fishe:copperfishe_pickaxe",
+  "category": "fishe:fishe_tools",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishecopperfishe_pickaxe"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fisheironfishe_pickaxe"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishegoldfishe_pickaxe"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishediamondfishe_pickaxe"
+    }
+  ]
+}

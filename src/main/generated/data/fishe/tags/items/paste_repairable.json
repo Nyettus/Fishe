@@ -24,6 +24,22 @@
     "fishe:ironfishe_pickaxe",
     "fishe:copperfishe_axe",
     "fishe:diamondfishe_sword",
-    "fishe:ironfishe_sword"
+    "fishe:ironfishe_sword",
+    "fishe:goldfishe_leggings",
+    "fishe:ironfishe_leggings",
+    "fishe:copperfishe_helmet",
+    "fishe:ironfishe_helmet",
+    "fishe:diamondfishe_helmet",
+    "fishe:copperfishe_chestplate",
+    "fishe:goldfishe_helmet",
+    "fishe:diamondfishe_leggings",
+    "fishe:diamondfishe_boots",
+    "fishe:ironfishe_boots",
+    "fishe:diamondfishe_chestplate",
+    "fishe:goldfishe_chestplate",
+    "fishe:goldfishe_boots",
+    "fishe:copperfishe_boots",
+    "fishe:copperfishe_leggings",
+    "fishe:ironfishe_chestplate"
   ]
 }

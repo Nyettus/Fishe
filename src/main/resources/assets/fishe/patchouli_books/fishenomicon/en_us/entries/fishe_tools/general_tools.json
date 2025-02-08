@@ -1,0 +1,12 @@
+{
+  "name": "General Information",
+  "icon": "minecraft:crafting_table",
+  "category": "fishe:fishe_tools",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "General Information",
+      "text": "All fishe tools are crafted exactly how you'd expect, all fishe tools have less durability, more enchantability and slightly more mining speed. All fishe tools can be repaired in a fishe repair table"
+    }
+  ]
+}

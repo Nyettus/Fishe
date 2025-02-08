@@ -1,0 +1,12 @@
+{
+  "name": "General Information",
+  "icon": "minecraft:crafting_table",
+  "category": "fishe:fishe_armor",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "General Information",
+      "text": "All fishe armor is crafted exactly how you'd expect, all fishe armor have less durability, more enchantability and slightly tinkered values. All fishe armor can be repaired in a fishe repair table"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Hoe",
+  "icon": "fishe:copperfishe_hoe",
+  "category": "fishe:fishe_tools",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishecopperfishe_hoe"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fisheironfishe_hoe"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishegoldfishe_hoe"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishediamondfishe_hoe"
+    }
+  ]
+}
+

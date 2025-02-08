@@ -1,0 +1,20 @@
+{
+  "name": "Ironfishe",
+  "icon": "fishe:ironfishe_helmet",
+  "category": "fishe:fishe_armor",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:ironfishe_helmet",
+      "recipe2": "fishe:ironfishe_chestplate"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:ironfishe_leggings",
+      "recipe2": "fishe:ironfishe_boots"
+    }
+  ]
+}
+

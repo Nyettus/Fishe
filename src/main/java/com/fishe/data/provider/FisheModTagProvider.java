@@ -1,10 +1,7 @@
 package com.fishe.data.provider;
 
 
-import com.fishe.Items.ItemMaster;
-import com.fishe.Items.ItemsFishe;
-import com.fishe.Items.ItemsMisc;
-import com.fishe.Items.ItemsTools;
+import com.fishe.Items.*;
 import com.fishe.Utils.FisheModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.ItemTagProvider;
@@ -70,6 +67,9 @@ public class FisheModTagProvider extends ItemTagProvider {
 
         for (Item tool : ItemMaster.ToolMap.values()) {
             tagBuilder.add(tool);
+        }
+        for (Item armor : ItemMaster.ArmorMap.values()){
+            tagBuilder.add(armor);
         }
 
 

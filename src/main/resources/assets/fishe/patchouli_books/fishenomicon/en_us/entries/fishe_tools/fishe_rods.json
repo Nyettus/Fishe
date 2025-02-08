@@ -1,0 +1,28 @@
+{
+  "name": "Fishing Rods",
+  "icon": "fishe:copper_rod",
+  "category": "fishe:fishe_tools",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishecopper_rod",
+      "recipe2": "fishe:fishebcopper_rod"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fisheiron_rod"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishegold_rod"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishediamond_rod"
+    }
+  ]
+}

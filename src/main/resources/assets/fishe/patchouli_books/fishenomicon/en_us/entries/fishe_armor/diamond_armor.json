@@ -1,0 +1,20 @@
+{
+  "name": "Diamond",
+  "icon": "fishe:diamondfishe_helmet",
+  "category": "fishe:fishe_armor",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:diamondfishe_helmet",
+      "recipe2": "fishe:diamondfishe_chestplate"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:diamondfishe_leggings",
+      "recipe2": "fishe:diamondfishe_boots"
+    }
+  ]
+}
+

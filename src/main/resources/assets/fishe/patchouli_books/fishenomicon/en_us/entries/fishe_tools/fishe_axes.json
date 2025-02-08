@@ -1,0 +1,27 @@
+{
+  "name": "Axes",
+  "icon": "fishe:copperfishe_axe",
+  "category": "fishe:fishe_tools",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishecopperfishe_axe"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fisheironfishe_axe"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishegoldfishe_axe"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:fishediamondfishe_axe"
+    }
+  ]
+}

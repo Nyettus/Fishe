@@ -1,0 +1,20 @@
+{
+  "name": "Copperfishe",
+  "icon": "fishe:copperfishe_helmet",
+  "category": "fishe:fishe_armor",
+  "pages": [
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:copperfishe_helmet",
+      "recipe2": "fishe:copperfishe_chestplate"
+    },
+    {
+      "type": "crafting",
+      "title": "",
+      "recipe": "fishe:copperfishe_leggings",
+      "recipe2": "fishe:copperfishe_boots"
+    }
+  ]
+}
+
