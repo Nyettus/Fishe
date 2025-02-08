@@ -1,0 +1,11 @@
+{
+  "name": "Nautilus Shell",
+  "icon": "minecraft:nautilus_shell",
+  "category": "fishe:fisheomancy_recipe_misc_category",
+  "pages": [
+    {
+      "type": "fishe:fisheomancy_recipe_template",
+      "recipe": "fishe:fisheomancy_nautilus_shell"
+    }
+  ]
+}

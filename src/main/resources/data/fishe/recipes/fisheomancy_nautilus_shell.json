@@ -1,0 +1,43 @@
+{
+  "type": "fishe:fisheomancy_recipe",
+  "ingredients": [
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "fishe:ender_fishe"
+    },
+    {
+      "item": "minecraft:prismarine_shard"
+    },
+    {
+      "item": "minecraft:prismarine_shard"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:dark_prismarine"
+    }
+
+
+  ],
+  "catalyst": {
+    "item": "fishe:stone_fishe"
+  },
+  "slop_amount": 126,
+  "enchantment": [
+  ],
+  "output": {
+    "item": "minecraft:nautilus_shell"
+  }
+}
